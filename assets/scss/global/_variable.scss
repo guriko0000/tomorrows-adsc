@@ -1,0 +1,36 @@
+// 透過度
+$opacity: 0.6;
+$hover-opacity: 0.7;
+
+//汎用色
+$color-black01: #222;
+$color-black02: #333;
+
+$main-color: #4DC1A0;
+$second-color: #38BADC;
+
+$main-bg: #EDF3F8;
+
+$accent-color: #92846F;
+
+
+
+/* FontFamily */
+$base-font-family: 'Notosans_subset', sans-serif;
+$second-font-family: 'Roboto Condensed', sans-serif;
+$third-font-family: 'Roboto', sans-serif;
+
+
+/* font-weight */
+$thin: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$bold: 700;
+$black: 900;
+
+body {
+  font-family: $base-font-family;
+  font-weight: $regular;
+  color: $color-black01;
+}
