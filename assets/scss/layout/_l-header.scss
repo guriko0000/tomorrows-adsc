@@ -16,7 +16,7 @@
   margin-right: auto;
   margin-left: auto;
   @include mq(md) {
-    height: 60px;
+    height: 73px;
   }
 
   &__inner {
@@ -60,6 +60,9 @@
     display: inline-block;
     font-size: 1.2rem;
     line-height: 1.2;
+    @include mq(header) {
+      font-size: 1rem;     
+    }
   }
 
   &__logo-main {
@@ -72,6 +75,7 @@
     }
     @include mq(md) {
       max-width: 256px;
+      margin-top: 6px;
     }
   }
 
@@ -100,33 +104,6 @@
     flex-shrink: 0;
     width: 244px;
   }
-
-  // &__tel {
-  //   display: flex;
-  //   align-items: center;
-  //   color: $main-color;
-  //   font-family: $third-font-family;
-  //   font-size: 3rem;
-  //   font-weight: $black;
-  //   line-height: 1.2;
-  //   transition: opacity 0.25s;
-  //   &::before {
-  //     content: '';
-  //     display: inline-block;
-  //     width: 24px;
-  //     height: 24px;
-  //     background: url(../img/icon/icon_tel.svg) no-repeat center / contain;
-  //     margin-right: 5px;
-  //   }
-
-  //   &:hover, &:focus-visible {
-  //     opacity: 0.7;
-  //   }
-  // }
-
-  // &__tel-note {
-  //   font-size: 1.2rem;
-  // }
 
   &__cta-btn {
     width: 211px;
@@ -226,12 +203,8 @@
   &__inner {
     display: block;
     position: relative;
-    width: 17px;
-    height: 14px;
-    @include mq(md) {
-      width: 17px;
-      height: 14px;
-    }
+    width: 28px;
+    height: 20px;
   }
 
   &__line {
@@ -246,7 +219,7 @@
       content: "";
       display: block;
       height: 2px;
-      background-color: #222;
+      background-color: $main-color;
       border-radius: 20px;
     }
 
@@ -282,7 +255,7 @@
   visibility: hidden;
   pointer-events: none;
   transition: 0.15s;
-  margin-top: 100px;
+  margin-top: 114px;
   @include mq(header) {
     position: absolute;
     top: 0;
@@ -291,75 +264,57 @@
     height: 100vh;
     min-height: auto;
     overflow-y: auto;
-    background-color: #f1f1f1;
+    background-color: #fff;
     transition: 0.15s;
     z-index: 30;
     @include mq(md) {
-      margin-top: 60px;
+      margin-top: 73px;
     }
   }
 
   &__inner {
     position: relative;
-    padding-top: 60px;
+    padding-top: 10px;
     padding-bottom: 200px;
     z-index: 30;
   }
   
   &__item {
     position: relative;
-    max-width: 295px;
+    max-width: 308px;
     width: 100%;
-    border-top: 1px solid #4F546B;
+    border-bottom: 1px solid #ddd;
     margin: 0 auto;
     cursor: pointer;
-    &:last-child {
-      border-bottom: 1px solid #4F546B;
-    }
   }
 
   &__title {
     position: relative;
-    font-size: 1.8rem;
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
 
   &__link {
     display: block;
-    text-align: center;
-    padding: 9px 0;
+    padding: 15px 10px;
+  }
+
+  &__bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    max-width: 360px;
+    margin: 30px auto 0;
   }
 
   &__btn {
-    display: block;
-    max-width: 295px;
     width: 100%;
-    background-color: #fff;
-    border: 1px solid #fff;
-    color: $main-color;
-    text-align: center;
-    padding: 22px 0;
-    margin: 0 auto;
-    &:hover, &:focus-visible {
-      background-color: $main-color;
-      border: 1px solid #FFF;
-      color: #fff;
-    }
-
-    &--line {
-      background-color: $main-color;
-      border: 1px solid #fff;
-      color: #fff;
-      &:hover, &:focus-visible {
-        background-color: #fff;
-        border: 1px solid #fff;
-        color: $main-color;
-      }
-    }
-
-    &:not(:first-child) {
-      margin-top: 32px;
+    max-width: 360px;
+    .c-btn {
+      max-width: 360px;
+      font-size: 1.6rem;
+      padding: 21px 8px;
     }
   }
 

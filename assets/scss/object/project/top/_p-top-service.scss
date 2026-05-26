@@ -5,38 +5,173 @@
 -----------------------------------------*/
 .p-top-service {
 
-  &__card-wrap {}
+  &__card-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    row-gap: 0;
+    margin-top: 70px;
 
-  &__card {}
+    @media screen and (max-width: 1050px){
+      grid-template-columns: repeat(2, 1fr);
+      margin: 50px auto 0;
+    }
+    @include mq(md) {
+      grid-template-columns: repeat(1, 1fr);
+      column-gap: 0;
+      row-gap: 30px;
+      
+    }
+  }
 
-  &__card-img {}
+  &__card {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: span 4;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+    @media screen and (max-width: 1050px) {
+      &:nth-child(n + 3) {
+        margin-top: 30px;
+        @include mq(md) {
+          margin-top: 0;
+        }
+      }
+    }
 
-  &__card-body {}
+    @include mq(md) {
+      display: block;
+      grid-row: auto;
+      margin-top: 0;
+    }
+  }
 
-  &__card-content {}
+  &__card-img {
+    grid-row: 1;
 
-  &__card-title {}
+    img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
 
-  &__card--num {}
+  &__card-body {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 2 / span 3;
+    background-color: #fff;
+    padding: 40px 35px 24px;
+  }
 
-  &__card-text {}
+  &__card-content {
+    grid-row: 1;
+    position: relative;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 24px;
+  }
 
-  &__card-price {}
+  &__card-title {
+    font-family: $second-font-family;
+    font-size: 2.2rem;
+    font-weight: $demibold;
+    text-align: center;
+  }
 
-  &__card-dl {}
+  &__card--num {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -65px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 50px;
+    background-color: $main-color;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2.4rem;
+    line-height: 1;
+  }
 
-  &__card-dl-item {}
+  &__card-text {
+    margin-top: 15px;
+  }
 
-  &__card-dl-item--highlight {}
+  &__card-price {
+    grid-row: 2;
+    padding: 20px 0;
+  }
 
-  &__card-dt {}
+  &__card-dl {
+  }
 
-  &__card-dd {}
+  &__card-dl-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3px 10px;
+  }
 
-  &__card-price-unit {}
+  &__card-dl-item--highlight {
+    background-color: $marker-color;
 
-  &__card-dl-note {}
+    .p-top-service__card-dt {
+      font-weight: $medium;
+    }
+  }
 
-  &__card-link {}
+  &__card-dt {
+    font-size: 1.2rem;
+  }
+
+  &__card-dd {
+    color: $main-color;
+    font-family: $third-font-family;
+    font-size: 2rem;
+    font-weight: $medium;
+  }
+
+  &__card-price-unit {
+    display: inline-block;
+    color: $color-black01;
+    font-family: $base-font-family;
+    font-size: 1.2rem;
+    font-weight: $regular;
+    margin-left: 5px;
+  }
+
+  &__card-dl-note {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  &__card-link-wrap {
+    grid-row: 3;
+    align-self: end;
+    text-align: right;
+  }
+
+  &__card-link {
+    display: inline-flex;
+    align-items: center;
+    font-size: 1.4rem;
+    
+    &:hover, &:focus-visible {
+      &::after {
+        transform: translateX(6px);
+      }
+    }
+
+    &::after {
+      content: '';
+      display: inline-block;
+      width: 6px;
+      height: 12px;
+      background: url(../img/icon/icon_arrow-right.svg) no-repeat center / contain;
+      margin-left: 9px;
+      transition: transform 0.25s;
+    }
+  }
 
 }

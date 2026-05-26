@@ -4,25 +4,77 @@
         p-top-intro
 -----------------------------------------*/
 .p-top-intro {
+  padding: 100px 0;
 
-  &__container {}
+  &__title {
+    font-family: $second-font-family;
+    font-size: 3.6rem;
+    font-weight: $demibold;
+    line-height: 1.4;
+    text-align: center;
+  }
 
-  &__text-area {}
+  &__text {
+    font-size: 2rem;
+    line-height: 2;
+    text-align: center;
+    margin-top: 20px;
+  }
 
-  &__title {}
+  &__media {
+    margin-top: 100px;
+  }
 
-  &__text {}
+  &__media-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 60px;
+  }
 
-  &__media {}
+  &__media-img {
+    width: 47%;
+    max-width: 540px;
+  }
 
-  &__media-img {}
+  &__media-text-area {
+    flex: 1;
+  }
 
-  &__media-text-area {}
+  &__media-title {
+    color: $main-color;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
 
-  &__media-title {}
+  &__media-list {
+    border-left: 1px solid $main-color;
+    padding-left: 15px;
+    margin-top: 20px;
 
-  &__media-list {}
+    li {
+      font-size: 1.8rem;
+      line-height: 1.5;
+      &:not(:first-child) {
+        margin-top: 20px;
+      }
+    }
+  }
 
-  &__media-catch {}
+  &__media-catch {
+    font-size: 2.2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    margin-top: 40px;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url(../img/icon/icon_check.svg) no-repeat center / contain;
+      margin-right: 10px;
+      transform: translateY(5px);
+    }
+  }
 
 }

@@ -188,6 +188,20 @@ window.addEventListener('DOMContentLoaded', function() {
   });
 });
 
-
-
 });
+
+
+
+// 340px以下スケーリング
+// ________________________________________________________
+!(function () {
+  const viewport = document.querySelector('meta[name="viewport"]');
+  function switchViewport() {
+    const value = window.outerWidth > 340 ? 'width=device-width,initial-scale=1' : 'width=390';
+    if (viewport && viewport.getAttribute('content') !== value) {
+      viewport.setAttribute('content', value);
+    }
+  }
+  window.addEventListener('resize', switchViewport);
+  switchViewport();
+})();

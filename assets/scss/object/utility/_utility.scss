@@ -48,3 +48,7 @@
 .u-text-main-color {
   color: $main-color;
 }
+
+.u-text-marker {
+  background: linear-gradient(transparent 60%, $marker-color 60%);
+}
