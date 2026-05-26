@@ -1,0 +1,42 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-service
+-----------------------------------------*/
+.p-top-service {
+
+  &__card-wrap {}
+
+  &__card {}
+
+  &__card-img {}
+
+  &__card-body {}
+
+  &__card-content {}
+
+  &__card-title {}
+
+  &__card--num {}
+
+  &__card-text {}
+
+  &__card-price {}
+
+  &__card-dl {}
+
+  &__card-dl-item {}
+
+  &__card-dl-item--highlight {}
+
+  &__card-dt {}
+
+  &__card-dd {}
+
+  &__card-price-unit {}
+
+  &__card-dl-note {}
+
+  &__card-link {}
+
+}

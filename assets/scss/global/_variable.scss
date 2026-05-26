@@ -3,13 +3,13 @@ $opacity: 0.6;
 $hover-opacity: 0.7;
 
 //汎用色
-$color-black01: #222;
-$color-black02: #333;
+$color-black01: #333;
+$color-black02: #222;
 
-$main-color: #4DC1A0;
+$main-color: #2DAEBB;
 $second-color: #38BADC;
 
-$main-bg: #EDF3F8;
+$main-bg: #EEFAF9;
 
 $accent-color: #92846F;
 
@@ -17,7 +17,7 @@ $accent-color: #92846F;
 
 /* FontFamily */
 $base-font-family: 'Notosans_subset', sans-serif;
-$second-font-family: 'Roboto Condensed', sans-serif;
+$second-font-family: 'Yu Mincho', 'YuMincho', 'Hiragino Mincho ProN', 'Hiragino Mincho Pro', serif;
 $third-font-family: 'Roboto', sans-serif;
 
 
@@ -26,6 +26,7 @@ $thin: 200;
 $light: 300;
 $regular: 400;
 $medium: 500;
+$demibold: 600;
 $bold: 700;
 $black: 900;
 

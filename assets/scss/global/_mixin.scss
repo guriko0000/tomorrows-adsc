@@ -1,3 +1,5 @@
+@use "breakpoints" as *;
+
 // opacityのtransition
 @mixin opacity-transition($transition-time: 0.25s) {
   transition: opacity $transition-time;
@@ -7,5 +9,32 @@
 @mixin hover-opacity($opacity: 0.7) {
   &:hover, &:focus-visible {
     opacity: $opacity;
+  }
+}
+
+// MVのグラデーション
+@mixin mv-bg(
+  $pc-img,
+  $sp-img,
+  $pc-position: center center,
+  $sp-position: $pc-position
+) {
+  background:
+    linear-gradient(
+      to right,
+      #ffffff 40%,
+      rgba(255, 255, 255, 0) 100%
+    ),
+    url(#{$pc-img}) no-repeat $pc-position / cover;
+
+  @include mq(md) {
+    background:
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 1) 40%,
+        rgba(255, 255, 255, 0.53) 100%,
+        rgba(255, 255, 255, 0) 100%
+      ),
+      url(#{$sp-img}) no-repeat $sp-position / cover;
   }
 }

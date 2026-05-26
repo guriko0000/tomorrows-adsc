@@ -9,10 +9,10 @@
   left: 50%;
   transform: translateX(-50%);
   width: 100%;
-  height: 100px;
+  height: 114px;
   background-color: #fff;
   z-index: 20;
-  max-width: 1540px;
+  // max-width: 1500px;
   margin-right: auto;
   margin-left: auto;
   @include mq(md) {
@@ -25,9 +25,12 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    padding-right: 60px;
-    padding-left: 60px;
+    padding-right: 90px;
+    padding-left: 90px;
     margin: 0 auto;
+    @media screen and (max-width: 1560px){
+      padding: 0 40px;
+    }
     @include mq(lg) {
       padding-right: 20px;
       padding-left: 20px;
@@ -37,11 +40,13 @@
   &__logo {
     display: flex;
     align-items: center;
+    margin-right: 20px;
   }
 
   &__logo a {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
     cursor: pointer;
     z-index: 40;
@@ -51,21 +56,24 @@
     }
   }
 
-  &__logo-main {
-    display: block;
-    max-width: 135px;
-    width: 100%;
-    margin-right: 28px;
-    @include mq(md) {
-      max-width: 155px;
-      margin-right: 20px;
-    }
+  &__logo-text {
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1.2;
   }
 
-  // &__logo-text {
-  //   color: #666;
-  //   font-size: 1.7rem;
-  // }
+  &__logo-main {
+    display: block;
+    max-width: 361px;
+    width: 100%;
+    margin-top: 20px;
+    @media screen and (max-width: 1560px){
+      max-width: 320px;
+    }
+    @include mq(md) {
+      max-width: 256px;
+    }
+  }
 
   &__container {
     display: flex;
@@ -75,11 +83,54 @@
     }
   }
 
+  &__contact {
+    display: flex;
+    align-items: center;
+    width: 494px;
+    gap: 10px 40px;
+    margin-left: 70px;
+    @media screen and (max-width: 1560px){
+      gap: 10px 20px;
+      width: 474px;
+      margin-left: 30px;
+    }
+  }
 
+  &__tel-wrap {
+    flex-shrink: 0;
+    width: 244px;
+  }
 
-  &__btn {
+  // &__tel {
+  //   display: flex;
+  //   align-items: center;
+  //   color: $main-color;
+  //   font-family: $third-font-family;
+  //   font-size: 3rem;
+  //   font-weight: $black;
+  //   line-height: 1.2;
+  //   transition: opacity 0.25s;
+  //   &::before {
+  //     content: '';
+  //     display: inline-block;
+  //     width: 24px;
+  //     height: 24px;
+  //     background: url(../img/icon/icon_tel.svg) no-repeat center / contain;
+  //     margin-right: 5px;
+  //   }
+
+  //   &:hover, &:focus-visible {
+  //     opacity: 0.7;
+  //   }
+  // }
+
+  // &__tel-note {
+  //   font-size: 1.2rem;
+  // }
+
+  &__cta-btn {
     width: 211px;
-    margin-left: 40px;
+    flex-shrink: 0;
   }
 }
 
@@ -114,10 +165,17 @@
     align-items: center;
     position: relative;    
     height: 100%;
-    font-size: 1.5rem;
-    padding: 0 12px;
+    padding: 0 13px;
+    margin-top: 24px;
     transition: 0.25s;
     text-transform: uppercase;
+    @media screen and (max-width: 1560px){
+      font-size: 1.5rem;
+      padding: 10px;
+    }
+    @include mq(xxl) {
+      font-size: 1.2rem;
+    }
 
     &:hover, &:focus-visible {      
       color: $main-color;

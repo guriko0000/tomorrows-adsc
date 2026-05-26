@@ -1,0 +1,28 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-intro
+-----------------------------------------*/
+.p-top-intro {
+
+  &__container {}
+
+  &__text-area {}
+
+  &__title {}
+
+  &__text {}
+
+  &__media {}
+
+  &__media-img {}
+
+  &__media-text-area {}
+
+  &__media-title {}
+
+  &__media-list {}
+
+  &__media-catch {}
+
+}

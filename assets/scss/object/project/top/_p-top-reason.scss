@@ -1,0 +1,14 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-reason
+-----------------------------------------*/
+.p-top-reason {
+
+  &__list {
+    display: grid;
+    gap: 40px 50px;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}

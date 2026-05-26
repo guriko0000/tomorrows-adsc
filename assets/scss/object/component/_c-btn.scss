@@ -6,17 +6,18 @@
 .c-btn {
   display: inline-block;
   position: relative;
-  max-width: 293px;
+  max-width: 300px;
   width: 100%; 
   border: 1px solid $main-color;
-  border-radius: 48px;
   background-color: $main-color;
-  color: #fff;  
+  color: #fff;
+  font-size: 1.8rem;
   font-weight: $medium;
+  line-height: 1.5;
   text-align: center;
   transition: 0.25s;
   z-index: 10;
-  padding: 14px 10px;
+  padding: 20px 10px;
   @include mq(md) {
     font-size: 1.4rem;
     max-width: 250px;
@@ -42,20 +43,18 @@
     }
   }
 
-  // &::after {
-  //   content: '';
-  //   display: inline-block;
-  //   width: 8px;
-  //   height: 12px;
-  //   background-image: url(../images/icon/icon_arrow-right.svg);
-  //   background-size: contain;
-  //   background-repeat: no-repeat;
-  //   margin-left: 10px;
-  // }
-
   &:hover, &:focus-visible {
     background-color: #fff;
     color: $main-color;
+  }
+}
+
+.c-btn--small {
+  max-width: 211px;
+  padding: 12px 10px;
+  @include mq(md) {
+    max-width: 300px;
+    font-size: 1.4rem;    
   }
 }
 

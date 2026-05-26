@@ -1,0 +1,40 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-tel
+-----------------------------------------*/
+.c-tel {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    color: $main-color;
+    font-family: $third-font-family;
+    font-size: 3rem;
+    font-weight: $black;
+    line-height: 1.2;
+    transition: opacity 0.25s;
+    pointer-events: none;
+    &::before {
+      content: '';
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background: url(../img/icon/icon_tel.svg) no-repeat center / contain;
+      margin-right: 5px;
+    }
+
+    @include mq(md) {
+      pointer-events: auto;
+      &:hover, &:focus-visible {
+        opacity: 0.7;
+      }
+      
+    }
+  }
+
+  &__note {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+}
