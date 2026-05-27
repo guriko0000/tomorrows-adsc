@@ -4,5 +4,84 @@
         l-footer
 -----------------------------------------*/
 .l-footer {
+  color: #fff;
+  background: transparent url(../img/common/footer_bg.jpg) no-repeat center center/cover;
+  padding: 70px 0;
 
+  .l-inner {
+    max-width: 1020px;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    @include mq(md) {
+      flex-direction: column;
+    }
+  }
+
+  &__info {
+    width: 46%;
+    @include mq(md) {
+      width: 100%;
+    }
+  }
+
+  &__name {
+    font-size: 2rem;
+    font-weight: $medium;
+  }
+
+  &__address {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  &__tel {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  &__license {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  &__copyright {
+    font-size: 1rem;
+    margin-top: 50px;
+  }
+
+  &__nav-wrap {
+    flex: 1;
+  }
+
+  &__nav {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+  }
+
+  &__nav-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__nav-item {
+    a {
+      display: inline-block;
+      color: #fff;
+      text-decoration: none;
+      font-size: 1.5rem;
+      transition: opacity 0.3s;
+
+      &:hover, &:focus-visible {
+        opacity: $hover-opacity;        
+      }      
+    }
+  }
 }

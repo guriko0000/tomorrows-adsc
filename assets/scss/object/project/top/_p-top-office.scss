@@ -1,0 +1,68 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-office
+-----------------------------------------*/
+.p-top-office {
+  padding: 100px 0 200px;
+
+  &__content {
+    display: flex;
+    gap: 80px;
+    max-width: 910px;
+    margin: 70px auto 0;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__name {
+    display: flex;
+    align-items: center;
+    font-size: 2rem;
+    font-weight: $medium;
+    &::before {
+      content: '';
+      display: block;
+      width: 12px;
+      height: 12px;
+      background-color: $main-color;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+  }
+
+  &__address {
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  &__access {
+    margin-top: 35px;
+  }
+
+  &__access-title {
+    color: $main-color;
+    font-size: 1.5rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    text-transform: uppercase;
+  }
+
+  &__access-text-wrap {
+    margin-top: 8px;
+  }
+
+  &__access-text {
+    color: #555;
+    font-size: 1.5rem;
+    line-height: 1.5;
+  }
+
+  &__img {
+    width: 54%;
+    max-width: 488px;
+  }
+
+}
