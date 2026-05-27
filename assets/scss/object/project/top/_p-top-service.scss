@@ -4,6 +4,8 @@
         p-top-service
 -----------------------------------------*/
 .p-top-service {
+  background: transparent url(../img/top/service_bg.jpg) no-repeat center center/cover;
+  padding: 100px 0;
 
   &__card-wrap {
     display: grid;
@@ -45,6 +47,22 @@
     }
   }
 
+  &__card-link {
+    display: grid;
+    grid-template-rows: subgrid;
+    grid-row: 1 / span 4;
+    @include mq(md) {
+      display: block;
+      grid-row: auto;
+    }
+
+    &:hover, &:focus-visible {
+      .p-top-service__card-link-text::after {
+        transform: translateX(6px);
+      }
+    }
+  }
+
   &__card-img {
     grid-row: 1;
 
@@ -61,6 +79,10 @@
     grid-row: 2 / span 3;
     background-color: #fff;
     padding: 40px 35px 24px;
+    @include mq(md) {
+      display: block;
+      grid-row: auto;
+    }
   }
 
   &__card-content {
@@ -68,6 +90,9 @@
     position: relative;
     border-bottom: 1px solid #ccc;
     padding-bottom: 24px;
+    @include mq(md) {
+      grid-row: auto;
+    }
   }
 
   &__card-title {
@@ -101,6 +126,9 @@
   &__card-price {
     grid-row: 2;
     padding: 20px 0;
+    @include mq(md) {
+      grid-row: auto;
+    }
   }
 
   &__card-dl {
@@ -150,18 +178,15 @@
     grid-row: 3;
     align-self: end;
     text-align: right;
+    @include mq(md) {
+      grid-row: auto;
+    }
   }
 
-  &__card-link {
+  &__card-link-text {
     display: inline-flex;
     align-items: center;
-    font-size: 1.4rem;
-    
-    &:hover, &:focus-visible {
-      &::after {
-        transform: translateX(6px);
-      }
-    }
+    font-size: 1.4rem; 
 
     &::after {
       content: '';

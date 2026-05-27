@@ -1,0 +1,35 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-greeting
+-----------------------------------------*/
+.c-greeting {
+  display: flex;
+  gap: 70px;
+  margin-top: 50px;
+
+  &__img {
+    max-width: 355px;
+    width: 33%;
+  }
+
+  &__body {
+    flex: 1;
+  }
+
+  &__position {}
+
+  &__name {
+    font-size: 2.4rem;
+  }
+
+  &__text-warp {
+    margin-top: 50px;
+  }
+
+  &__text {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+}

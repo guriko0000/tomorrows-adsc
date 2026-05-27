@@ -7,7 +7,7 @@
   display: grid;
   // display: flex;
   // flex-wrap: wrap;
-  gap: 40px 50px;
+  gap: 20px 30px;
   @include mq(md) {
     gap: 30px;
   }

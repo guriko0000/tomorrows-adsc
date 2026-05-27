@@ -98,3 +98,14 @@
   } 
 }
 
+.c-btn--border {
+  max-width: 300px;
+  background-color: #fff;
+  color: $main-color;
+  font-size: 1.6rem;
+  padding: 18px 10px;
+  &:hover, &:focus-visible {
+    color: #fff;
+    background-color: $main-color;
+  }
+}

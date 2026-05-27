@@ -1,0 +1,24 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-greeting
+-----------------------------------------*/
+.p-top-greeting {
+  position: relative;
+  padding: 75px 0 100px;
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 130px;
+    left: 0;
+    width: 379px;
+    aspect-ratio: 379 / 255;
+    background: url(../img/common/bg_ring02.png) no-repeat center / contain;
+    z-index: -1;
+  }
+
+  &__media {
+    margin-top: 50px;
+  }
+}

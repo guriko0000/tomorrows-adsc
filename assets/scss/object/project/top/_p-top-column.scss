@@ -1,0 +1,20 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-top-column
+-----------------------------------------*/
+.p-top-column {
+  background-color: $main-bg;
+  padding: 242px 0 100px;
+  margin-top: -142px;
+
+  &__card-wrap {
+    margin-top: 50px;
+  }
+
+  &__btn-wrap {
+    margin-top: 50px;
+    text-align: center;
+  }
+
+}

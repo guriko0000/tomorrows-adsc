@@ -4,11 +4,13 @@
         p-top-reason
 -----------------------------------------*/
 .p-top-reason {
+  padding: 100px 0;
 
   &__list {
     display: grid;
     gap: 40px 50px;
     grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
   }
 
 }
