@@ -78,7 +78,7 @@ $(function() {
 // 固定ヘッダー分リンク飛ばした時調整
   if(window.matchMedia("(max-width: 767px)").matches){
     $(function () {
-      var headerHight = 60;
+      var headerHight = 75;
       $('a[href^="#"]').click(function () {
       var href = $(this).attr("href");
       var target = $(href == "#" || href == "" ? "html" : href);
@@ -100,95 +100,11 @@ $(function() {
       });
   }
 
-
-
-// スクロールしたらふわっと
-// ________________________________________________________
-
-// 下から表示
-function fadeAnime(){
-  $('.fadeUpTrigger').each(function(){ 
-    var elemPos = $(this).offset().top-50;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight + 240){
-    $(this).addClass('fadeup');
-    }
-  });
-}
-
-$(window).scroll(function (){
-  fadeAnime();
-});
-
-
-// 右から表示
-function fadeAnime2(){
-  $('.fadeRightTrigger').each(function(){ 
-    var elemPos = $(this).offset().top-50;
-    var scroll = $(window).scrollTop();
-    var windowHeight = $(window).height();
-    if (scroll >= elemPos - windowHeight + 240){
-    $(this).addClass('fadeRight');
-    }
-  });
-}
-
-$(window).scroll(function (){
-  fadeAnime2();
-});
-
   
 });
 
 // コピーライト年数動的
 document.getElementById("current-year").innerText = new Date().getFullYear();
-
-// 319px以下スケーリング
-// ________________________________________________________
-!(function () {
-  const viewport = document.querySelector('meta[name="viewport"]');
-  function switchViewport() {
-    const value = window.outerWidth > 319 ? 'width=device-width,initial-scale=1' : 'width=390';
-    if (viewport && viewport.getAttribute('content') !== value) {
-      viewport.setAttribute('content', value);
-    }
-  }
-  window.addEventListener('resize', switchViewport);
-  switchViewport();
-})();
-
-
-// gsap
-// ________________________________________________________
-window.addEventListener('DOMContentLoaded', function() {
-
-  // 読込むとふわっと出現
-  document.querySelectorAll(".js-fade").forEach((el) => {
-    el.classList.add("show");
-  });
-
-  // スクロールしたら出現
-  document.querySelectorAll(".js-fadeUp").forEach((el) => {
-    ScrollTrigger.create({
-    trigger: el,
-    start: 'top 85%',
-    onEnter: () => el.classList.add('show'),
-    markers: true,
-  });
-});
-
-  // スクロールしたら右から出現
-  document.querySelectorAll(".js-fadeRight").forEach((el) => {
-    ScrollTrigger.create({
-    trigger: el,
-    start: 'top 85%',
-    onEnter: () => el.classList.add('show'),
-    markers: true,
-  });
-});
-
-});
 
 
 

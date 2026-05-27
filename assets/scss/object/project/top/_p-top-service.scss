@@ -6,6 +6,52 @@
 .p-top-service {
   background: transparent url(../img/top/service_bg.jpg) no-repeat center center/cover;
   padding: 100px 0;
+  @include mq(md) {
+    padding: 60px 0;
+  }
+
+  &__sp-nav {
+    display: none;
+    @include mq(md) {
+      display: block;
+    }
+  }
+
+  &__nav-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    margin-top: 32px;
+  }
+
+  &__nav-item {
+    a {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background-color: $main-color;
+      color: #fff;
+      line-height: 1.4;
+      text-align: center;
+      padding: 10px 5px;
+      @media screen and (max-width: 390px){
+        font-size: 1.3rem;
+      }
+      &::after {
+        content: '';
+        display: inline-block;
+        width: 25px;
+        aspect-ratio: 25 / 12;
+        background: url(../img/icon/icon_arrow-down.svg) no-repeat center / contain;
+        margin-top: 5px;
+        @media screen and (max-width: 390px){
+          font-size: 1.3rem;
+          width: 20px;
+        }
+      }
+    }
+  }
 
   &__card-wrap {
     display: grid;
@@ -13,7 +59,6 @@
     column-gap: 25px;
     row-gap: 0;
     margin-top: 70px;
-
     @media screen and (max-width: 1050px){
       grid-template-columns: repeat(2, 1fr);
       margin: 50px auto 0;
@@ -92,6 +137,7 @@
     padding-bottom: 24px;
     @include mq(md) {
       grid-row: auto;
+      padding-bottom: 18px;
     }
   }
 
@@ -100,6 +146,9 @@
     font-size: 2.2rem;
     font-weight: $demibold;
     text-align: center;
+    @include mq(md) {
+      font-size: 2rem;
+    }
   }
 
   &__card--num {
@@ -121,6 +170,9 @@
 
   &__card-text {
     margin-top: 15px;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 
   &__card-price {
@@ -151,6 +203,9 @@
 
   &__card-dt {
     font-size: 1.2rem;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
   }
 
   &__card-dd {

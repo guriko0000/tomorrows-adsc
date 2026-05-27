@@ -28,6 +28,8 @@
   &__title {
     color: #fff;
     font-size: 4rem;
+    font-weight: $medium;
+    letter-spacing: 0.1em;
     line-height: 1.5;
     text-align: center;
     text-transform: uppercase;
@@ -38,14 +40,13 @@
     max-width: 864px;
     padding: 40px 30px 50px;
     margin: 0 auto;
-    margin-top: 20px;
+    margin-top: 24px;
   }
 
   &__catch {
     font-family: $second-font-family;
     font-size: 2.8rem;
     font-weight: $demibold;
-    line-height: 1.6;
     text-align: center;
     @include mq(md) {
       font-size: 2rem;

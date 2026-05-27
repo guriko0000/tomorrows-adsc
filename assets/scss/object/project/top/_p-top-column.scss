@@ -6,7 +6,11 @@
 .p-top-column {
   background-color: $main-bg;
   padding: 242px 0 100px;
-  margin-top: -142px;
+  margin-top: -152px;
+  @include mq(md) {
+    padding: 310px 0 50px;
+    margin-top: -272px;
+  }
 
   &__card-wrap {
     margin-top: 50px;
