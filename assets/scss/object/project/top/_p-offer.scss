@@ -1,9 +1,9 @@
 @use "../../../global/index" as *;
 
 /* -------------------------------------
-        p-top-offer
+        p-offer
 -----------------------------------------*/
-.p-top-offer {
+.p-offer {
   @include mq(md) {    
     background: transparent url(../img/top/offer_img-sp.jpg) no-repeat center center/cover;
     padding: 60px 0;

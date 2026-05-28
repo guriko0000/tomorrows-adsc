@@ -46,6 +46,8 @@
 @use "./object/component/c-lead";
 @use "./object/component/c-tel";
 @use "./object/component/c-greeting";
+@use "./object/component/c-support";
+@use "./object/component/c-plan";
 
 
 // Project
@@ -55,10 +57,16 @@
 @use "./object/project/top/p-top-reason";
 @use "./object/project/top/p-cta";
 @use "./object/project/top/p-top-support";
-@use "./object/project/top/p-top-greeting";
+@use "./object/project/top/p-greeting";
 @use "./object/project/top/p-top-column";
-@use "./object/project/top/p-top-offer";
-@use "./object/project/top/p-top-office";
+@use "./object/project/top/p-offer";
+@use "./object/project/top/p-office";
+
+@use "./object/project/under/p-service";
+@use "./object/project/under/p-procedure";
+@use "./object/project/under/p-support";
+@use "./object/project/under/p-worries";
+@use "./object/project/under/p-plan";
 
 
 

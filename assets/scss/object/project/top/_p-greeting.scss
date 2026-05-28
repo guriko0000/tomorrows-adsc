@@ -1,0 +1,42 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-greeting
+-----------------------------------------*/
+.p-greeting {
+  position: relative;
+  padding: 100px 0 75px;
+  @include mq(md) {
+    padding: 60px 0 50px;
+  }
+  &::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    bottom: 130px;
+    left: 0;
+    width: 379px;
+    aspect-ratio: 379 / 255;
+    background: url(../img/common/bg_ring02.png) no-repeat center / contain;
+    z-index: -1;
+    @include mq(md) {
+      content: none;
+    }
+  }
+
+  &--top {
+    padding: 75px 0 100px;
+    @include mq(md) {
+      padding: 50px 0 60px;
+    }
+  }
+
+  &__media {
+    margin-top: 50px;
+    @include mq(md) {
+      margin-top: 30px;
+    }
+  }
+}
+
+

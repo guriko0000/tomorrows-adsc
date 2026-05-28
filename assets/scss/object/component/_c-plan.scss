@@ -1,0 +1,58 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-plan
+-----------------------------------------*/
+.c-plan {
+
+  &__head {
+    background-color: $main-color;
+    color: #fff;
+    padding: 30px 10px;
+  }
+
+  &__title {
+    font-family: $second-font-family;
+    font-size: 2.6rem;
+    font-weight: $extraold;
+    line-height: 1.4;
+    text-align: center;
+  }
+
+  &__lead {
+    font-weight: $medium;
+    line-height: 1.5;
+    margin-top: 15px;
+    text-align: center;
+  }
+
+  &__sub-lead {
+    font-weight: $medium;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+
+  &__head-price {
+    text-align: center;
+  }
+
+  &__body {
+    background-color: #fff;
+    padding: 30px 25px;
+  }
+
+  &__set-price-wrap {}
+
+  &__set-price-text {}
+
+  &__set-price {}
+
+  &__set-price-discount {}
+
+  &__set-price-main {}
+
+  &__note {}
+
+  &__list {}
+
+}

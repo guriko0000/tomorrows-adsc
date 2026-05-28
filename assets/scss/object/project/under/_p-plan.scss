@@ -1,0 +1,20 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-plan
+-----------------------------------------*/
+.p-plan {
+  padding: 354px 0 100px;
+  margin-top: -254px;
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+
+  &__note-wrap {}
+
+  &__note {}
+
+}

@@ -1,0 +1,61 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-procedure
+-----------------------------------------*/
+
+.p-procedure {
+  padding: 100px 0;
+
+  &__dl {
+    margin-top: 50px;
+  }
+
+  &__row {
+    display: flex;
+    border-bottom: 1px solid #EEE;
+  }
+
+  &__row--head {
+    .p-procedure__dt, .p-procedure__dd {
+      color: #fff;
+      background-color: $main-color;
+    }
+  }
+
+  &__dt {
+    flex-shrink: 0;
+    background-color: #fff;
+    width: 332px;
+    padding: 20px 40px;
+  }
+
+  &__dd {
+    flex: 1;
+    background-color: #fff;
+    border-left: 1px solid #EEE;
+    padding: 20px 40px;
+  }
+
+  &__list {
+    li {
+
+    }
+
+    .tag {
+      display: inline-block;
+      color: #fff;
+      background-color: #B96060;
+      font-size: 1.2rem;
+      font-weight: $medium;
+      line-height: 1.2;
+      padding: 4px 5px;
+      margin-left: 16px;
+    }
+  }
+
+  &__bottom {}
+
+  &__bottom-text {}
+
+}

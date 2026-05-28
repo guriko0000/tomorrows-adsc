@@ -37,10 +37,6 @@
   margin-top: 80px!important;
 }
 
-.u-text-accent-color {
-  color: $accent-color;
-}
-
 .u-border-bottom-none {
   border-bottom-width: 0;
 }
@@ -53,6 +49,26 @@
   background: linear-gradient(transparent 60%, $marker-color 60%);
 }
 
+.u-text-main-color {
+  color: $main-color;
+}
+
+.u-text-accent-color {
+  color: $accent-color;
+}
+
+.u-text-bold {
+  font-weight: $bold;
+}
+
+.u-text-demibold {
+  font-weight: $demibold;
+}
+
 .u-bg-color-main {
   background-color: $main-bg;
+}
+
+.u-bg-color-gray {
+  background-color: #F7F7F7;
 }

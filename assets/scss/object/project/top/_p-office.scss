@@ -1,12 +1,20 @@
 @use "../../../global/index" as *;
 
 /* -------------------------------------
-        p-top-office
+        p-office
 -----------------------------------------*/
-.p-top-office {
-  padding: 100px 0 200px;
+.p-office {
+  padding: 75px 0 200px;
   @include mq(md) {
-    padding: 60px 0 100px;
+    padding: 50px 0 100px;
+  }
+
+
+  &--top {
+    padding: 100px 0 200px;
+    @include mq(md) {
+      padding: 60px 0 100px;
+    }
   }
 
   &__content {
@@ -94,3 +102,5 @@
   }
 
 }
+
+

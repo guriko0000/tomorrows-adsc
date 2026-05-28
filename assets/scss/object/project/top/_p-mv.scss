@@ -7,11 +7,11 @@
   height: 666px;
   padding: 40px 0;
 
-@include mv-bg(
-  "../img/top/mv_img.jpg",
-  "../img/top/mv_img-sp.jpg",
-  70% center,
-);
+  @include mv-bg(
+    "../img/top/mv_img.jpg",
+    "../img/top/mv_img-sp.jpg",
+    70% center,
+  );
 
   @include mq(md) {
     height: auto;
@@ -109,4 +109,20 @@
     max-width: 263px;
   }
 
+  &__note {
+    small {
+      display: inline-block;
+      font-size: 1.4rem;
+      margin-top: 10px;
+    }
+  }
+}
+
+
+.p-mv--service01 {
+  @include mv-bg(
+    "../img/under/service01_mv.jpg",
+    "../img/top/service01_mv-sp.jpg",
+    70% center,
+  );
 }

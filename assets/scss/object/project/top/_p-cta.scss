@@ -97,5 +97,17 @@
       }
     }
   }
+}
 
+.p-cta--service {
+  .p-cta__btn-wrap {
+    width: 314px;
+    @include mq(md) {
+      width: 100%;
+    }
+    
+    .c-btn {
+      max-width: 314px;
+    }
+  }
 }
