@@ -39,8 +39,14 @@
     background-color: #fff;
     max-width: 864px;
     padding: 40px 30px 50px;
-    margin: 0 auto;
-    margin-top: 24px;
+    margin: 24px auto 0;
+    @include mq(md) {
+      margin: 24px 10px 0;
+    }
+    @media screen and (max-width: 390px){
+      margin-right: auto;
+      margin-left: auto;
+    }
   }
 
   &__catch {
@@ -56,7 +62,7 @@
   &__text {
     font-size: 1.8rem;
     text-align: center;
-    margin-top: 10px;
+    margin-top: 5px;
     @include mq(md) {
       font-size: 1.6rem;
     }
@@ -80,9 +86,15 @@
 
   &__btn-wrap {
     width: 211px;
+    @include mq(md) {
+      width: 100%;
+    }
     
     .c-btn {
       padding: 13px 10px;
+      @include mq(md) {
+        max-width: 282px;
+      }
     }
   }
 

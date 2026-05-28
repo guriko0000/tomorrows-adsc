@@ -58,7 +58,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 25px;
     row-gap: 0;
-    margin-top: 70px;
+    margin-top: 60px;
     @media screen and (max-width: 1050px){
       grid-template-columns: repeat(2, 1fr);
       margin: 50px auto 0;
@@ -67,7 +67,7 @@
       grid-template-columns: repeat(1, 1fr);
       column-gap: 0;
       row-gap: 30px;
-      
+      margin-top: 40px;
     }
   }
 
@@ -169,7 +169,7 @@
   }
 
   &__card-text {
-    margin-top: 15px;
+    margin-top: 10px;
     @include mq(md) {
       font-size: 1.5rem;
     }
@@ -177,7 +177,7 @@
 
   &__card-price {
     grid-row: 2;
-    padding: 20px 0;
+    padding: 10px 0 20px;
     @include mq(md) {
       grid-row: auto;
     }

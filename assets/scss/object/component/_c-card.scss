@@ -44,6 +44,9 @@
   &__body {
     background-color: #fff;
     padding: 40px 30px;
+    @include mq(md) {
+      padding: 30px;
+    }
   }
 
   &__meta {
@@ -82,11 +85,6 @@
     background: linear-gradient($main-color 0 0) var(--p, 0) 100% /var(--d, 0) 1px no-repeat;
     transition: 0.3s, background-position 0s 0.3s;
     font-weight: $medium;
-    @include mq(md) {
-      font-size: 1.4rem;
-      letter-spacing: 0.05em;
-      margin-top: 3px;
-    }
     @include mq(pc) {
       &:hover, &:focus-visible {
         --d: 100%;

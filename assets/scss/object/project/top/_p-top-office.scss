@@ -5,12 +5,20 @@
 -----------------------------------------*/
 .p-top-office {
   padding: 100px 0 200px;
+  @include mq(md) {
+    padding: 60px 0 100px;
+  }
 
   &__content {
     display: flex;
     gap: 80px;
     max-width: 910px;
     margin: 70px auto 0;
+    @include mq(md) {
+      flex-direction: column-reverse;
+      gap: 30px;
+      margin-top: 40px;
+    }
   }
 
   &__body {
@@ -22,6 +30,9 @@
     align-items: center;
     font-size: 2rem;
     font-weight: $medium;
+    @include mq(md) {
+      font-size: 1.8rem;
+    }
     &::before {
       content: '';
       display: block;
@@ -36,10 +47,16 @@
   &__address {
     line-height: 1.5;
     margin-top: 20px;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 
   &__access {
     margin-top: 35px;
+    @include mq(md) {
+      margin-top: 20px;
+    }
   }
 
   &__access-title {
@@ -58,11 +75,22 @@
     color: #555;
     font-size: 1.5rem;
     line-height: 1.5;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
   }
 
   &__img {
     width: 54%;
     max-width: 488px;
+    @include mq(md) {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
   }
 
 }

@@ -4,9 +4,13 @@
         p-top-offer
 -----------------------------------------*/
 .p-top-offer {
+  @include mq(md) {    
+    background: transparent url(../img/top/offer_img-sp.jpg) no-repeat center center/cover;
+    padding: 60px 0;
+  }
 
   .l-inner {
-    max-width: 1360px;
+    max-width: 1320px;
   }
 
   &__content {
@@ -16,10 +20,16 @@
   }
 
   &__text-area {
-    width: 36.875%;
+    width: 39.5454%;
     max-width: 472px;
     padding: 50px 0;
     margin-left: 50px;
+    @include mq(md) {
+      width: 100%;
+      max-width: 100%;
+      padding: 0;
+      margin: 0;
+    }
   }
 
   &__title {
@@ -27,10 +37,19 @@
     font-size: 3rem;
     font-weight: $demibold;
     line-height: 1.5;
+    @include mq(md) {
+      font-size: 2.2rem;
+    }
+    @media screen and (max-width: 382px){
+      font-size: 5.6vw;
+    }
   }
 
   &__text {
     margin-top: 30px;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 
   &__img {
@@ -39,6 +58,9 @@
     margin-left: calc(-50vw - -50%);
     width: 49.31vw;
     min-height: 526px;
+    @include mq(md) {
+      display: none;
+    }
     &::before {
       content: '';
       display: block;
@@ -59,11 +81,17 @@
 
   &__btn-wrap {
     margin-top: 40px;
+    @include mq(md) {
+      text-align: center;
+    }
 
     .c-btn {
       max-width: 300px;
       font-size: 1.6rem;
       padding: 18px 40px;
+      @include mq(md) {
+        max-width: 360px;
+      }
     }
   }
 

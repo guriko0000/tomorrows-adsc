@@ -48,6 +48,7 @@
     font-family: $second-font-family;
     font-size: 4rem;
     font-weight: $demibold;
+    letter-spacing: 0.05em;
     line-height: 1.4;
     @include mq(md) {
       font-size: 2.5rem;

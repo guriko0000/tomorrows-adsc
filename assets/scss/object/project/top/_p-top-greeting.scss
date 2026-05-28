@@ -19,6 +19,9 @@
     aspect-ratio: 379 / 255;
     background: url(../img/common/bg_ring02.png) no-repeat center / contain;
     z-index: -1;
+    @include mq(md) {
+      content: none;
+    }
   }
 
   &__media {
