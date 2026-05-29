@@ -1,0 +1,94 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-servicetable
+-----------------------------------------*/
+.c-servicetable {
+  overflow-x: auto;
+
+  &__inner {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  &__th-first {
+    width: 267px;
+
+    @include mq(lg) {
+      width: 240px;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid #eee;
+    font-size: 1.4rem;
+    line-height: 1.6;
+    padding: 14px 16px;
+  }
+
+  thead {
+    th {
+      background-color: $main-color;
+      color: #fff;
+      font-weight: $bold;
+      text-align: center;
+      vertical-align: middle;
+
+      &:first-child {
+        background-color: #eee;
+        color: #333;
+        font-weight: $regular;
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    th {
+      background-color: $main-bg;
+      font-weight: $regular;
+      text-align: left;
+      vertical-align: middle;
+    }
+
+    td {
+      background-color: #fff;
+      font-family: $third-font-family;
+      text-align: center;
+      vertical-align: middle;
+    }
+  }
+
+  tbody &__section {
+    th {
+      background-color: #808080;
+      color: #fff;
+      font-family: $base-font-family;
+      font-size: 1.3rem;
+      font-weight: $bold;
+      text-align: left;
+      padding: 8px 16px;
+    }
+  }
+
+  &__mark {
+    display: block;
+
+    &.maru {
+      color: #0A4D5C;
+    }
+    &.sankaku {
+      color: #B8944D;
+    }
+  }
+
+  &__sub {
+    display: block;
+    font-family: $base-font-family;
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+}

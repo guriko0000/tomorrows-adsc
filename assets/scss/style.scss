@@ -48,6 +48,9 @@
 @use "./object/component/c-greeting";
 @use "./object/component/c-support";
 @use "./object/component/c-plan";
+@use "./object/component/c-numcard";
+@use "./object/component/c-plantable";
+@use "./object/component/c-servicetable";
 
 
 // Project
@@ -67,6 +70,9 @@
 @use "./object/project/under/p-support";
 @use "./object/project/under/p-worries";
 @use "./object/project/under/p-plan";
+@use "./object/project/under/p-features";
+@use "./object/project/under/p-tab";
+@use "./object/project/under/p-reference";
 
 
 

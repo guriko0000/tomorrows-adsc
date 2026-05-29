@@ -1,0 +1,78 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-plantable
+-----------------------------------------*/
+.c-plantable {
+  overflow-x: auto;
+
+  &__inner {
+    width: 100%;
+    min-width: 900px;
+    border-collapse: collapse;
+    table-layout: fixed;
+  }
+
+  &__th-first {
+    width: 267px;
+    @include mq(lg) {
+      width: 240px;
+    }
+  }
+
+  th,
+  td {
+    border: 1px solid #eee;
+    font-size: 1.8rem;
+    line-height: 1.6;
+    padding: 20px;
+  }
+
+  thead {
+    th {
+      background-color: $main-color;
+      color: #fff;
+      font-weight: $bold;
+      text-align: center;
+      vertical-align: middle;
+
+      &:first-child {
+        background-color: #eee;
+        color: #333;
+        font-weight: $regular;
+        text-align: left;
+      }
+    }
+  }
+
+  tbody {
+    font-family: $third-font-family;
+    .align-center {
+      vertical-align: middle;
+    }
+
+    th {
+      background-color: $main-bg;
+      font-weight: $regular;
+      text-align: left;
+    }
+
+    td {
+      background-color: #fff;
+      text-align: right;
+
+      &[colspan] {
+        font-family: $base-font-family;
+        text-align: center;
+      }
+    }
+
+    .unit {
+      font-family: $base-font-family;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__note-wrap {}
+
+}

@@ -47,7 +47,7 @@
   &__title {
     font-family: $second-font-family;
     font-size: 4rem;
-    font-weight: $demibold;
+    font-weight: $semibold;
     letter-spacing: 0.05em;
     line-height: 1.4;
     @include mq(md) {

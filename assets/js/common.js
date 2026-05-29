@@ -79,7 +79,7 @@ $(function() {
   if(window.matchMedia("(max-width: 767px)").matches){
     $(function () {
       var headerHight = 75;
-      $('a[href^="#"]').click(function () {
+      $('a[href^="#"]:not(.js-tab-link)').click(function () {
       var href = $(this).attr("href");
       var target = $(href == "#" || href == "" ? "html" : href);
       var position = target.offset().top - headerHight;
@@ -90,7 +90,7 @@ $(function() {
   }else{ 
     $(function () {
       var headerHight = 120;
-      $('a[href^="#"]').click(function () {
+      $('a[href^="#"]:not(.js-tab-link)').click(function () {
       var href = $(this).attr("href");
       var target = $(href == "#" || href == "" ? "html" : href);
       var position = target.offset().top - headerHight;
@@ -121,3 +121,73 @@ document.getElementById("current-year").innerText = new Date().getFullYear();
   window.addEventListener('resize', switchViewport);
   switchViewport();
 })();
+
+
+
+
+
+
+// タブ切り替え
+// ________________________________________________________
+document.addEventListener("DOMContentLoaded", () => {
+  const root = document.querySelector(".js-tab");
+  if (!root) return;
+
+  const tabItems = Array.from(root.querySelectorAll(".p-tab__item"));
+  const tabLinks = Array.from(root.querySelectorAll(".js-tab-link"));
+  const panels = Array.from(root.querySelectorAll(".p-tab__panel"));
+  if (tabLinks.length === 0 || panels.length === 0) return;
+
+  const getPanelByHash = (hash) => {
+    if (!hash) return null;
+    try {
+      return root.querySelector(hash);
+    } catch {
+      return null;
+    }
+  };
+
+  const setActive = (hash) => {
+    const target = getPanelByHash(hash);
+    const panel = target || root.querySelector(".p-tab__panel--first") || panels[0];
+    if (!panel) return;
+
+    const id = `#${panel.id}`;
+    const activeLink = tabLinks.find((a) => a.getAttribute("href") === id);
+    const activeItem = activeLink?.closest(".p-tab__item");
+
+    tabItems.forEach((li) => li.classList.remove("is-active"));
+    tabLinks.forEach((a) => {
+      a.setAttribute("aria-selected", "false");
+      a.setAttribute("tabindex", "-1");
+    });
+
+    if (activeItem) activeItem.classList.add("is-active");
+    if (activeLink) {
+      activeLink.setAttribute("aria-selected", "true");
+      activeLink.setAttribute("tabindex", "0");
+    }
+
+    panels.forEach((p) => {
+      p.classList.remove("is-active");
+      p.setAttribute("aria-hidden", "true");
+    });
+    panel.classList.add("is-active");
+    panel.setAttribute("aria-hidden", "false");
+  };
+
+  root.addEventListener(
+    "click",
+    (e) => {
+      const link = e.target.closest(".js-tab-link");
+      if (!link || !root.contains(link)) return;
+
+      e.preventDefault(); // ← #を付けない
+      setActive(link.getAttribute("href"));
+    },
+    true
+  );
+
+  // ここ（最後）：最初は必ず01を開く（#は使わない）
+  setActive(null);
+});

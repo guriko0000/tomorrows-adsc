@@ -144,7 +144,7 @@
   &__card-title {
     font-family: $second-font-family;
     font-size: 2.2rem;
-    font-weight: $demibold;
+    font-weight: $semibold;
     text-align: center;
     @include mq(md) {
       font-size: 2rem;

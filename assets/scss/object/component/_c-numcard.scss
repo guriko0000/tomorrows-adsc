@@ -1,0 +1,62 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-numcard
+-----------------------------------------*/
+.c-numcard {
+  position: relative;
+  background-color: #fff;
+  box-shadow: 0px 5px 20px rgba(0,0,0,0.1);
+  padding: 22px 30px 30px;
+
+  &::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51px;
+    height: 46px;
+    background: url(../img/common/num-bg.png) no-repeat center / contain;
+  }
+
+  &__num {
+    display: inline-block;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    color: #fff;
+    font-family: $third-font-family;
+    font-size: 1.8rem;
+    font-weight: $medium;
+    z-index: 1;
+  }
+
+  &__head {}
+
+  &__icon {
+    display: block;
+    max-width: 70px;
+    margin: 0 auto;
+  }
+
+  &__title {
+    font-family: $second-font-family;
+    font-family: $second-color;
+    font-size: 2rem;
+    font-weight: $semibold;
+    margin-top: 30px;
+  }
+
+  &__body {
+    margin-top: 20px;
+  }
+
+  &__text {
+    em {
+      font-style: normal;
+      font-weight: $bold;
+    }
+  }
+
+}

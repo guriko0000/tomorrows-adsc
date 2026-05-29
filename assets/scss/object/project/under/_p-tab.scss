@@ -1,0 +1,36 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-tab
+-----------------------------------------*/
+.p-tab {
+
+  // パネル
+  &__panel {
+    display: none;
+    opacity: 0;
+    background: #fff;
+    border-top: none;
+    padding: 30px 20px;
+    @include mq(md) {
+      padding: 20px 10px;
+    }
+  }
+
+  // 表示時
+  &__panel.is-active {
+    display: block;
+    animation-name: tab-display;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+  @keyframes tab-display {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+  
+}
