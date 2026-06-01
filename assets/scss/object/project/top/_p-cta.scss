@@ -53,6 +53,7 @@
     font-family: $second-font-family;
     font-size: 2.8rem;
     font-weight: $semibold;
+    line-height: 1.5;
     text-align: center;
     @include mq(md) {
       font-size: 2rem;
@@ -99,7 +100,15 @@
   }
 }
 
-.p-cta--service {
+.p-cta--service {  
+  .p-cta__content {
+    max-width: 828px;
+  }
+
+  .p-cta__text {
+    margin-top: 20px;
+  }
+
   .p-cta__btn-wrap {
     width: 314px;
     @include mq(md) {

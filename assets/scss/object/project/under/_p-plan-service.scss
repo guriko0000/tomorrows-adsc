@@ -1,12 +1,13 @@
 @use "../../../global/index" as *;
 
 /* -------------------------------------
-        p-faq
+        p-plan-service
 -----------------------------------------*/
-.p-faq {
-  padding: 100px 0;
+.p-plan-service {
+  padding: 70px 0px 100px;
 
-  &__list {
-    margin-top: 60px;
+  &__table {
+    margin-top: 50px;
   }
+
 }

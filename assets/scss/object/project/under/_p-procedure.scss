@@ -18,8 +18,10 @@
 
   &__row--head {
     .p-procedure__dt, .p-procedure__dd {
-      color: #fff;
       background-color: $main-color;
+      color: #fff;
+      font-size: 1.8rem;
+      font-weight: $medium;
     }
   }
 
@@ -27,6 +29,8 @@
     flex-shrink: 0;
     background-color: #fff;
     width: 332px;
+    font-weight: $medium;
+    line-height: 1.5;
     padding: 20px 40px;
   }
 
@@ -34,12 +38,13 @@
     flex: 1;
     background-color: #fff;
     border-left: 1px solid #EEE;
+    line-height: 1.5;
     padding: 20px 40px;
-  }
 
-  &__list {
-    li {
-
+    em {
+      display: inline-block;
+      color: $main-color;
+      font-weight: $medium;
     }
 
     .tag {
@@ -51,11 +56,73 @@
       line-height: 1.2;
       padding: 4px 5px;
       margin-left: 16px;
+      text-indent: 0;
     }
   }
 
-  &__bottom {}
+  &__list {
+    padding-left: 1em;
 
-  &__bottom-text {}
+    li {
+      line-height: 1.5;
+      text-indent: -0.8em;
+      &:not(:first-child) {
+        margin-top: 5px;
+      }
+
+      &::before {
+        content:  "";
+        width: 3px;
+        height: 3px;
+        display: inline-block;
+        background-color: $color-black01;
+        border-radius: 50%;  
+        margin-right: 8px;
+        margin-bottom: 3px;
+      }
+
+      .tag {
+        display: inline-block;
+        color: #fff;
+        background-color: $accent-color;
+        font-size: 1.2rem;
+        font-weight: $medium;
+        line-height: 1.2;
+        padding: 4px 5px;
+        margin-left: 16px;
+        text-indent: 0;
+      }
+    }
+  }
+
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 35px;
+    margin-top: 40px;
+
+    &::before, &::after {
+      content: '';
+      display: inline-block;
+      width: 101px;
+      height: 124px;
+      background: url(../img/under/procedure_icon01.png) no-repeat center / contain;
+    }
+
+    &::before {
+      background-image: url(../img/under/procedure_icon01.png);
+    }
+    &::after {
+      background: url(../img/under/procedure_icon02.png) no-repeat center / contain;
+    }
+  }
+
+  &__bottom-text {
+    font-size: 1.8rem;
+    font-weight: $medium;
+    text-align: center;
+  }
+
 
 }

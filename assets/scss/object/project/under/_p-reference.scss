@@ -4,13 +4,44 @@
         p-reference
 -----------------------------------------*/
 .p-reference {
+  padding: 100px 0 70px;
 
-  &__set {}
+  &__set {
+    background-color: $main-bg;
+    border-top: 3px solid $main-color;
+    padding: 40px 30px;
+    margin-top: 70px;
+  }
 
-  &__set-title {}
+  &__set-title {
+    display: block;
+    width: fit-content;
+    background-color: $main-color;
+    color: #fff;
+    font-size: 2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    text-align: center;
+    padding: 5px 35px;
+    margin: 0 auto;
+  }
 
-  &__set-text {}
+  &__set-text {
+    font-weight: $medium;
+    line-height: 1.5;
+    text-align: center;
+    margin-top: 15px;
 
-  &__set-note {}
+    .num {
+      display: inline-block;
+      font-size: 3rem;
+    }
+  }
+
+  &__set-note {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+  }
 
 }

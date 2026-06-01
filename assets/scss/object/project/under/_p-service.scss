@@ -4,7 +4,7 @@
         p-service
 -----------------------------------------*/
 .p-service {
-  background: transparent url(../img/top/service_bg.jpg) no-repeat center center/cover;
+  background: transparent url(../img/under/under-service_bg.jpg) no-repeat center center/cover;
   padding: 100px 0;
   @include mq(md) {
     padding: 60px 0;
@@ -61,17 +61,18 @@
     top: -30px;
     left: 50%;
     transform: translateX(-50%);
-    width: 50px;
-    height: 50px;
+    width: 60px;
+    height: 60px;
     background-color: $main-color;
     border-radius: 50%;
     color: #fff;
-    font-size: 2.4rem;
+    font-family: $second-font-family;
+    font-size: 2.6rem;
     line-height: 1;
   }
 
   &__card-text {
-    margin-top: 10px;
+    margin-top: 30px;
     @include mq(md) {
       font-size: 1.5rem;
     }

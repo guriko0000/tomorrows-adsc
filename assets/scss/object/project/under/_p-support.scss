@@ -25,3 +25,10 @@
     margin-top: 60px;
   }
 }
+
+.p-support--service {
+    &::after {
+    top: 62px;
+
+  }
+}

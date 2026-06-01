@@ -2005,6 +2005,9 @@ body {
         align-self: start;
   }
 }
+.c-greeting__position {
+  line-height: 1.2;
+}
 @media screen and (max-width: 767px) {
   .c-greeting__position {
     font-size: 1.4rem;
@@ -2013,18 +2016,17 @@ body {
 .c-greeting__name {
   font-size: 2.4rem;
   line-height: 1.5;
-  margin-top: 5px;
+  margin-top: 10px;
 }
 @media screen and (max-width: 767px) {
   .c-greeting__name {
     font-size: 1.8rem;
-    margin-top: 0;
   }
 }
 .c-greeting__text-warp {
   grid-column: 2/3;
   grid-row: 2/3;
-  margin-top: 50px;
+  margin-top: 40px;
 }
 @media screen and (max-width: 767px) {
   .c-greeting__text-warp {
@@ -2032,13 +2034,27 @@ body {
     margin-top: 0;
   }
 }
+.c-greeting__text em {
+  font-style: normal;
+  font-weight: 700;
+}
 @media screen and (max-width: 767px) {
   .c-greeting__text {
     font-size: 1.5rem;
   }
 }
-.c-greeting__text:not(:first-child) {
+.c-greeting__text + .c-greeting__text {
   margin-top: 30px;
+}
+.c-greeting__title {
+  color: #2DAEBB;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.c-greeting__title + * {
+  margin-top: 15px;
 }
 
 /* -------------------------------------
@@ -2052,6 +2068,9 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   gap: 40px;
+  max-width: 1070px;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media screen and (max-width: 767px) {
   .c-support {
@@ -2064,11 +2083,13 @@ body {
 .c-support__img {
   max-width: 408px;
   width: 40%;
+  margin-top: 6px;
 }
 @media screen and (max-width: 767px) {
   .c-support__img {
     max-width: 100%;
     width: 100%;
+    margin-top: 0;
   }
 }
 .c-support__img img {
@@ -2268,6 +2289,8 @@ body {
   padding: 13px 5px;
 }
 .c-plan__set-price-text {
+  font-size: 1.5rem;
+  line-height: 1.5;
   text-align: center;
 }
 .c-plan__set-price-text .text-color {
@@ -2363,18 +2386,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 51px;
-  height: 46px;
-  background: url(../img/common/num-bg.png) no-repeat center/contain;
+  width: 70px;
+  height: 70px;
+  background: url(../img/common/num-bg02.png) no-repeat center/cover;
 }
 .c-numcard__num {
   display: inline-block;
   position: absolute;
-  top: 5px;
-  left: 10px;
+  top: 7px;
+  left: 13px;
   color: #fff;
   font-family: "Roboto", sans-serif;
-  font-size: 1.8rem;
+  font-size: 2.4rem;
   font-weight: 500;
   z-index: 1;
 }
@@ -2385,7 +2408,6 @@ body {
 }
 .c-numcard__title {
   font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
-  font-family: #38BADC;
   font-size: 2rem;
   font-weight: 600;
   margin-top: 30px;
@@ -2444,6 +2466,9 @@ body {
 .c-plantable tbody .align-center {
   vertical-align: middle;
 }
+.c-plantable tbody .border {
+  border: 2px solid #2DAEBB;
+}
 .c-plantable tbody th {
   background-color: #EEFAF9;
   font-weight: 400;
@@ -2455,12 +2480,40 @@ body {
 }
 .c-plantable tbody td[colspan] {
   font-family: "Notosans_subset", sans-serif;
+  font-size: 1.6rem;
   text-align: center;
 }
 .c-plantable tbody .unit {
   font-family: "Notosans_subset", sans-serif;
   font-size: 1.4rem;
 }
+.c-plantable__note-wrap {
+  margin-top: 20px;
+}
+.c-plantable__note {
+  position: relative;
+  line-height: 1.5;
+  padding-left: 16px;
+}
+.c-plantable__note::before {
+  content: "※";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+.c-plantable__note small {
+  display: block;
+  font-size: 1.2rem;
+}
+.c-plantable__note em {
+  color: #2DAEBB;
+  font-style: normal;
+  font-weight: 700;
+}
+
 /* -------------------------------------
         c-servicetable
 -----------------------------------------*/
@@ -2502,6 +2555,11 @@ body {
   font-weight: 400;
   text-align: left;
 }
+.c-servicetable tbody .text-small {
+  color: #555;
+  display: inline-block;
+  font-size: 1.2rem;
+}
 .c-servicetable tbody th {
   background-color: #EEFAF9;
   font-size: 1.6rem;
@@ -2509,7 +2567,6 @@ body {
 }
 .c-servicetable tbody td {
   background-color: #fff;
-  font-family: "Roboto", sans-serif;
   text-align: center;
   vertical-align: middle;
 }
@@ -2521,6 +2578,9 @@ tbody .c-servicetable__section th {
   font-weight: 500;
   text-align: left;
   padding: 10px 20px;
+}
+tbody .c-servicetable__section th .sub-text {
+  font-size: 1.4rem;
 }
 .c-servicetable__mark {
   display: block;
@@ -2536,6 +2596,169 @@ tbody .c-servicetable__section th {
   font-family: "Notosans_subset", sans-serif;
   font-size: 1.2rem;
   line-height: 1.4;
+}
+.c-servicetable__legend {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 20px;
+}
+.c-servicetable__note-wrap {
+  margin-top: 20px;
+}
+.c-servicetable__note {
+  position: relative;
+  line-height: 1.5;
+  padding-left: 16px;
+}
+.c-servicetable__note::before {
+  content: "※";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  margin-right: 5px;
+}
+.c-servicetable__note small {
+  display: block;
+  font-size: 1.2rem;
+}
+.c-servicetable__note em {
+  color: #2DAEBB;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* -------------------------------------
+        c-servicetable02
+-----------------------------------------*/
+.c-servicetable02 {
+  overflow-x: auto;
+}
+.c-servicetable02__inner {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.c-servicetable02__th-first {
+  width: 329px;
+}
+@media screen and (max-width: 992px) {
+  .c-servicetable02__th-first {
+    width: 300px;
+  }
+}
+.c-servicetable02 th,
+.c-servicetable02 td {
+  border: 1px solid #eee;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  padding: 20px 20px;
+  vertical-align: middle;
+}
+.c-servicetable02 thead th {
+  background-color: #2DAEBB;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  vertical-align: middle;
+}
+.c-servicetable02 thead th:first-child {
+  background-color: #eee;
+  color: #333;
+  font-weight: 400;
+  text-align: left;
+}
+.c-servicetable02 tbody th {
+  background-color: #EEFAF9;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.c-servicetable02 tbody td {
+  background-color: #fff;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  vertical-align: middle;
+}
+tbody .c-servicetable02__section th {
+  background-color: #797979;
+  color: #fff;
+  font-family: "Notosans_subset", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: left;
+  padding: 10px 20px;
+}
+.c-servicetable02__mark {
+  font-family: "Notosans_subset", sans-serif;
+  display: block;
+}
+.c-servicetable02__mark.maru {
+  color: #0A4D5C;
+}
+.c-servicetable02__mark.batu {
+  color: #B96060;
+}
+.c-servicetable02__sub {
+  display: block;
+  font-family: "Notosans_subset", sans-serif;
+  line-height: 1.5;
+}
+.c-servicetable02__sub small {
+  display: block;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+/* -------------------------------------
+        c-faq
+-----------------------------------------*/
+.c-faq__row {
+  background-color: #fff;
+  line-height: 1.5;
+  padding: 30px 40px;
+}
+.c-faq__row:not(:first-child) {
+  margin-top: 30px;
+}
+.c-faq__head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.c-faq__head::before {
+  content: "Q.";
+  display: block;
+  font-family: "Roboto", sans-serif;
+  color: #2DAEBB;
+  font-size: 2.8rem;
+  line-height: 1.4;
+  margin-right: 10px;
+}
+.c-faq__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5px;
+}
+.c-faq__data::before {
+  content: "A.";
+  display: block;
+  color: #B96060;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 1.4;
+  margin-right: 10px;
 }
 
 /* -------------------------------------
@@ -3230,6 +3453,7 @@ tbody .c-servicetable__section th {
   font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
   font-size: 2.8rem;
   font-weight: 600;
+  line-height: 1.5;
   text-align: center;
 }
 @media screen and (max-width: 767px) {
@@ -3289,6 +3513,12 @@ tbody .c-servicetable__section th {
   }
 }
 
+.p-cta--service .p-cta__content {
+  max-width: 828px;
+}
+.p-cta--service .p-cta__text {
+  margin-top: 20px;
+}
 .p-cta--service .p-cta__btn-wrap {
   width: 314px;
 }
@@ -3389,7 +3619,7 @@ tbody .c-servicetable__section th {
 -----------------------------------------*/
 .p-greeting {
   position: relative;
-  padding: 100px 0 75px;
+  padding: 100px 0 65px;
 }
 @media screen and (max-width: 767px) {
   .p-greeting {
@@ -3575,7 +3805,7 @@ tbody .c-servicetable__section th {
         p-office
 -----------------------------------------*/
 .p-office {
-  padding: 75px 0 200px;
+  padding: 65px 0 200px;
 }
 @media screen and (max-width: 767px) {
   .p-office {
@@ -3692,7 +3922,7 @@ tbody .c-servicetable__section th {
         p-service
 -----------------------------------------*/
 .p-service {
-  background: transparent url(../img/top/service_bg.jpg) no-repeat center center/cover;
+  background: transparent url(../img/under/under-service_bg.jpg) no-repeat center center/cover;
   padding: 100px 0;
 }
 @media screen and (max-width: 767px) {
@@ -3757,16 +3987,17 @@ tbody .c-servicetable__section th {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   background-color: #2DAEBB;
   border-radius: 50%;
   color: #fff;
-  font-size: 2.4rem;
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  font-size: 2.6rem;
   line-height: 1;
 }
 .p-service__card-text {
-  margin-top: 10px;
+  margin-top: 30px;
 }
 @media screen and (max-width: 767px) {
   .p-service__card-text {
@@ -3874,14 +4105,18 @@ tbody .c-servicetable__section th {
   border-bottom: 1px solid #EEE;
 }
 .p-procedure__row--head .p-procedure__dt, .p-procedure__row--head .p-procedure__dd {
-  color: #fff;
   background-color: #2DAEBB;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 500;
 }
 .p-procedure__dt {
   -ms-flex-negative: 0;
       flex-shrink: 0;
   background-color: #fff;
   width: 332px;
+  font-weight: 500;
+  line-height: 1.5;
   padding: 20px 40px;
 }
 .p-procedure__dd {
@@ -3890,9 +4125,15 @@ tbody .c-servicetable__section th {
           flex: 1;
   background-color: #fff;
   border-left: 1px solid #EEE;
+  line-height: 1.5;
   padding: 20px 40px;
 }
-.p-procedure__list .tag {
+.p-procedure__dd em {
+  display: inline-block;
+  color: #2DAEBB;
+  font-weight: 500;
+}
+.p-procedure__dd .tag {
   display: inline-block;
   color: #fff;
   background-color: #B96060;
@@ -3901,7 +4142,71 @@ tbody .c-servicetable__section th {
   line-height: 1.2;
   padding: 4px 5px;
   margin-left: 16px;
+  text-indent: 0;
 }
+.p-procedure__list {
+  padding-left: 1em;
+}
+.p-procedure__list li {
+  line-height: 1.5;
+  text-indent: -0.8em;
+}
+.p-procedure__list li:not(:first-child) {
+  margin-top: 5px;
+}
+.p-procedure__list li::before {
+  content: "";
+  width: 3px;
+  height: 3px;
+  display: inline-block;
+  background-color: #333;
+  border-radius: 50%;
+  margin-right: 8px;
+  margin-bottom: 3px;
+}
+.p-procedure__list li .tag {
+  display: inline-block;
+  color: #fff;
+  background-color: #B96060;
+  font-size: 1.2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  padding: 4px 5px;
+  margin-left: 16px;
+  text-indent: 0;
+}
+.p-procedure__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 35px;
+  margin-top: 40px;
+}
+.p-procedure__bottom::before, .p-procedure__bottom::after {
+  content: "";
+  display: inline-block;
+  width: 101px;
+  height: 124px;
+  background: url(../img/under/procedure_icon01.png) no-repeat center/contain;
+}
+.p-procedure__bottom::before {
+  background-image: url(../img/under/procedure_icon01.png);
+}
+.p-procedure__bottom::after {
+  background: url(../img/under/procedure_icon02.png) no-repeat center/contain;
+}
+.p-procedure__bottom-text {
+  font-size: 1.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+
 /* -------------------------------------
         p-support
 -----------------------------------------*/
@@ -3929,6 +4234,10 @@ tbody .c-servicetable__section th {
   margin-top: 60px;
 }
 
+.p-support--service::after {
+  top: 62px;
+}
+
 /* -------------------------------------
         p-worries
 -----------------------------------------*/
@@ -3940,9 +4249,48 @@ tbody .c-servicetable__section th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+}
+.p-worries__text-area {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  max-width: 630px;
+  margin-right: 50px;
+  margin: 26px 50px 0 0;
+}
+.p-worries__title {
+  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #2DAEBB;
+}
+.p-worries__list {
+  font-size: 1.8rem;
+  padding-left: 1.2em;
+  margin-top: 30px;
+}
+.p-worries__item {
+  line-height: 1.5;
+  text-indent: -1em;
+}
+.p-worries__item:not(:first-child) {
+  margin-top: 20px;
+}
+.p-worries__item::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background-color: #848484;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+.p-worries__item em {
+  color: #2DAEBB;
+  font-style: normal;
+  font-weight: 500;
 }
 .p-worries__catch {
   display: -webkit-box;
@@ -3951,7 +4299,7 @@ tbody .c-servicetable__section th {
   font-size: 2.2rem;
   font-weight: 500;
   line-height: 1.5;
-  margin-top: 40px;
+  margin-top: 50px;
 }
 @media screen and (max-width: 767px) {
   .p-worries__catch {
@@ -4013,8 +4361,8 @@ tbody .c-servicetable__section th {
         p-plan
 -----------------------------------------*/
 .p-plan {
-  padding: 354px 0 100px;
-  margin-top: -254px;
+  padding: 327px 0 100px;
+  margin-top: -227px;
 }
 .p-plan__list {
   display: -webkit-box;
@@ -4071,11 +4419,37 @@ tbody .c-servicetable__section th {
   margin-top: 20px;
 }
 .p-plan__note {
+  position: relative;
   line-height: 1.5;
+  padding-left: 16px;
+}
+.p-plan__note::before {
+  content: "※";
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 1.2rem;
+  margin-right: 5px;
 }
 .p-plan__note small {
-  display: inline-block;
+  display: block;
   font-size: 1.2rem;
+}
+.p-plan__note em {
+  color: #2DAEBB;
+  font-style: normal;
+  font-weight: 700;
+}
+
+/* -------------------------------------
+        p-plan-service
+-----------------------------------------*/
+.p-plan-service {
+  padding: 70px 0px 100px;
+}
+.p-plan-service__table {
+  margin-top: 50px;
 }
 
 /* -------------------------------------
@@ -4084,15 +4458,72 @@ tbody .c-servicetable__section th {
 .p-features {
   padding: 100px 0;
 }
+.p-features__list {
+  margin-top: 50px;
+}
+
 /* -------------------------------------
         p-tab
 -----------------------------------------*/
+.p-tab__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  max-width: 812px;
+  gap: 30px;
+  margin: 80px auto 0;
+}
+.p-tab__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  position: relative;
+  background-color: #fff;
+  border: 1px solid #2DAEBB;
+  text-align: center;
+  padding: 20px 10px;
+}
+.p-tab__item::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  bottom: -19px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 24px;
+  height: 19px;
+  background: url(../img/under/triangle_border.png) no-repeat center/contain;
+}
+.p-tab__item.is-active {
+  background-color: #2DAEBB;
+  color: #fff;
+}
+.p-tab__item.is-active::after {
+  background: url(../img/under/triangle.png) no-repeat center/contain;
+}
+.p-tab__item.is-active .p-tab__title {
+  color: #fff;
+}
+.p-tab__title {
+  color: #2DAEBB;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.p-tab__lead {
+  font-size: 1.4rem;
+  line-height: 1.5;
+  margin-top: 5px;
+}
 .p-tab__panel {
   display: none;
   opacity: 0;
   background: #fff;
-  border-top: none;
-  padding: 30px 20px;
+  margin-top: 40px;
 }
 @media screen and (max-width: 767px) {
   .p-tab__panel {
@@ -4128,6 +4559,138 @@ tbody .c-servicetable__section th {
 /* -------------------------------------
         p-reference
 -----------------------------------------*/
+.p-reference {
+  padding: 100px 0 70px;
+}
+.p-reference__set {
+  background-color: #EEFAF9;
+  border-top: 3px solid #2DAEBB;
+  padding: 40px 30px;
+  margin-top: 70px;
+}
+.p-reference__set-title {
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #2DAEBB;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  padding: 5px 35px;
+  margin: 0 auto;
+}
+.p-reference__set-text {
+  font-weight: 500;
+  line-height: 1.5;
+  text-align: center;
+  margin-top: 15px;
+}
+.p-reference__set-text .num {
+  display: inline-block;
+  font-size: 3rem;
+}
+.p-reference__set-note {
+  font-size: 1.2rem;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* -------------------------------------
+        p-flow
+-----------------------------------------*/
+.p-flow {
+  padding: 327px 0 100px;
+  margin-top: -227px;
+}
+.p-flow__list {
+  margin-top: 50px;
+}
+.p-flow__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  position: relative;
+  gap: 35px;
+}
+.p-flow__item:not(:first-child) {
+  margin-top: 50px;
+}
+.p-flow__item::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 60px;
+  left: 30px;
+  background-color: #2DAEBB;
+  width: 1px;
+  height: calc(100% + 50px);
+}
+.p-flow__item:last-child::after {
+  content: none;
+}
+.p-flow__number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #2DAEBB;
+  color: #fff;
+  font-family: "Roboto", sans-serif;
+}
+.p-flow__number-text {
+  font-size: 1.2rem;
+  line-height: 1.4;
+}
+.p-flow__number-num {
+  font-size: 2rem;
+  line-height: 1;
+}
+.p-flow__body {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+.p-flow__title {
+  color: #2DAEBB;
+  font-size: 2.2rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+.p-flow__text {
+  margin-top: 12px;
+  line-height: 1.5;
+}
+
+/* -------------------------------------
+        p-faq
+-----------------------------------------*/
+.p-faq {
+  padding: 100px 0;
+}
+.p-faq__list {
+  margin-top: 60px;
+}
+
 /* -------------------------------------
         utility
 -----------------------------------------*/

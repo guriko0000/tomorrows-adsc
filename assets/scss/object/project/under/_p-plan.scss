@@ -4,8 +4,8 @@
         p-plan
 -----------------------------------------*/
 .p-plan {
-  padding: 354px 0 100px;
-  margin-top: -254px;
+  padding: 327px 0 100px;
+  margin-top: -227px;
 
   &__list {
     display: flex;
@@ -41,15 +41,45 @@
     }
   }
 
-  &__note-wrap {
-    margin-top: 20px;
-  }
+  // &__note-wrap {
+  //   margin-top: 20px;
+  // }
 
-  &__note {
+  // &__note {
+  //   line-height: 1.5;
+  //   small {
+  //     display: inline-block;
+  //     font-size: 1.2rem;
+  //   }
+  // }
+
+    &__note-wrap {
+      margin-top: 20px;
+    }
+
+    &__note {
+    position: relative;
     line-height: 1.5;
-    small {
+    padding-left: 16px;
+    &::before {
+      content: '※';
       display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
       font-size: 1.2rem;
+      margin-right: 5px;
+    }
+    
+    small {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    em {
+      color: $main-color;
+      font-style: normal;
+      font-weight: $bold;
     }
   }
 

@@ -9,8 +9,6 @@
   position: relative;
 
   &--recommend {
-    // border: 5px solid $main-color;
-
     &::before {
       content: '';
       display: inline-block;
@@ -114,6 +112,8 @@
   }
 
   &__set-price-text {
+    font-size: 1.5rem;
+    line-height: 1.5;
     text-align: center;
     .text-color {
       color: #056E79;

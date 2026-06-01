@@ -48,6 +48,11 @@
   }
 
   tbody {
+    .text-small {
+      color: #555;
+      display: inline-block;
+      font-size: 1.2rem;
+    }
     th {
       background-color: $main-bg;
       font-size: 1.6rem;
@@ -56,7 +61,6 @@
 
     td {
       background-color: #fff;
-      font-family: $third-font-family;
       text-align: center;
       vertical-align: middle;
     }
@@ -71,6 +75,10 @@
       font-weight: $medium;
       text-align: left;
       padding: 10px 20px;
+
+      .sub-text {
+        font-size: 1.4rem;
+      }
     }
   }
 
@@ -90,5 +98,41 @@
     font-family: $base-font-family;
     font-size: 1.2rem;
     line-height: 1.4;
+  }
+
+  &__legend {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    margin-top: 20px;
+  }
+
+  &__note-wrap {
+    margin-top: 20px;
+  }
+
+  &__note {
+    position: relative;
+    line-height: 1.5;
+    padding-left: 16px;
+    &::before {
+      content: '※';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      font-size: 1.2rem;
+      margin-right: 5px;
+    }
+    
+    small {
+      display: block;
+      font-size: 1.2rem;
+    }
+
+    em {
+      color: $main-color;
+      font-style: normal;
+      font-weight: $bold;
+    }
   }
 }
