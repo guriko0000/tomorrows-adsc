@@ -51,11 +51,12 @@
 @use "./object/component/c-numcard";
 @use "./object/component/c-plantable";
 @use "./object/component/c-servicetable";
+@use "./object/component/c-faq";
 
 
 // Project
 @use "./object/project/top/p-mv";
-@use "./object/project/top/p-top-intro";
+@use "./object/project/top/p-intro";
 @use "./object/project/top/p-top-service";
 @use "./object/project/top/p-top-reason";
 @use "./object/project/top/p-cta";
@@ -73,6 +74,8 @@
 @use "./object/project/under/p-features";
 @use "./object/project/under/p-tab";
 @use "./object/project/under/p-reference";
+@use "./object/project/under/p-flow";
+@use "./object/project/under/p-faq";
 
 
 
