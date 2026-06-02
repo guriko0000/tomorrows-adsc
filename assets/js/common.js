@@ -191,3 +191,39 @@ document.addEventListener("DOMContentLoaded", () => {
   // ここ（最後）：最初は必ず01を開く（#は使わない）
   setActive(null);
 });
+
+
+
+
+
+
+
+// スクロールヒント
+// ________________________________________________________
+document.addEventListener("DOMContentLoaded", function () {
+  const element1 = document.querySelector(".js-scroll-1");
+  const element2 = document.querySelector(".js-scroll-2");
+
+  // .js-scroll-1 が存在する場合のみ ScrollHint を初期化
+  if (element1) {
+    const scrollHint1 = new ScrollHint(".js-scroll-1", {
+      i18n: {
+        scrollable: "スクロールできます",
+      },
+      remainingTime: 5000,
+      suggestiveShadow: true,
+      // scrollHintIconAppendClass: "scroll-hint-icon-white",
+    });
+  }
+
+  // .js-scroll-2 が存在する場合のみ ScrollHint を初期化
+  if (element2) {
+    const scrollHint2 = new ScrollHint(".js-scroll-2", {
+      i18n: {
+        scrollable: "スクロールできます2",
+      },
+      remainingTime: 1000,
+      suggestiveShadow: true,
+    });
+  }
+});

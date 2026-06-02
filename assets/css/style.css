@@ -2918,8 +2918,8 @@ tbody .c-servicetable02__section th {
 }
 @media screen and (max-width: 767px) {
   .p-mv--service01 {
-    background: -webkit-gradient(linear, left top, right top, color-stop(40%, rgb(255, 255, 255)), color-stop(100%, rgba(255, 255, 255, 0.53)), to(rgba(255, 255, 255, 0))), url(../img/top/service01_mv-sp.jpg) no-repeat 70% center/cover;
-    background: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.53) 100%, rgba(255, 255, 255, 0) 100%), url(../img/top/service01_mv-sp.jpg) no-repeat 70% center/cover;
+    background: -webkit-gradient(linear, left top, right top, color-stop(40%, rgb(255, 255, 255)), color-stop(100%, rgba(255, 255, 255, 0.53)), to(rgba(255, 255, 255, 0))), url(../img/under/service01_mv-sp.jpg) no-repeat 70% center/cover;
+    background: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.53) 100%, rgba(255, 255, 255, 0) 100%), url(../img/under/service01_mv-sp.jpg) no-repeat 70% center/cover;
   }
 }
 
@@ -3922,11 +3922,12 @@ tbody .c-servicetable02__section th {
         p-service
 -----------------------------------------*/
 .p-service {
-  background: transparent url(../img/under/under-service_bg.jpg) no-repeat center center/cover;
+  background: transparent url(../img/under/under-service_bg.jpg) no-repeat center top/cover;
   padding: 100px 0;
 }
 @media screen and (max-width: 767px) {
   .p-service {
+    background-image: url(../img/under/under-service_bg_sp.jpg);
     padding: 60px 0;
   }
 }
@@ -4095,6 +4096,11 @@ tbody .c-servicetable02__section th {
 .p-procedure {
   padding: 100px 0;
 }
+@media screen and (max-width: 767px) {
+  .p-procedure {
+    padding: 60px 0;
+  }
+}
 .p-procedure__dl {
   margin-top: 50px;
 }
@@ -4110,6 +4116,11 @@ tbody .c-servicetable02__section th {
   font-size: 1.8rem;
   font-weight: 500;
 }
+@media screen and (max-width: 767px) {
+  .p-procedure__row--head .p-procedure__dt, .p-procedure__row--head .p-procedure__dd {
+    font-size: 1.6rem;
+  }
+}
 .p-procedure__dt {
   -ms-flex-negative: 0;
       flex-shrink: 0;
@@ -4118,6 +4129,13 @@ tbody .c-servicetable02__section th {
   font-weight: 500;
   line-height: 1.5;
   padding: 20px 40px;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__dt {
+    width: 120px;
+    font-size: 1.4rem;
+    padding: 20px 10px 20px 20px;
+  }
 }
 .p-procedure__dd {
   -webkit-box-flex: 1;
@@ -4128,10 +4146,27 @@ tbody .c-servicetable02__section th {
   line-height: 1.5;
   padding: 20px 40px;
 }
+@media screen and (max-width: 767px) {
+  .p-procedure__dd {
+    font-size: 1.4rem;
+    padding: 20px;
+  }
+}
 .p-procedure__dd em {
   display: inline-block;
+  font-style: normal;
   color: #2DAEBB;
   font-weight: 500;
+}
+.p-procedure__dd .text {
+  display: inline-block;
+  margin-right: 16px;
+  text-indent: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__dd .text {
+    margin-right: 13px;
+  }
 }
 .p-procedure__dd .tag {
   display: inline-block;
@@ -4141,8 +4176,13 @@ tbody .c-servicetable02__section th {
   font-weight: 500;
   line-height: 1.2;
   padding: 4px 5px;
-  margin-left: 16px;
   text-indent: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__dd .tag {
+    font-size: 1rem;
+    padding: 4px 4px;
+  }
 }
 .p-procedure__list {
   padding-left: 1em;
@@ -4164,6 +4204,16 @@ tbody .c-servicetable02__section th {
   margin-right: 8px;
   margin-bottom: 3px;
 }
+.p-procedure__list li .text {
+  display: inline-block;
+  margin-right: 16px;
+  text-indent: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__list li .text {
+    margin-right: 13px;
+  }
+}
 .p-procedure__list li .tag {
   display: inline-block;
   color: #fff;
@@ -4172,8 +4222,13 @@ tbody .c-servicetable02__section th {
   font-weight: 500;
   line-height: 1.2;
   padding: 4px 5px;
-  margin-left: 16px;
   text-indent: 0;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__list li .tag {
+    font-size: 1rem;
+    padding: 4px 4px;
+  }
 }
 .p-procedure__bottom {
   display: -webkit-box;
@@ -4188,12 +4243,24 @@ tbody .c-servicetable02__section th {
   gap: 35px;
   margin-top: 40px;
 }
+@media screen and (max-width: 767px) {
+  .p-procedure__bottom {
+    gap: 9px;
+    margin-top: 30px;
+  }
+}
 .p-procedure__bottom::before, .p-procedure__bottom::after {
   content: "";
   display: inline-block;
   width: 101px;
   height: 124px;
   background: url(../img/under/procedure_icon01.png) no-repeat center/contain;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__bottom::before, .p-procedure__bottom::after {
+    width: 50px;
+    height: 61px;
+  }
 }
 .p-procedure__bottom::before {
   background-image: url(../img/under/procedure_icon01.png);
@@ -4205,6 +4272,11 @@ tbody .c-servicetable02__section th {
   font-size: 1.8rem;
   font-weight: 500;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__bottom-text {
+    font-size: 1.5rem;
+  }
 }
 
 /* -------------------------------------
