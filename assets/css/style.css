@@ -983,7 +983,7 @@ body {
 @media screen and (max-width: 767px) {
   .l-footer {
     background-image: url(../img/common/footer_bg-sp.jpg);
-    padding: 60px 0;
+    padding: 40px 0 20px;
   }
 }
 .l-footer .l-inner {
@@ -1009,6 +1009,7 @@ body {
 }
 .l-footer__info {
   width: 46%;
+  font-weight: 500;
   line-height: 1.5;
 }
 @media screen and (max-width: 767px) {
@@ -1019,15 +1020,29 @@ body {
 }
 .l-footer__name {
   font-size: 2rem;
-  font-weight: 500;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__name {
+    font-size: 1.6rem;
+  }
 }
 .l-footer__address {
   font-size: 1.5rem;
   margin-top: 16px;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__address {
+    font-size: 1.4rem;
+  }
+}
 .l-footer__tel {
   font-size: 1.5rem;
   margin-top: 6px;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__tel {
+    font-size: 1.4rem;
+  }
 }
 .l-footer__license {
   font-size: 1.5rem;
@@ -1036,6 +1051,12 @@ body {
 .l-footer__copyright {
   font-size: 1rem;
   margin-top: 40px;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__copyright {
+    text-align: center;
+    margin-top: 40px;
+  }
 }
 .l-footer__nav-wrap {
   -webkit-box-flex: 1;
@@ -1075,7 +1096,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .l-footer__nav-list {
-    gap: 12px;
+    gap: 0;
   }
 }
 .l-footer__nav-item a {
@@ -1083,6 +1104,7 @@ body {
   color: #fff;
   text-decoration: none;
   font-size: 1.5rem;
+  font-weight: 500;
   line-height: 1.5;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -1090,8 +1112,9 @@ body {
 @media screen and (max-width: 767px) {
   .l-footer__nav-item a {
     display: block;
-    padding: 15px 0;
     border-bottom: 1px solid #B5D4DA;
+    font-size: 1.6rem;
+    padding: 15px 0;
   }
 }
 .l-footer__nav-item a:hover, .l-footer__nav-item a:focus-visible {
@@ -2886,11 +2909,6 @@ tbody .c-servicetable02__section th {
     padding: 0 20px;
   }
 }
-@media screen and (max-width: 767px) {
-  .p-mv__inner {
-    padding: 0 20px;
-  }
-}
 .p-mv__content {
   position: relative;
   margin-top: -9px;
@@ -2954,7 +2972,7 @@ tbody .c-servicetable02__section th {
   gap: 40px;
   margin-top: 40px;
 }
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 767px) {
   .p-mv__bottom {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -2964,10 +2982,6 @@ tbody .c-servicetable02__section th {
         -ms-flex-align: start;
             align-items: flex-start;
     gap: 25px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .p-mv__bottom {
     margin-top: 35px;
   }
 }
@@ -3002,6 +3016,10 @@ tbody .c-servicetable02__section th {
     background: -webkit-gradient(linear, left top, right top, color-stop(40%, rgb(255, 255, 255)), color-stop(100%, rgba(255, 255, 255, 0.53)), to(rgba(255, 255, 255, 0))), url(../img/under/service01_mv-sp.jpg) no-repeat 70% center/cover;
     background: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.53) 100%, rgba(255, 255, 255, 0) 100%), url(../img/under/service01_mv-sp.jpg) no-repeat 70% center/cover;
   }
+}
+.p-mv--service01 .p-mv__tags {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 /* -------------------------------------

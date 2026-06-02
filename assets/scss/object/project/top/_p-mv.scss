@@ -31,9 +31,6 @@
     @include mq(lg) {
       padding: 0 20px;
     }
-    @include mq(md) {
-      padding: 0 20px;
-    }
   }
 
   &__content {
@@ -83,12 +80,15 @@
     display: flex;
     gap: 40px;
     margin-top: 40px;
-    @include mq(lg) {
+    // @include mq(lg) {
+    //   flex-direction: column-reverse;
+    //   align-items: flex-start;
+    //   gap: 25px;
+    // }
+    @include mq(md) {
       flex-direction: column-reverse;
       align-items: flex-start;
       gap: 25px;
-    }
-    @include mq(md) {
       margin-top: 35px;
     }
   }
@@ -120,9 +120,14 @@
 
 
 .p-mv--service01 {
+
   @include mv-bg(
     "../img/under/service01_mv.jpg",
     "../img/under/service01_mv-sp.jpg",
     70% center,
   );
+
+  .p-mv__tags {
+    flex-wrap: wrap;
+  }
 }
