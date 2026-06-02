@@ -4,11 +4,14 @@
         c-servicetable
 -----------------------------------------*/
 .c-servicetable {
-  overflow-x: auto;
 
   &__inner {
+    overflow-x: auto;
+  }
+
+  &__table {
     width: 100%;
-    min-width: 900px;
+    min-width: 980px;
     border-collapse: collapse;
     table-layout: fixed;
   }

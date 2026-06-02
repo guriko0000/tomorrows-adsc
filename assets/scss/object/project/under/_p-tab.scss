@@ -11,6 +11,10 @@
     max-width: 812px;
     gap: 30px;
     margin: 80px auto 0;
+    @include mq(md) {
+      flex-direction: column;
+      margin-top: 40px;
+    }
   }
 
   &__item {

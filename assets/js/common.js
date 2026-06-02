@@ -108,12 +108,12 @@ document.getElementById("current-year").innerText = new Date().getFullYear();
 
 
 
-// 340px以下スケーリング
+// 360px以下スケーリング
 // ________________________________________________________
 !(function () {
   const viewport = document.querySelector('meta[name="viewport"]');
   function switchViewport() {
-    const value = window.outerWidth > 340 ? 'width=device-width,initial-scale=1' : 'width=390';
+    const value = window.outerWidth > 360 ? 'width=device-width,initial-scale=1' : 'width=390';
     if (viewport && viewport.getAttribute('content') !== value) {
       viewport.setAttribute('content', value);
     }
@@ -121,8 +121,6 @@ document.getElementById("current-year").innerText = new Date().getFullYear();
   window.addEventListener('resize', switchViewport);
   switchViewport();
 })();
-
-
 
 
 
@@ -176,6 +174,20 @@ document.addEventListener("DOMContentLoaded", () => {
     panel.setAttribute("aria-hidden", "false");
   };
 
+  const reinitScrollHint = (panel) => {
+    if (!panel || typeof ScrollHint === "undefined") return;
+    panel.querySelectorAll(".js-scroll-1").forEach((el) => {
+      el.classList.remove("scroll-hint");
+      const iconWrap = el.querySelector('[data-target="scrollable-icon"]');
+      if (iconWrap) iconWrap.remove();
+      new ScrollHint([el], {
+        i18n: { scrollable: "スクロールできます" },
+        remainingTime: 5000,
+        suggestiveShadow: true,
+      });
+    });
+  };
+
   root.addEventListener(
     "click",
     (e) => {
@@ -184,12 +196,14 @@ document.addEventListener("DOMContentLoaded", () => {
 
       e.preventDefault(); // ← #を付けない
       setActive(link.getAttribute("href"));
+      reinitScrollHint(root.querySelector(".p-tab__panel.is-active"));
     },
     true
   );
 
   // ここ（最後）：最初は必ず01を開く（#は使わない）
   setActive(null);
+  reinitScrollHint(root.querySelector(".p-tab__panel.is-active"));
 });
 
 
@@ -204,9 +218,12 @@ document.addEventListener("DOMContentLoaded", function () {
   const element1 = document.querySelector(".js-scroll-1");
   const element2 = document.querySelector(".js-scroll-2");
 
-  // .js-scroll-1 が存在する場合のみ ScrollHint を初期化
-  if (element1) {
-    const scrollHint1 = new ScrollHint(".js-scroll-1", {
+  // タブパネル外の .js-scroll-1 のみ初期化（タブ内はタブ切り替え処理で管理）
+  const outsideScrollEls = Array.from(document.querySelectorAll(".js-scroll-1")).filter(
+    (el) => !el.closest(".p-tab__panel")
+  );
+  if (outsideScrollEls.length > 0) {
+    new ScrollHint(outsideScrollEls, {
       i18n: {
         scrollable: "スクロールできます",
       },

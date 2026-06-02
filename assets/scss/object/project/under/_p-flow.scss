@@ -7,9 +7,16 @@
 .p-flow {
   padding: 327px 0 100px;
   margin-top: -227px;
+    @include mq(md) {
+    padding: 388px 0 60px;
+    margin-top: -328px;
+  }
 
   &__list {
     margin-top: 50px;
+    @include mq(md) {
+      margin-top: 30px;
+    }
   }
 
   &__item {
@@ -17,6 +24,9 @@
     align-items: flex-start;
     position: relative;
     gap: 35px;
+    @include mq(md) {
+      gap: 20px;
+    }
     &:not(:first-child) {
       margin-top: 50px;
     }
@@ -71,11 +81,17 @@
     font-size: 2.2rem;
     font-weight: $medium;
     line-height: 1.4;
+    @include mq(md) {
+      font-size: 1.8rem;
+    }
   }
 
   &__text {
     margin-top: 12px;
     line-height: 1.5;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 
 }

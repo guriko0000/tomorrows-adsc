@@ -8,6 +8,7 @@
   background: transparent url(../img/common/footer_bg.jpg) no-repeat center center/cover;
   padding: 70px 0;
   @include mq(md) {
+    background-image: url(../img/common/footer_bg-sp.jpg);
     padding: 60px 0;
   }
 
@@ -30,6 +31,7 @@
     line-height: 1.5;
     @include mq(md) {
       width: 100%;
+      text-align: center;
     }
   }
 
@@ -66,6 +68,12 @@
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    @include mq(md) {
+      flex-direction: column;
+      gap: 0;
+      max-width: 360px;
+      margin: 0 auto;
+    }
   }
 
   &__nav-list {
@@ -86,6 +94,11 @@
       font-size: 1.5rem;
       line-height: 1.5;
       transition: opacity 0.3s;
+      @include mq(md) {
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid #B5D4DA;
+      }
 
       &:hover, &:focus-visible {
         opacity: $hover-opacity;        

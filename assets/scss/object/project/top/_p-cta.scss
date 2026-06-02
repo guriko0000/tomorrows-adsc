@@ -87,8 +87,10 @@
 
   &__btn-wrap {
     width: 211px;
+    max-width: 100%;
     @include mq(md) {
       width: 100%;
+      text-align: center;
     }
     
     .c-btn {
@@ -103,17 +105,26 @@
 .p-cta--service {  
   .p-cta__content {
     max-width: 828px;
+    @media screen and (max-width: 410px){
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media screen and (max-width: 360px){
+      padding-right: 20px;
+      padding-left: 20px;
+    }
   }
 
   .p-cta__text {
     margin-top: 20px;
+    @media screen and (max-width: 390px){
+      font-size: 1.4rem;
+    }
   }
 
   .p-cta__btn-wrap {
     width: 314px;
-    @include mq(md) {
-      width: 100%;
-    }
+
     
     .c-btn {
       max-width: 314px;

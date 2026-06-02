@@ -5,32 +5,55 @@
 -----------------------------------------*/
 .p-reference {
   padding: 100px 0 70px;
+  @include mq(md) {
+    padding: 60px 0;
+  }
 
   &__set {
     background-color: $main-bg;
     border-top: 3px solid $main-color;
     padding: 40px 30px;
     margin-top: 70px;
+    @include mq(md) {
+      padding: 30px 30px 40px;
+      margin-top: 50px;
+    }
   }
 
   &__set-title {
-    display: block;
-    width: fit-content;
+    max-width: 300px;
     background-color: $main-color;
     color: #fff;
     font-size: 2rem;
     font-weight: $medium;
     line-height: 1.5;
     text-align: center;
-    padding: 5px 35px;
+    padding: 5px 20px;
     margin: 0 auto;
   }
 
-  &__set-text {
+  &__set-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &__set-item {
     font-weight: $medium;
     line-height: 1.5;
     text-align: center;
-    margin-top: 15px;
+    &::after {
+      content: '／';
+      display: inline-block;
+      font-size: 2rem;
+      @include mq(lg) {
+        content: none;
+      }
+    }
 
     .num {
       display: inline-block;

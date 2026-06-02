@@ -10,6 +10,9 @@
     background-color: #fff;
     line-height: 1.5;
     padding: 30px 40px;
+    @include mq(md) {
+      padding: 20px 30px;
+    }
     &:not(:first-child) {
       margin-top: 30px;
     }
@@ -17,7 +20,6 @@
 
   &__head {
     display: flex;
-    align-items: center;
     font-size: 1.8rem;
     font-weight: $medium;
     &::before {
@@ -28,13 +30,16 @@
       font-size: 2.8rem;
       line-height: 1.4;
       margin-right: 10px;
+      transform: translateY(-4px);
+      @include mq(md) {
+        transform: translateY(0px);
+      }
     }
     
   }
 
   &__data {
     display: flex;
-    align-items: center;
     margin-top: 5px;
     &::before {
       content: 'A.';
@@ -45,6 +50,10 @@
       font-weight: $medium;
       line-height: 1.4;
       margin-right: 10px;
+      transform: translateY(-4px);
+      @include mq(md) {
+        transform: translateY(0px);
+      }
     }
   }
 

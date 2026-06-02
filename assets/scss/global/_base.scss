@@ -247,3 +247,13 @@ textarea {
   // field-sizing: content;
   resize: both;
 }
+
+.scroll-hint-icon {
+  top: calc(50% - 80px);
+}
+
+.c-servicetable {
+  .scroll-hint-icon {
+    top: 200px;
+  }
+}

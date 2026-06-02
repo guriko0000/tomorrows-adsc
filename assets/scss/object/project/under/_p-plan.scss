@@ -6,6 +6,10 @@
 .p-plan {
   padding: 327px 0 100px;
   margin-top: -227px;
+  @include mq(md) {
+    padding: 388px 0 60px;
+    margin-top: -328px;
+  }
 
   &__list {
     display: flex;

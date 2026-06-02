@@ -61,6 +61,7 @@
     font-weight: $extraold;
     line-height: 1.4;
     text-align: center;
+    
   }
 
   &__lead {
@@ -85,9 +86,15 @@
     line-height: 1;
     text-align: center;
     margin-top: 20px;
+    @media screen and (max-width: 390px){
+      font-size: 3.6rem;
+    }
 
     .unit {
       font-size: 3rem;
+      @media screen and (max-width: 390px){
+        font-size: 2.4rem;
+      }
     }
 
     .price-from {
@@ -139,9 +146,16 @@
     font-size: 2rem;
     text-align: center;
     padding: 1px 5px;
+    @media screen and (max-width: 390px){
+      font-size: 1.8rem;
+    }
 
     .text-small {
       font-size: 1.2rem;
+      @media screen and (max-width: 390px){
+        font-size: 1.2rem;
+      }
+
     }
   }
 
@@ -151,9 +165,15 @@
     font-weight: $bold;
     font-weight: $semibold;
     margin-left: 8px;
+    @media screen and (max-width: 390px){
+      font-size: 3.6rem;
+    }
 
     .unit {
       font-size: 3rem;
+      @media screen and (max-width: 390px){
+        font-size: 2.4rem;
+      }
     }
 
     .price-from {

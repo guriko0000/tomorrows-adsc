@@ -5,9 +5,15 @@
 -----------------------------------------*/
 .p-features {
   padding: 100px 0;
+  @include mq(md) {
+    padding: 60px 0;
+  }
 
   &__list {
     margin-top: 50px;
+    @include mq(md) {
+      margin-top: 30px;
+    }
   }
 
 }

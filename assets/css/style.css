@@ -547,6 +547,14 @@ textarea {
   resize: both;
 }
 
+.scroll-hint-icon {
+  top: calc(50% - 80px);
+}
+
+.c-servicetable .scroll-hint-icon {
+  top: 200px;
+}
+
 /* FontFamily */
 /* font-weight */
 body {
@@ -974,6 +982,7 @@ body {
 }
 @media screen and (max-width: 767px) {
   .l-footer {
+    background-image: url(../img/common/footer_bg-sp.jpg);
     padding: 60px 0;
   }
 }
@@ -1005,6 +1014,7 @@ body {
 @media screen and (max-width: 767px) {
   .l-footer__info {
     width: 100%;
+    text-align: center;
   }
 }
 .l-footer__name {
@@ -1041,6 +1051,17 @@ body {
           justify-content: space-between;
   gap: 40px;
 }
+@media screen and (max-width: 767px) {
+  .l-footer__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 0;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+}
 .l-footer__nav-list {
   list-style: none;
   display: -webkit-box;
@@ -1065,6 +1086,13 @@ body {
   line-height: 1.5;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+@media screen and (max-width: 767px) {
+  .l-footer__nav-item a {
+    display: block;
+    padding: 15px 0;
+    border-bottom: 1px solid #B5D4DA;
+  }
 }
 .l-footer__nav-item a:hover, .l-footer__nav-item a:focus-visible {
   opacity: 0.7;
@@ -2123,6 +2151,9 @@ body {
     margin-top: 20px;
   }
 }
+.c-support__dl-row:last-child {
+  border-bottom: none;
+}
 .c-support__dt {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2152,6 +2183,11 @@ body {
   font-size: 1.5rem;
   line-height: 1.5;
   margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .c-support__dd {
+    font-size: 1.4rem;
+  }
 }
 .c-support__bg {
   background-color: #EEFAF9;
@@ -2265,8 +2301,18 @@ body {
   text-align: center;
   margin-top: 20px;
 }
+@media screen and (max-width: 390px) {
+  .c-plan__head-price {
+    font-size: 3.6rem;
+  }
+}
 .c-plan__head-price .unit {
   font-size: 3rem;
+}
+@media screen and (max-width: 390px) {
+  .c-plan__head-price .unit {
+    font-size: 2.4rem;
+  }
 }
 .c-plan__head-price .price-from {
   display: inline-block;
@@ -2322,8 +2368,18 @@ body {
   text-align: center;
   padding: 1px 5px;
 }
+@media screen and (max-width: 390px) {
+  .c-plan__set-price-discount {
+    font-size: 1.8rem;
+  }
+}
 .c-plan__set-price-discount .text-small {
   font-size: 1.2rem;
+}
+@media screen and (max-width: 390px) {
+  .c-plan__set-price-discount .text-small {
+    font-size: 1.2rem;
+  }
 }
 .c-plan__set-price-main {
   font-family: "Roboto", sans-serif;
@@ -2332,8 +2388,18 @@ body {
   font-weight: 600;
   margin-left: 8px;
 }
+@media screen and (max-width: 390px) {
+  .c-plan__set-price-main {
+    font-size: 3.6rem;
+  }
+}
 .c-plan__set-price-main .unit {
   font-size: 3rem;
+}
+@media screen and (max-width: 390px) {
+  .c-plan__set-price-main .unit {
+    font-size: 2.4rem;
+  }
 }
 .c-plan__set-price-main .price-from {
   display: inline-block;
@@ -2423,12 +2489,12 @@ body {
 /* -------------------------------------
         c-plantable
 -----------------------------------------*/
-.c-plantable {
+.c-plantable__inner {
   overflow-x: auto;
 }
-.c-plantable__inner {
+.c-plantable__table {
   width: 100%;
-  min-width: 900px;
+  min-width: 980px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -2517,12 +2583,12 @@ body {
 /* -------------------------------------
         c-servicetable
 -----------------------------------------*/
-.c-servicetable {
+.c-servicetable__inner {
   overflow-x: auto;
 }
-.c-servicetable__inner {
+.c-servicetable__table {
   width: 100%;
-  min-width: 900px;
+  min-width: 980px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -2632,12 +2698,12 @@ tbody .c-servicetable__section th .sub-text {
 /* -------------------------------------
         c-servicetable02
 -----------------------------------------*/
-.c-servicetable02 {
+.c-servicetable02__inner {
   overflow-x: auto;
 }
-.c-servicetable02__inner {
+.c-servicetable02__table {
   width: 100%;
-  min-width: 900px;
+  min-width: 980px;
   border-collapse: collapse;
   table-layout: fixed;
 }
@@ -2719,6 +2785,11 @@ tbody .c-servicetable02__section th {
   line-height: 1.5;
   padding: 30px 40px;
 }
+@media screen and (max-width: 767px) {
+  .c-faq__row {
+    padding: 20px 30px;
+  }
+}
 .c-faq__row:not(:first-child) {
   margin-top: 30px;
 }
@@ -2726,9 +2797,6 @@ tbody .c-servicetable02__section th {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   font-size: 1.8rem;
   font-weight: 500;
 }
@@ -2740,14 +2808,19 @@ tbody .c-servicetable02__section th {
   font-size: 2.8rem;
   line-height: 1.4;
   margin-right: 10px;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+@media screen and (max-width: 767px) {
+  .c-faq__head::before {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 .c-faq__data {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   margin-top: 5px;
 }
 .c-faq__data::before {
@@ -2759,6 +2832,14 @@ tbody .c-servicetable02__section th {
   font-weight: 500;
   line-height: 1.4;
   margin-right: 10px;
+  -webkit-transform: translateY(-4px);
+          transform: translateY(-4px);
+}
+@media screen and (max-width: 767px) {
+  .c-faq__data::before {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
 }
 
 /* -------------------------------------
@@ -3088,13 +3169,26 @@ tbody .c-servicetable02__section th {
         p-top-service
 -----------------------------------------*/
 .p-top-service {
-  background: transparent url(../img/top/service_bg.jpg) no-repeat center center/cover;
+  position: relative;
+  background: transparent url(../img/top/service_bg.jpg) no-repeat center top/cover;
   padding: 100px 0;
 }
 @media screen and (max-width: 767px) {
   .p-top-service {
     padding: 60px 0;
   }
+}
+.p-top-service::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.85)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  z-index: 1;
 }
 .p-top-service__sp-nav {
   display: none;
@@ -3498,10 +3592,12 @@ tbody .c-servicetable02__section th {
 }
 .p-cta__btn-wrap {
   width: 211px;
+  max-width: 100%;
 }
 @media screen and (max-width: 767px) {
   .p-cta__btn-wrap {
     width: 100%;
+    text-align: center;
   }
 }
 .p-cta__btn-wrap .c-btn {
@@ -3516,16 +3612,28 @@ tbody .c-servicetable02__section th {
 .p-cta--service .p-cta__content {
   max-width: 828px;
 }
+@media screen and (max-width: 410px) {
+  .p-cta--service .p-cta__content {
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 360px) {
+  .p-cta--service .p-cta__content {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+}
 .p-cta--service .p-cta__text {
   margin-top: 20px;
 }
+@media screen and (max-width: 390px) {
+  .p-cta--service .p-cta__text {
+    font-size: 1.4rem;
+  }
+}
 .p-cta--service .p-cta__btn-wrap {
   width: 314px;
-}
-@media screen and (max-width: 767px) {
-  .p-cta--service .p-cta__btn-wrap {
-    width: 100%;
-  }
 }
 .p-cta--service .p-cta__btn-wrap .c-btn {
   max-width: 314px;
@@ -3623,7 +3731,7 @@ tbody .c-servicetable02__section th {
 }
 @media screen and (max-width: 767px) {
   .p-greeting {
-    padding: 60px 0 50px;
+    padding: 60px 0;
   }
 }
 .p-greeting::after {
@@ -3809,7 +3917,7 @@ tbody .c-servicetable02__section th {
 }
 @media screen and (max-width: 767px) {
   .p-office {
-    padding: 50px 0 100px;
+    padding: 60px 0 100px;
   }
 }
 .p-office--top {
@@ -3922,14 +4030,28 @@ tbody .c-servicetable02__section th {
         p-service
 -----------------------------------------*/
 .p-service {
+  position: relative;
   background: transparent url(../img/under/under-service_bg.jpg) no-repeat center top/cover;
   padding: 100px 0;
+  overflow: hidden;
 }
 @media screen and (max-width: 767px) {
   .p-service {
-    background-image: url(../img/under/under-service_bg_sp.jpg);
+    background-image: url(../img/under/under-service_bg-sp.jpg);
     padding: 60px 0;
   }
+}
+.p-service::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.85)));
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.85) 100%);
+  width: 100%;
+  height: 20px;
+  pointer-events: none;
+  z-index: 1;
 }
 .p-service__sp-nav {
   display: none;
@@ -3948,11 +4070,7 @@ tbody .c-servicetable02__section th {
 @media screen and (max-width: 767px) {
   .p-service__card-wrap {
     grid-template-columns: repeat(1, 1fr);
-    -webkit-column-gap: 0;
-       -moz-column-gap: 0;
-            column-gap: 0;
-    row-gap: 30px;
-    margin-top: 40px;
+    margin-top: 70px;
   }
 }
 .p-service__card {
@@ -4103,6 +4221,11 @@ tbody .c-servicetable02__section th {
 }
 .p-procedure__dl {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .p-procedure__dl {
+    margin-top: 30px;
+  }
 }
 .p-procedure__row {
   display: -webkit-box;
@@ -4286,6 +4409,11 @@ tbody .c-servicetable02__section th {
   position: relative;
   padding-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .p-support {
+    padding: 60px 0;
+  }
+}
 .p-support::after {
   content: "";
   display: inline-block;
@@ -4305,6 +4433,11 @@ tbody .c-servicetable02__section th {
 .p-support__content {
   margin-top: 60px;
 }
+@media screen and (max-width: 767px) {
+  .p-support__content {
+    margin-top: 40px;
+  }
+}
 
 .p-support--service::after {
   top: 62px;
@@ -4317,18 +4450,36 @@ tbody .c-servicetable02__section th {
   overflow: hidden;
   padding-top: 100px;
 }
+@media screen and (max-width: 767px) {
+  .p-worries {
+    padding-top: 40px;
+  }
+}
 .p-worries__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+@media screen and (max-width: 767px) {
+  .p-worries__content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 .p-worries__text-area {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
   max-width: 630px;
-  margin-right: 50px;
   margin: 26px 50px 0 0;
+}
+@media screen and (max-width: 767px) {
+  .p-worries__text-area {
+    max-width: 100%;
+    margin: 20px 0 0 0;
+  }
 }
 .p-worries__title {
   font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
@@ -4338,14 +4489,24 @@ tbody .c-servicetable02__section th {
   padding-bottom: 4px;
   border-bottom: 1px solid #2DAEBB;
 }
+@media screen and (max-width: 767px) {
+  .p-worries__title {
+    font-size: 2.2rem;
+  }
+}
 .p-worries__list {
-  font-size: 1.8rem;
   padding-left: 1.2em;
   margin-top: 30px;
 }
 .p-worries__item {
+  font-size: 1.8rem;
   line-height: 1.5;
   text-indent: -1em;
+}
+@media screen and (max-width: 767px) {
+  .p-worries__item {
+    font-size: 1.6rem;
+  }
 }
 .p-worries__item:not(:first-child) {
   margin-top: 20px;
@@ -4409,7 +4570,9 @@ tbody .c-servicetable02__section th {
 }
 @media screen and (max-width: 767px) {
   .p-worries__img {
-    display: none;
+    margin: 0;
+    min-height: auto;
+    width: 100%;
   }
 }
 .p-worries__img::before {
@@ -4422,11 +4585,21 @@ tbody .c-servicetable02__section th {
   background: -webkit-gradient(linear, left top, right top, from(#ffffff), color-stop(10%, rgba(255, 255, 255, 0.8)), color-stop(24%, rgba(255, 255, 255, 0.4)), color-stop(30%, rgba(255, 255, 255, 0)));
   background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0.8) 10%, rgba(255, 255, 255, 0.4) 24%, rgba(255, 255, 255, 0) 30%);
 }
+@media screen and (max-width: 767px) {
+  .p-worries__img::before {
+    content: none;
+  }
+}
 .p-worries__img img {
   width: 100%;
   height: 638px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+@media screen and (max-width: 767px) {
+  .p-worries__img img {
+    height: auto;
+  }
 }
 
 /* -------------------------------------
@@ -4435,6 +4608,12 @@ tbody .c-servicetable02__section th {
 .p-plan {
   padding: 327px 0 100px;
   margin-top: -227px;
+}
+@media screen and (max-width: 767px) {
+  .p-plan {
+    padding: 388px 0 60px;
+    margin-top: -328px;
+  }
 }
 .p-plan__list {
   display: -webkit-box;
@@ -4520,8 +4699,18 @@ tbody .c-servicetable02__section th {
 .p-plan-service {
   padding: 70px 0px 100px;
 }
+@media screen and (max-width: 767px) {
+  .p-plan-service {
+    padding: 60px 0;
+  }
+}
 .p-plan-service__table {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .p-plan-service__table {
+    margin-top: 40px;
+  }
 }
 
 /* -------------------------------------
@@ -4530,8 +4719,18 @@ tbody .c-servicetable02__section th {
 .p-features {
   padding: 100px 0;
 }
+@media screen and (max-width: 767px) {
+  .p-features {
+    padding: 60px 0;
+  }
+}
 .p-features__list {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .p-features__list {
+    margin-top: 30px;
+  }
 }
 
 /* -------------------------------------
@@ -4547,6 +4746,15 @@ tbody .c-servicetable02__section th {
   max-width: 812px;
   gap: 30px;
   margin: 80px auto 0;
+}
+@media screen and (max-width: 767px) {
+  .p-tab__list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 40px;
+  }
 }
 .p-tab__item {
   -webkit-box-flex: 1;
@@ -4634,33 +4842,67 @@ tbody .c-servicetable02__section th {
 .p-reference {
   padding: 100px 0 70px;
 }
+@media screen and (max-width: 767px) {
+  .p-reference {
+    padding: 60px 0;
+  }
+}
 .p-reference__set {
   background-color: #EEFAF9;
   border-top: 3px solid #2DAEBB;
   padding: 40px 30px;
   margin-top: 70px;
 }
+@media screen and (max-width: 767px) {
+  .p-reference__set {
+    padding: 30px 30px 40px;
+    margin-top: 50px;
+  }
+}
 .p-reference__set-title {
-  display: block;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  max-width: 300px;
   background-color: #2DAEBB;
   color: #fff;
   font-size: 2rem;
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
-  padding: 5px 35px;
+  padding: 5px 20px;
   margin: 0 auto;
 }
-.p-reference__set-text {
+.p-reference__set-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 15px;
+}
+@media screen and (max-width: 992px) {
+  .p-reference__set-list {
+    display: block;
+  }
+}
+.p-reference__set-item {
   font-weight: 500;
   line-height: 1.5;
   text-align: center;
-  margin-top: 15px;
 }
-.p-reference__set-text .num {
+.p-reference__set-item::after {
+  content: "／";
+  display: inline-block;
+  font-size: 2rem;
+}
+@media screen and (max-width: 992px) {
+  .p-reference__set-item::after {
+    content: none;
+  }
+}
+.p-reference__set-item .num {
   display: inline-block;
   font-size: 3rem;
 }
@@ -4677,8 +4919,19 @@ tbody .c-servicetable02__section th {
   padding: 327px 0 100px;
   margin-top: -227px;
 }
+@media screen and (max-width: 767px) {
+  .p-flow {
+    padding: 388px 0 60px;
+    margin-top: -328px;
+  }
+}
 .p-flow__list {
   margin-top: 50px;
+}
+@media screen and (max-width: 767px) {
+  .p-flow__list {
+    margin-top: 30px;
+  }
 }
 .p-flow__item {
   display: -webkit-box;
@@ -4689,6 +4942,11 @@ tbody .c-servicetable02__section th {
           align-items: flex-start;
   position: relative;
   gap: 35px;
+}
+@media screen and (max-width: 767px) {
+  .p-flow__item {
+    gap: 20px;
+  }
 }
 .p-flow__item:not(:first-child) {
   margin-top: 50px;
@@ -4748,9 +5006,19 @@ tbody .c-servicetable02__section th {
   font-weight: 500;
   line-height: 1.4;
 }
+@media screen and (max-width: 767px) {
+  .p-flow__title {
+    font-size: 1.8rem;
+  }
+}
 .p-flow__text {
   margin-top: 12px;
   line-height: 1.5;
+}
+@media screen and (max-width: 767px) {
+  .p-flow__text {
+    font-size: 1.5rem;
+  }
 }
 
 /* -------------------------------------
@@ -4759,8 +5027,18 @@ tbody .c-servicetable02__section th {
 .p-faq {
   padding: 100px 0;
 }
+@media screen and (max-width: 767px) {
+  .p-faq {
+    padding: 60px 0;
+  }
+}
 .p-faq__list {
   margin-top: 60px;
+}
+@media screen and (max-width: 767px) {
+  .p-faq__list {
+    margin-top: 30px;
+  }
 }
 
 /* -------------------------------------
