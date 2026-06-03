@@ -2976,9 +2976,9 @@ tbody .c-servicetable02__section th {
   }
 }
 .p-mv__tags {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
-  display: inline-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   gap: 10px;
   margin-top: 40px;
 }
@@ -2994,8 +2994,11 @@ tbody .c-servicetable02__section th {
     margin-top: 35px;
   }
 }
+.p-mv__tags + .p-mv__tags {
+  margin-top: 10px;
+}
 .p-mv__tag {
-  background-color: #fff;
+  background-color: #FAFEFF;
   border: 2px solid #2DAEBB;
   line-height: 1.2;
   padding: 13px 13px;
@@ -3067,9 +3070,21 @@ tbody .c-servicetable02__section th {
     font-size: 6vw;
   }
 }
-.p-mv--service01 .p-mv__tags {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+
+.p-mv--service02 {
+  background: -webkit-gradient(linear, left top, right top, color-stop(40%, #ffffff), to(rgba(255, 255, 255, 0))), url(../img/under/service02_mv.jpg) no-repeat 70% center/cover;
+  background: linear-gradient(to right, #ffffff 40%, rgba(255, 255, 255, 0) 100%), url(../img/under/service02_mv.jpg) no-repeat 70% center/cover;
+}
+@media screen and (max-width: 767px) {
+  .p-mv--service02 {
+    background: -webkit-gradient(linear, left top, right top, color-stop(40%, rgb(255, 255, 255)), color-stop(100%, rgba(255, 255, 255, 0.53)), to(rgba(255, 255, 255, 0))), url(../img/under/service02_mv-sp.jpg) no-repeat 70% center/cover;
+    background: linear-gradient(to right, rgb(255, 255, 255) 40%, rgba(255, 255, 255, 0.53) 100%, rgba(255, 255, 255, 0) 100%), url(../img/under/service02_mv-sp.jpg) no-repeat 70% center/cover;
+  }
+}
+@media screen and (max-width: 410px) {
+  .p-mv--service02 .p-mv__title {
+    font-size: 6vw;
+  }
 }
 
 /* -------------------------------------
@@ -4233,6 +4248,11 @@ tbody .c-servicetable02__section th {
     font-size: 1.5rem;
   }
 }
+.p-service__card-text em {
+  color: #2DAEBB;
+  font-style: normal;
+  font-weight: 500;
+}
 .p-service__card-price {
   grid-row: 2;
   padding: 10px 0 20px;
@@ -5277,6 +5297,11 @@ tbody .c-servicetable02__section th {
 .u-shadow {
   -webkit-box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+}
+
+.u-shadow-10 {
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
 }
 
 .u-inline-block {

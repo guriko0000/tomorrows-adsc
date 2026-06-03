@@ -94,6 +94,12 @@
     @include mq(md) {
       font-size: 1.5rem;
     }
+
+    em {
+      color: $main-color;
+      font-style: normal;
+      font-weight: $medium;
+    }
   }
 
   &__card-price {
