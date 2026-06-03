@@ -1,0 +1,26 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-voice
+-----------------------------------------*/
+.p-voice {
+
+  &__intro {}
+
+  &__intro-text {}
+
+  &__intro-img {}
+
+  &__cate-wrap {}
+
+  &__cate-list {}
+
+  &__cate-item {}
+
+  &__item-wrap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px 30px;
+  }
+
+}

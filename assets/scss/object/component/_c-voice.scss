@@ -1,0 +1,121 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-voice
+-----------------------------------------*/
+.c-voice {
+  padding: 40px;
+  box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+
+  &__head {
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 40px;
+  }
+
+  &__meta-wrap {
+    display: flex;
+  }
+
+  &__meta {
+    flex: 1;
+    line-height: 1.5;
+  }
+
+  &__person {
+    font-size: 1.8rem;
+    font-weight: $medium;
+  }
+
+  &__area {
+    color: #555;
+    font-size: 1.4rem;
+    font-weight: $medium;
+    margin-top: 10px;
+  }
+    
+  &__cate {
+    flex-shrink: 0;
+    width: 103px;
+  }
+
+  &__rating {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+  }
+
+  &__star {
+    margin-left: 20px;
+  }
+
+  &__body {
+    padding-top: 40px;
+  }
+
+  &__title {
+    border-left: 1px solid $main-color;
+    font-size: 2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    padding-left: 12px;
+  }
+
+  &__content {
+    margin-top: 40px;
+  }
+
+  &__block {
+    &:not(:first-child) {
+      margin-top: 30px;
+    }
+  }
+
+  &__label {
+    position: relative;
+    font-weight: $medium;
+    line-height: 1.5;
+    padding-left: 14px;
+    &::before {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 8px;
+      left: 0;
+      background-color: $main-color;
+      border-radius: 50%;
+      width: 9px;
+      height: 9px;
+      margin-right: 5px;
+    }
+  }
+
+  &__text {
+    margin-top: 10px;
+  }
+
+  &__bg {
+    background-color: $main-bg;
+    padding: 20px 25px;
+    margin-top: 25px;
+  }
+
+  &__bg-title {
+    font-size: 1.5rem;
+    font-weight: $medium;
+    line-height: 1.5;
+  }
+
+  &__bg-text {
+    font-size: 1.5rem;
+    margin-top: 10px;
+  }
+
+  &__date {
+    color: #555;
+    font-size: 1.2rem;
+    font-weight: $medium;
+    text-align: right;
+    margin-top: 15px;
+  }
+
+}

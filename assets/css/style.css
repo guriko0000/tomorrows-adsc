@@ -1465,7 +1465,7 @@ body {
   border: 1px solid #EEFAF9;
   background-color: #EEFAF9;
   border-radius: 4px;
-  font-family: "Yu Mincho", "YuMincho", "Hiragino Mincho ProN", "Hiragino Mincho Pro", serif;
+  font-family: "Roboto", sans-serif;
   line-height: 1;
   margin: 3px;
 }
@@ -2911,6 +2911,115 @@ tbody .c-servicetable02__section th {
 .c-faq em {
   font-style: normal;
   font-weight: 700;
+}
+
+/* -------------------------------------
+        c-voice
+-----------------------------------------*/
+.c-voice {
+  padding: 40px;
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+}
+.c-voice__head {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 40px;
+}
+.c-voice__meta-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.c-voice__meta {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  line-height: 1.5;
+}
+.c-voice__person {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.c-voice__area {
+  color: #555;
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin-top: 10px;
+}
+.c-voice__cate {
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  width: 103px;
+}
+.c-voice__rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 10px;
+}
+.c-voice__star {
+  margin-left: 20px;
+}
+.c-voice__body {
+  padding-top: 40px;
+}
+.c-voice__title {
+  border-left: 1px solid #2DAEBB;
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-left: 12px;
+}
+.c-voice__content {
+  margin-top: 40px;
+}
+.c-voice__block:not(:first-child) {
+  margin-top: 30px;
+}
+.c-voice__label {
+  position: relative;
+  font-weight: 500;
+  line-height: 1.5;
+  padding-left: 14px;
+}
+.c-voice__label::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  left: 0;
+  background-color: #2DAEBB;
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  margin-right: 5px;
+}
+.c-voice__text {
+  margin-top: 10px;
+}
+.c-voice__bg {
+  background-color: #EEFAF9;
+  padding: 20px 25px;
+  margin-top: 25px;
+}
+.c-voice__bg-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.c-voice__bg-text {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+.c-voice__date {
+  color: #555;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: right;
+  margin-top: 15px;
 }
 
 /* -------------------------------------
@@ -5576,6 +5685,15 @@ tbody .c-servicetable02__section th {
   .p-willsupport__dd {
     font-size: 1.5rem;
   }
+}
+
+/* -------------------------------------
+        p-voice
+-----------------------------------------*/
+.p-voice__item-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px 30px;
 }
 
 /* -------------------------------------
