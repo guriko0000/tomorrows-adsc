@@ -7,13 +7,29 @@
   background-color: $main-bg;
   padding: 242px 0 100px;
   margin-top: -147px;
+  @include mq(lg) {
+    padding: 279px 0 100px;
+    margin-top: -180px;
+  }
   @include mq(md) {
     padding: 330px 0 50px;
     margin-top: -270px;
   }
 
   &__card-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px 30px;
     margin-top: 50px;
+    @include mq(xl) {
+      gap: 25px 20px;      
+    }
+    @include mq(lg) {
+      grid-template-columns: repeat(1, 1fr);
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     @include mq(md) {
       margin-top: 30px;
     }

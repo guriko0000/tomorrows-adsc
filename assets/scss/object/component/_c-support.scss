@@ -19,9 +19,9 @@
     width: 40%;
     margin-top: 6px;
     @include mq(md) {
-      max-width: 100%;
+      max-width: 420px;
       width: 100%;
-      margin-top: 0;
+      margin: 0 auto;
     }
 
     img {

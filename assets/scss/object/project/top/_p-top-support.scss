@@ -7,6 +7,10 @@
   position: relative;
   padding: 242px 0px 75px;
   margin-top: -147px;
+  @include mq(lg) {
+    padding: 279px 0 100px;
+    margin-top: -180px;
+  }
   @include mq(md) {
     padding: 333px 0 50px;
     margin-top: -270px;

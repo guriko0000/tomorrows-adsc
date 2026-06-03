@@ -69,9 +69,6 @@
     opacity: 0;
     background: #fff;
     margin-top: 40px;
-    @include mq(md) {
-      padding: 20px 10px;
-    }
   }
 
   // 表示時

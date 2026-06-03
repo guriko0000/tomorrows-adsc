@@ -30,6 +30,7 @@
       font-weight: $medium;
       @include mq(md) {
         font-size: 1.6rem;
+        text-align: center;
       }
     }
   }
@@ -41,6 +42,9 @@
     font-weight: $medium;
     line-height: 1.5;
     padding: 20px 40px;
+    @include mq(lg) {
+      width: 240px;
+    }
     @include mq(md) {
       width: 120px;
       font-size: 1.4rem;
@@ -52,7 +56,7 @@
     flex: 1;
     background-color: #fff;
     border-left: 1px solid #EEE;
-    line-height: 1.5;
+    line-height: 1.6;
     padding: 20px 40px;
     @include mq(md) {
       font-size: 1.4rem;
@@ -68,10 +72,10 @@
 
     .text {
       display: inline-block;
-      margin-right: 16px;
+      margin-right: 13px;
       text-indent: 0;
       @include mq(md) {
-        margin-right: 13px;
+        margin-right: 10px;
       }
     }
 
@@ -95,7 +99,6 @@
     padding-left: 1em;
 
     li {
-      line-height: 1.5;
       text-indent: -0.8em;
       &:not(:first-child) {
         margin-top: 5px;
@@ -114,10 +117,10 @@
 
     .text {
       display: inline-block;
-      margin-right: 16px;
+      margin-right: 13px;
       text-indent: 0;
       @include mq(md) {
-        margin-right: 13px;
+        margin-right: 10px;
       }
     }
 

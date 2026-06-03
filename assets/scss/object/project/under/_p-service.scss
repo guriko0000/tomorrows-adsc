@@ -42,12 +42,13 @@
     grid-template-columns: repeat(3, 1fr);
     gap: 60px 25px;
     margin-top: 80px;
-    // @media screen and (max-width: 1050px){
-    //   grid-template-columns: repeat(2, 1fr);
-    //   margin: 50px auto 0;
-    // }
-    @include mq(md) {
+    @include mq(lg) {
       grid-template-columns: repeat(1, 1fr);
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @include mq(md) {
       margin-top: 70px;
     }
   }

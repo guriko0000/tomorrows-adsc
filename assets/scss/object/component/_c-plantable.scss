@@ -28,7 +28,10 @@
     border: 1px solid #eee;
     font-size: 1.8rem;
     line-height: 1.6;
-    padding: 20px;
+    padding: 20px 20px;
+    @include mq(md) {
+      padding: 14px 20px;
+    }
   }
 
   thead {
