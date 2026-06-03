@@ -12,6 +12,13 @@
     margin-top: -328px;
   }
 
+  &--service02 {
+    @include mq(md) {
+      padding: 418px 0 60px;
+      margin-top: -358px;
+    }
+  }
+
   &__list {
     margin-top: 50px;
     @include mq(md) {

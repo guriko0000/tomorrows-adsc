@@ -1,0 +1,42 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-risk
+-----------------------------------------*/
+.p-risk {
+  padding: 100px 0 65px;
+  @include mq(md) {
+    padding: 60px 0;
+  }
+
+  &__card-wrap {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    margin-top: 60px;
+    @include mq(lg) {
+      grid-template-columns: repeat(1, 1fr);
+      gap: 40px;
+    }
+  }
+
+  &__card {
+    @include mq(lg) {
+      max-width: 600px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+
+  &__card-title {
+    font-size: 2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  &__card-text {
+    margin-top: 30px;
+  }
+
+}
