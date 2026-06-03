@@ -135,11 +135,26 @@
   }
 }
 
-// service01
+// service02
 .p-mv--service02 {
   @include mv-bg(
     "../img/under/service02_mv.jpg",
     "../img/under/service02_mv-sp.jpg",
+    70% center,
+  );
+
+  .p-mv__title {
+    @media screen and (max-width: 410px){
+      font-size: 6vw;
+    }
+  }
+}
+
+// service03
+.p-mv--service03 {
+  @include mv-bg(
+    "../img/under/service03_mv.jpg",
+    "../img/under/service03_mv-sp.jpg",
     70% center,
   );
 

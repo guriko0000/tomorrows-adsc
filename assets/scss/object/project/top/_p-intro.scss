@@ -33,6 +33,15 @@
     }
   }
 
+    &__text-medium {
+      line-height: 2;
+      text-align: center;
+    }
+
+    &__img {
+      margin-top: 80px;
+    }
+
   &__media {
     margin-top: 100px;
     @include mq(md) {
