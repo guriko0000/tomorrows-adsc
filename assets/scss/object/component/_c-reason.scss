@@ -56,7 +56,7 @@
   &__title {
     font-family: $second-font-family;
     font-size: 2rem;
-    font-weight: $medium;
+    font-weight: $semibold;
     @include mq(md) {
       font-size: 1.8rem;
     }

@@ -1778,7 +1778,7 @@ body {
 .c-reason__title {
   font-family: "Notoserif_subset", serif;
   font-size: 2rem;
-  font-weight: 500;
+  font-weight: 600;
 }
 @media screen and (max-width: 767px) {
   .c-reason__title {
@@ -2131,7 +2131,7 @@ body {
 .c-plan__title {
   font-family: "Notoserif_subset", serif;
   font-size: 2.6rem;
-  font-weight: 800;
+  font-weight: 700;
   line-height: 1.4;
   text-align: center;
 }
@@ -4019,6 +4019,7 @@ tbody .c-servicetable02__section th {
 .p-service__card-title {
   font-family: "Notoserif_subset", serif;
   font-size: 1.8rem;
+  font-weight: 600;
   line-height: 1.5;
   text-align: center;
 }
@@ -4042,6 +4043,7 @@ tbody .c-servicetable02__section th {
   color: #fff;
   font-family: "Notoserif_subset", serif;
   font-size: 2.6rem;
+  font-weight: 600;
   line-height: 1;
 }
 .p-service__card-text {

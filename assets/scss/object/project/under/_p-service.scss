@@ -64,6 +64,7 @@
   &__card-title {
     font-family: $second-font-family;
     font-size: 1.8rem;
+    font-weight: $semibold;
     line-height: 1.5;
     text-align: center;
     @include mq(md) {
@@ -86,6 +87,7 @@
     color: #fff;
     font-family: $second-font-family;
     font-size: 2.6rem;
+    font-weight: $semibold;
     line-height: 1;
   }
 

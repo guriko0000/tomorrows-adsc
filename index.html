@@ -1,598 +1,682 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- meta情報 -->
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <!-- fontawesome -->
+    <!-- <script src="https://kit.fontawesome.com/39d42e1acb.js" crossorigin="anonymous"></script> -->
+    <!-- Googleフォント -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="./assets/js/splide/splide.min.css"> -->
+    <link rel="stylesheet" href="./assets/js/ScrollHint/scroll-hint.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script>
+      console.log("");
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <!-- meta情報 -->
-  <title></title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- ogp -->
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:description" content="">
-  <!-- ファビコン -->
-  <link rel="shortcut icon" type="image/x-icon" href="">
-  <!-- fontawesome -->
-  <!-- <script src="https://kit.fontawesome.com/39d42e1acb.js" crossorigin="anonymous"></script> -->
-  <!-- Googleフォント -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
-  <!-- css -->
-  <!-- <link rel="stylesheet" href="./assets/js/splide/splide.min.css"> -->
-  <link rel="stylesheet" href="./assets/js/ScrollHint/scroll-hint.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <script>console.log("")</script>
-</head>
-
-<body>
-  <header id="header" class="l-header js-header">
-    <div class="l-header__inner">
-      <!-- ロゴ -->
-      <div class="l-header__logo">
-        <a href="/">
-          <span class="l-header__logo-text">相続専門の行政書士法人</span>
-          <span class="l-header__logo-main">
-            <picture>
-              <source media="(min-width: 768px)" srcset="./assets/img/common/logo.svg" width="361" height="30">
-              <source media="(max-width: 767px)" srcset="./assets/img/common/logo-sp.svg" width="255" height="17">
-              <img class="l-header__logo-img" src="./assets/img/common/logo.svg" alt="ロゴ" width="361" height="30">
-            </picture>
-          </span>
-        </a>
-      </div>
-      <!-- ヘッダーナビ -->
-      <div class="l-header__container">
-        <nav class="p-header-nav">
-          <ul class="p-header-nav__list">
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="#">相続手続き代行</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="#">遺言書作成</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="#">おひとりさま終活</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="l-header__contact">
-          <div class="l-header__tel-wrap c-tel">
-            <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-            <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-          </div>
-          <a href="/contact/" class="l-header__cta-btn c-btn c-btn--small">お問い合わせ</a>
+  <body>
+    <header id="header" class="l-header js-header">
+      <div class="l-header__inner">
+        <!-- ロゴ -->
+        <div class="l-header__logo">
+          <a href="/">
+            <span class="l-header__logo-text">相続専門の行政書士法人</span>
+            <span class="l-header__logo-main">
+              <picture>
+                <source media="(min-width: 768px)" srcset="./assets/img/common/logo.svg" width="361" height="30" />
+                <source media="(max-width: 767px)" srcset="./assets/img/common/logo-sp.svg" width="255" height="17" />
+                <img class="l-header__logo-img" src="./assets/img/common/logo.svg" alt="ロゴ" width="361" height="30" />
+              </picture>
+            </span>
+          </a>
         </div>
-      </div>
-      <!-- ハンバーガーメニュー -->
-      <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
-        <span class="c-hamburger-btn__inner">
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-        </span>
-      </button>
-    </div>
-
-    <!-- ハンバーガーメニュー内ナビ -->
-    <nav class="p-sub-nav" aria-hidden="true">
-      <div class="l-inner p-sub-nav__inner">
-        <ul class="p-sub-nav__list js-header-nav">
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">ホーム</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続手続き代行</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">遺言書作成</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">おひとりさま終活</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">法人案内</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続コラム</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="https://tomorrowstax.com/">税理士法人トゥモローズ</a></p>
-          </li>
-        </ul>
-        <div class="p-sub-nav__bottom">
-          <div class="p-sub-nav__tel-wrap c-tel">
-            <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-            <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-          </div>
-          <div class="p-sub-nav__btn">
-            <a href="/contact/" class="c-btn">無料相談を予約する</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main class="l-main l-main--top">
-    <section class="p-mv">
-      <div class="p-mv__inner">
-        <div class="p-mv__content">
-          <h1 class="p-mv__title">相続専門の行政書士法人。<br>生前の備えから、<br><span class="u-text-main-color">亡くなった後の手続き</span>まで。</h1>
-          <ul class="p-mv__tags">
-            <li class="p-mv__tag">初回面談無料</li>
-            <li class="p-mv__tag">相続手続き・遺言作成 年間500件以上</li>
-            <li class="p-mv__tag">平日夜間・土日も対応</li>
-          </ul>
-          <div class="p-mv__bottom">
-            <div class="p-mv__btn-wrap">
-              <a href="/contact/" class="c-btn">無料相談を予約する</a>
-            </div>
-            <div class="p-mv__tel-wrap c-tel">
-              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-intro">
-      <div class="l-inner">
-        <h2 class="p-intro__title"><span class="u-text-marker">誠実に、素直に、誠実に。</span></h2>
-        <p class="p-intro__text">お客様の相続に最善を尽くします。<br>相続手続き・遺言書作成・終活サポートを、<br>グループの税理士法人と連携してワンストップでお引き受けします。<br>東京・神奈川・埼玉・千葉、首都圏全域に対応しています。</p>
-        <section class="p-intro__media">
-          <div class="p-intro__media-container">
-            <div class="p-intro__media-text-area">
-              <h3 class="p-intro__media-title">このようなお悩みはありませんか？</h3>
-              <ul class="p-intro__media-list">
-                <li>何から手をつけていいかわからない</li>
-                <li>遺言書を作った方がいいのか迷っている</li>
-                <li>将来のために終活を始めたいが、誰に相談すればいいかわからない</li>
-              </ul>
-              <p class="p-intro__media-catch">そのお悩み、相続専門の行政書士法人が解決します。</p>
-            </div>
-            <figure class="p-intro__media-img">
-              <img src="./assets/img/top/top-intro_img.jpg" alt="" width="540" height="360" loading="lazy">
-            </figure>
-          </div>
-        </section>
-      </div>
-    </section>
-    <section class="p-top-service">
-      <div class="l-inner">
-        <h2 class="c-primary-title">サービス内容</h2>
-        <p class="c-lead">相続専門の行政書士法人として、<br class="u-onliy-sp">3つのサービスをご提供しています。</p>
-        <div class="p-top-service__sp-nav">
-          <ul class="p-top-service__nav-list">
-            <li class="p-top-service__nav-item">
-              <a href="#service01">相続手続き<br>代行</a>
-            </li>
-            <li class="p-top-service__nav-item">
-              <a href="#service02">遺言書作成<br>サポート</a>
-            </li>
-            <li class="p-top-service__nav-item">
-              <a href="#service03">おひとりさま<br>終活サポート</a>
-            </li>
-          </ul>
-
-        </div>
-        <div class="p-top-service__card-wrap">
-          <div id="service01" class="p-top-service__card">
-            <a href="/service/inheritance/" class="p-top-service__card-link">
-              <div class="p-top-service__card-img">
-                <img src="./assets/img/top/top-service_img01.jpg" alt="" width="350" height="206" loading="lazy">
-              </div>
-              <div class="p-top-service__card-body">
-                <div class="p-top-service__card-content">
-                  <h3 class="p-top-service__card-title">相続手続き代行</h3>
-                  <span class="p-top-service__card--num">1</span>
-                  <p class="p-top-service__card-text">戸籍の収集、財産目録の作成、預貯金の解約、名義変更まで。面倒な相続手続きを全部おまかせ。</p>
-                </div>
-                <div class="p-top-service__card-price">
-                  <dl class="p-top-service__card-dl">
-                    <div class="p-top-service__card-dl-item">
-                      <dt class="p-top-service__card-dt">通常料金 ライト</dt>
-                      <dd class="p-top-service__card-dd">165,000<span class="p-top-service__card-price-unit">円〜</span></dd>
-                    </div>
-                    <div class="p-top-service__card-dl-item p-top-service__card-dl-item--highlight">
-                      <dt class="p-top-service__card-dt">相続税申告セット割</dt>
-                      <dd class="p-top-service__card-dd">99,000<span class="p-top-service__card-price-unit">円〜</span></dd>
-                    </div>
-                  </dl>
-                </div>
-                <div class="p-top-service__card-link-wrap">
-                  <p class="p-top-service__card-link-text">相続手続き代行を詳しく見る</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div id="service02" class="p-top-service__card">
-            <a href="" class="p-top-service__card-link">
-              <div class="p-top-service__card-img">
-                <img src="./assets/img/top/top-service_img02.jpg" alt="" width="350" height="206" loading="lazy">
-              </div>
-              <div class="p-top-service__card-body">
-                <div class="p-top-service__card-content">
-                  <h3 class="p-top-service__card-title">遺言書作成サポート</h3>
-                  <span class="p-top-service__card--num">2</span>
-                  <p class="p-top-service__card-text">公正証書遺言の作成を、原案作成から公証役場の手続きまで全面サポート。証人2名の手配込み。遺言執行者への就任もお受けします。</p>
-                </div>
-                <div class="p-top-service__card-price">
-                  <dl class="p-top-service__card-dl">
-                    <div class="p-top-service__card-dl-item">
-                      <dt class="p-top-service__card-dt">作成サポート</dt>
-                      <dd class="p-top-service__card-dd">220,000<span class="p-top-service__card-price-unit">円〜</span></dd>
-                    </div>
-                    <div class="p-top-service__card-dl-item">
-                      <dt class="p-top-service__card-dt">遺言執行報酬</dt>
-                      <dd class="p-top-service__card-dd">825,000<span class="p-top-service__card-price-unit">円〜</span></dd>
-                    </div>
-                  </dl>
-                  <p class="p-top-service__card-dl-note">※執行報酬は累進料率（1.5%〜0.2%）</p>
-                </div>
-                <div class="p-top-service__card-link-wrap">
-                  <p class="p-top-service__card-link-text">遺言書作成を詳しく見る</p>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div id="service03" class="p-top-service__card">
-            <a href="" class="p-top-service__card-link">
-              <div class="p-top-service__card-img">
-                <img src="./assets/img/top/top-service_img03.jpg" alt="" width="350" height="206" loading="lazy">
-              </div>
-              <div class="p-top-service__card-body">
-                <div class="p-top-service__card-content">
-                  <h3 class="p-top-service__card-title">おひとりさま終活サポート</h3>
-                  <span class="p-top-service__card--num">3</span>
-                  <p class="p-top-service__card-text">遺言書、死後事務委任契約、任意後見契約をまとめてサポート。生前の見守りから死後の手続きまで。</p>
-                </div>
-                <div class="p-top-service__card-price">
-                  <dl class="p-top-service__card-dl">
-                    <div class="p-top-service__card-dl-item">
-                      <dt class="p-top-service__card-dt">あんしんプラン</dt>
-                      <dd class="p-top-service__card-dd">330,000<span class="p-top-service__card-price-unit">円〜</span></dd>
-                    </div>
-                  </dl>
-                </div>
-                <div class="p-top-service__card-link-wrap">
-                  <p class="p-top-service__card-link-text">終活サポートを詳しく見る</p>
-                </div>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-top-reason u-bg-color-main">
-      <div class="l-inner">
-        <h2 class="c-primary-title">選ばれる7つの理由</h2>
-        <p class="c-lead">相続専門の行政書士法人として、<br class="u-onliy-sp">私たちが大切にしていること。</p>
-        <ul class="p-top-reason__list">
-          <li class="c-reason">
-            <span class="c-reason__num">01</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon01.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">謙虚に、素直に、誠実に</h3>
-                <p class="c-reason__text">お客様は大切なご家族を亡くされた方です。<br>トゥモローズのスタッフ全員が、お客様に寄り添いながら共に相続を乗り越えていきます。</p>
-              </div>
-            </div>
-          </li>
-          <li class="c-reason">
-            <span class="c-reason__num">02</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon02.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">相続専門</h3>
-                <p class="c-reason__text">売上の9割以上が相続関連業務。相続手続きに特化した専門法人だからこそ、複雑な案件にも対応できます。</p>
-              </div>
-            </div>
-          </li>
-          <li class="c-reason">
-            <span class="c-reason__num">03</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon03.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">豊富な実績</h3>
-                <p class="c-reason__text">グループで年間500件超の相続手続き・遺言作成実績。相続税申告年間350件の税理士法人と連携。</p>
-              </div>
-            </div>
-          </li>
-          <li class="c-reason">
-            <span class="c-reason__num">04</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon04.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">適正価格</h3>
-                <p class="c-reason__text">社内業務の効率化と企業努力により実現した適正価格報酬です。全ての業務について事前にお見積りを提示する明朗会計を徹底しております。</p>
-              </div>
-            </div>
-          </li>
-          <li class="c-reason">
-            <span class="c-reason__num">05</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon05.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">迅速対応</h3>
-                <p class="c-reason__text">お客様からのご相談ご質問には原則として1営業日以内に返答しお待たせしません。お急ぎの案件にも柔軟に対応いたします。</p>
-              </div>
-            </div>
-          </li>
-          <li class="c-reason">
-            <span class="c-reason__num">06</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon06.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">アフターサービス</h3>
-                <p class="c-reason__text">相続完了後も、二次相続対策・資産運用・税務調査対応など、アフターサービスも充実しています。</p>
-              </div>
-            </div>
-          </li>
-          <li class="c-reason">
-            <span class="c-reason__num">07</span>
-            <div class="c-reason__content">
-              <div class="c-reason__icon">
-                <img src="./assets/img/top/reason__icon07.png" alt="" width="" height="" loading="lazy">
-              </div>
-              <div class="c-reason__body">
-                <h3 class="c-reason__title">平日夜間・土日も対応</h3>
-                <p class="c-reason__text">平日はお仕事で時間が取れないお客様のために、平日夜間や土日の対応も可能です。オンライン面談も実施。</p>
-              </div>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="p-cta">
-      <div class="l-inner">
-        <h2 class="p-cta__title">Contact</h2>
-        <div class="p-cta__content">
-          <p class="p-cta__catch"><span class="u-text-marker">平日夜間や土日</span>も対応。<br class="u-onliy-tbsp">お急ぎの方は<span class="u-text-marker">即日対応可能。</span></p>
-          <p class="p-cta__text">初回のご相談は無料です。お気軽に<br class="u-onliy-sp">お問い合わせください。</p>
-          <div class="p-cta__bottom">
-            <div class="p-cta__tel-wrap c-tel c-tel--black">
-              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-            </div>
-            <div class="p-cta__btn-wrap">
-              <a href="/contact/" class="c-btn">お問い合わせ</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-top-support">
-      <div class="l-inner">
-        <h2 class="c-primary-title">トゥモローズグループが<br>フルサポート</h2>
-        <p class="c-lead">税理士法人・行政書士法人・株式会社の<br class="u-onliy-sp">3社連携で、相続に関するあらゆるご相談に<br class="u-onliy-sp">ワンストップで対応します。</p>
-        <div class="p-top-support__content c-support">
-          <figure class="c-support__img">
-            <img src="./assets/img/top/support_img.png" alt="" width="408" height="408" loading="lazy">
-          </figure>
-          <div class="c-support__text-area">
-            <div class="c-support__dl">
-              <div class="c-support__dl-row">
-                <dt class="c-support__dt">税理士法人トゥモローズ</dt>
-                <dd class="c-support__dd">相続税申告年間350件超の豊富な実績。相続税に特化した税理士法人として専門性の高いサービスを提供。</dd>
-              </div>
-              <div class="c-support__dl-row">
-                <dt class="c-support__dt">行政書士法人トゥモローズ</dt>
-                <dd class="c-support__dd">相続手続き・遺言書作成・終活サポートの窓口。専門スタッフがお客様の想いに寄り添います。</dd>
-              </div>
-              <div class="c-support__dl-row">
-                <dt class="c-support__dt">株式会社トゥモローズ</dt>
-                <dd class="c-support__dd">相続不動産の売却、有効活用、資産組替等をサポート。税務と連動した最適な不動産戦略をご提案します。</dd>
-              </div>
-              <div class="c-support__dl-row">
-                <dt class="c-support__dt">提携司法書士・弁護士</dt>
-                <dd class="c-support__dd">相続登記や紛争案件も信頼の提携ネットワークで対応。ワンストップで解決できます。</dd>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="p-top-support__bg">
-          <h3 class="p-top-support__bg-title">安心のアフターサービス</h3>
-          <p class="p-top-support__bg-text">資産運用相談　/　税務調査対応　/　<br class="u-onliy-sp">二次相続対策　/　生命保険見直し　/　<br class="u-onliy-sp">所得税確定申告　/　<br class="u-onliy-sp">信頼できる専門家のご紹介</p>
-        </div>
-      </div>
-    </section>
-    <section class="p-greeting p-greeting--top">
-      <div class="l-inner">
-        <h2 class="c-primary-title">代表ごあいさつ</h2>
-        <div class="c-greeting p-greeting__media">
-          <figure class="c-greeting__img">
-            <img src="./assets/img/top/greeting_img.jpg" alt="" width="355" height="388" loading="lazy">
-          </figure>
-          <div class="c-greeting__body">
-            <p class="c-greeting__position">行政書士法人トモワーズ</p>
-            <p class="c-greeting__name">大塚 英司</p>
-          </div>
-          <div class="c-greeting__text-warp">
-            <p class="c-greeting__text">私たちは「謙虚に、素直に、誠実に」をモットーに、お客様の相続に最善を尽くしてまいります。</p>
-            <p class="c-greeting__text">相続は人生で何度も経験することではありません。だからこそ、お客様一人ひとりのお気持ちに寄り添い、専門家として確かなサポートをお届けします。</p>
-            <p class="c-greeting__text">ご相談いただいたからといって、必ずご依頼いただく必要はありません。まずはお気軽にお話をお聞かせください。</p>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-cta">
-      <div class="l-inner">
-        <h2 class="p-cta__title">Contact</h2>
-        <div class="p-cta__content">
-          <p class="p-cta__catch"><span class="u-text-marker">平日夜間や土日</span>も対応。<br class="u-onliy-tbsp">お急ぎの方は<span class="u-text-marker">即日対応可能。</span></p>
-          <p class="p-cta__text">初回のご相談は無料です。お気軽に<br class="u-onliy-sp">お問い合わせください。</p>
-          <div class="p-cta__bottom">
-            <div class="p-cta__tel-wrap c-tel c-tel--black">
-              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-            </div>
-            <div class="p-cta__btn-wrap">
-              <a href="/contact/" class="c-btn">お問い合わせ</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section class="p-top-column">
-      <div class="l-inner l-inner--l">
-        <h2 class="c-primary-title">相続コラム</h2>
-        <p class="c-lead">相続・遺言・終活に関する<br class="u-onliy-sp">最新情報をお届けします。</p>
-        <ul class="p-top-column__card-wrap">
-          <li>
-            <a href="" class="c-card">
-              <figure class="c-card__img">
-                <img src="./assets/img/top/column_thumb.jpg" alt="" width="383" height="233" loading="lazy">
-              </figure>
-              <div class="c-card__body">
-                <div class="c-card__meta">
-                  <time class="c-card__date" datetime="2026-04-01">2026.04.01</time>
-                  <div class="c-card__cate-wrap">
-                    <span class="c-card__cate">相続手続き</span>
-                  </div>
-                </div>
-                <div class="c-card__content">
-                  <h3 class="c-card__title">インドの相続手続き｜承継証明書と日本の税務タイトルタイトルタイトルタイトル</h3>
-                  <p class="c-card__text">本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入りま...</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="" class="c-card">
-              <figure class="c-card__img">
-                <img src="./assets/img/top/column_thumb.jpg" alt="" width="383" height="233" loading="lazy">
-              </figure>
-              <div class="c-card__body">
-                <div class="c-card__meta">
-                  <time class="c-card__date" datetime="2026-04-01">2026.04.01</time>
-                  <div class="c-card__cate-wrap">
-                    <span class="c-card__cate">相続手続き</span>
-                  </div>
-                </div>
-                <div class="c-card__content">
-                  <h3 class="c-card__title">インドの相続手続き｜承継証明書と日本の税務タイトルタイトルタイトルタイトル</h3>
-                  <p class="c-card__text">本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入りま...</p>
-                </div>
-              </div>
-            </a>
-          </li>
-          <li>
-            <a href="" class="c-card">
-              <figure class="c-card__img">
-                <img src="./assets/img/top/column_thumb.jpg" alt="" width="383" height="233" loading="lazy">
-              </figure>
-              <div class="c-card__body">
-                <div class="c-card__meta">
-                  <time class="c-card__date" datetime="2026-04-01">2026.04.01</time>
-                  <div class="c-card__cate-wrap">
-                    <span class="c-card__cate">相続手続き</span>
-                  </div>
-                </div>
-                <div class="c-card__content">
-                  <h3 class="c-card__title">インドの相続手続き｜承継証明書と日本の税務タイトルタイトルタイトルタイトル</h3>
-                  <p class="c-card__text">本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入りま...</p>
-                </div>
-              </div>
-            </a>
-          </li>
-        </ul>
-        <div class="p-top-column__btn-wrap">
-          <a href="/column/" class="c-btn c-btn--border">コラム一覧を見る</a>
-        </div>
-      </div>
-    </section>
-    <section class="p-offer">
-      <div class="l-inner">
-        <div class="p-offer__content">
-
-          <div class="p-offer__text-area">
-            <h2 class="p-offer__title">まずは無料相談から、<br>お気軽にお問い合わせください。</h2>
-            <p class="p-offer__text">相続は、早めに専門家に相談することで<br>時間も費用も大幅に節約できます。<br>「まだ何も決まっていない」という段階でも構いません。<br>お客様のご状況を整理するところから、お手伝いします。</p>
-            <div class="p-offer__btn-wrap">
-              <a href="" class="c-btn">無料相談を予約する</a>
-            </div>
-          </div>
-          <figure class="p-offer__img">
-            <img src="./assets/img/top/offer_img.jpg" alt="" width="789" height="526" loading="lazy">
-          </figure>
-        </div>
-      </div>
-    </section>
-    <section class="p-office p-office--top">
-      <div class="l-inner">
-        <h2 class="c-primary-title">事務所のご案内</h2>
-        <div class="p-office__content">
-          <div class="p-office__body">
-            <h3 class="p-office__name">東京本店</h3>
-            <p class="p-office__address">〒104-0032<br>東京都中央区八丁堀4-3-5 京橋宝町PREX 6階</p>
-            <div class="p-office__access">
-              <p class="p-office__access-title">Access</p>
-              <div class="p-office__access-text-wrap">
-                <p class="p-office__access-text">東京メトロ日比谷線 八丁堀駅 徒歩3分</p>
-                <p class="p-office__access-text">都営浅草線 宝町駅 徒歩4分</p>
-                <p class="p-office__access-text">東京メトロ銀座線 京橋駅 徒歩6分</p>
-              </div>
-            </div>
-          </div>
-          <figure class="p-office__img">
-            <img src="./assets/img/top/office_img.jpg" alt="" width="488" height="325" loading="lazy">
-          </figure>
-        </div>
-      </div>
-    </section>
-  </main>
-  <!-- footer -->
-  <footer class="l-footer">
-    <div class="l-inner">
-      <div class="l-footer__container">
-        <div class="l-footer__info">
-          <p class="l-footer__name">行政書士法人トゥモローズ</p>
-          <p class="l-footer__address">〒104-0032<br>東京都中央区八丁堀4-3-5 京橋室町PREX 6階</p>
-          <p class="l-footer__tel">電話：03-6280-5188</p>
-          <p class="l-footer__license">東京 都行政書士会所属</p>
-        </div>
-
-        <div class="l-footer__nav-wrap">
-          <nav class="l-footer__nav" aria-label="フッターナビゲーション">
-            <ul class="l-footer__nav-list">
-              <li class="l-footer__nav-item"><a href="">相続手続き代行</a></li>
-              <li class="l-footer__nav-item"><a href="">遺言書作成</a></li>
-              <li class="l-footer__nav-item"><a href="">おひとりさま終活</a></li>
-              <li class="l-footer__nav-item"><a href="">法人案内</a></li>
-            </ul>
-            <ul class="l-footer__nav-list">
-              <li class="l-footer__nav-item"><a href="">相続コラム</a></li>
-              <li class="l-footer__nav-item"><a href="">お問い合わせ</a></li>
-              <li class="l-footer__nav-item"><a href="">税理士法人トゥモローズ</a></li>
+        <!-- ヘッダーナビ -->
+        <div class="l-header__container">
+          <nav class="p-header-nav">
+            <ul class="p-header-nav__list">
+              <li class="p-header-nav__item">
+                <a class="p-header-nav__link" href="#">相続手続き代行</a>
+              </li>
+              <li class="p-header-nav__item">
+                <a class="p-header-nav__link" href="#">遺言書作成</a>
+              </li>
+              <li class="p-header-nav__item">
+                <a class="p-header-nav__link" href="#">おひとりさま終活</a>
+              </li>
             </ul>
           </nav>
+          <div class="l-header__contact">
+            <div class="l-header__tel-wrap c-tel">
+              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+            </div>
+            <a href="/contact/" class="l-header__cta-btn c-btn c-btn--small">お問い合わせ</a>
+          </div>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
+          <span class="c-hamburger-btn__inner">
+            <span class="c-hamburger-btn__line"></span>
+            <span class="c-hamburger-btn__line"></span>
+            <span class="c-hamburger-btn__line"></span>
+          </span>
+        </button>
       </div>
-      <p class="l-footer__copyright">© <span id="current-year"></span> 行政書士法人トゥモローズ. All Rights Reserved.</p>
-    </div>
-  </footer>
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- <script src="./assets/js/splide/splide.min.js"></script> -->
-  <script src="./assets/js/ScrollHint/scroll-hint.min.js"></script>
-  <script defer src="./assets/js/common.js"></script>
-</body>
 
+      <!-- ハンバーガーメニュー内ナビ -->
+      <nav class="p-sub-nav" aria-hidden="true">
+        <div class="l-inner p-sub-nav__inner">
+          <ul class="p-sub-nav__list js-header-nav">
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">ホーム</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続手続き代行</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">遺言書作成</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">おひとりさま終活</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">法人案内</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続コラム</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title">
+                <a class="p-sub-nav__link" href="https://tomorrowstax.com/">税理士法人トゥモローズ</a>
+              </p>
+            </li>
+          </ul>
+          <div class="p-sub-nav__bottom">
+            <div class="p-sub-nav__tel-wrap c-tel">
+              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+            </div>
+            <div class="p-sub-nav__btn">
+              <a href="/contact/" class="c-btn">無料相談を予約する</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="l-main l-main--top">
+      <section class="p-mv">
+        <div class="p-mv__inner">
+          <div class="p-mv__content">
+            <h1 class="p-mv__title">
+              相続専門の行政書士法人。<br />生前の備えから、<br /><span class="u-text-main-color"
+                >亡くなった後の手続き</span
+              >まで。
+            </h1>
+            <ul class="p-mv__tags">
+              <li class="p-mv__tag">初回面談無料</li>
+              <li class="p-mv__tag">相続手続き・遺言作成 年間500件以上</li>
+              <li class="p-mv__tag">平日夜間・土日も対応</li>
+            </ul>
+            <div class="p-mv__bottom">
+              <div class="p-mv__btn-wrap">
+                <a href="/contact/" class="c-btn">無料相談を予約する</a>
+              </div>
+              <div class="p-mv__tel-wrap c-tel">
+                <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+                <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-intro">
+        <div class="l-inner">
+          <h2 class="p-intro__title"><span class="u-text-marker">誠実に、素直に、誠実に。</span></h2>
+          <p class="p-intro__text">
+            お客様の相続に最善を尽くします。<br />相続手続き・遺言書作成・終活サポートを、<br />グループの税理士法人と連携してワンストップでお引き受けします。<br />東京・神奈川・埼玉・千葉、首都圏全域に対応しています。
+          </p>
+          <section class="p-intro__media">
+            <div class="p-intro__media-container">
+              <div class="p-intro__media-text-area">
+                <h3 class="p-intro__media-title">このようなお悩みはありませんか？</h3>
+                <ul class="p-intro__media-list">
+                  <li>何から手をつけていいかわからない</li>
+                  <li>遺言書を作った方がいいのか迷っている</li>
+                  <li>将来のために終活を始めたいが、誰に相談すればいいかわからない</li>
+                </ul>
+                <p class="p-intro__media-catch">そのお悩み、相続専門の行政書士法人が解決します。</p>
+              </div>
+              <figure class="p-intro__media-img">
+                <img src="./assets/img/top/top-intro_img.jpg" alt="" width="540" height="360" loading="lazy" />
+              </figure>
+            </div>
+          </section>
+        </div>
+      </section>
+      <section class="p-top-service">
+        <div class="l-inner">
+          <h2 class="c-primary-title">サービス内容</h2>
+          <p class="c-lead">相続専門の行政書士法人として、<br class="u-onliy-sp" />3つのサービスをご提供しています。</p>
+          <div class="p-top-service__sp-nav">
+            <ul class="p-top-service__nav-list">
+              <li class="p-top-service__nav-item">
+                <a href="#service01">相続手続き<br />代行</a>
+              </li>
+              <li class="p-top-service__nav-item">
+                <a href="#service02">遺言書作成<br />サポート</a>
+              </li>
+              <li class="p-top-service__nav-item">
+                <a href="#service03">おひとりさま<br />終活サポート</a>
+              </li>
+            </ul>
+          </div>
+          <div class="p-top-service__card-wrap">
+            <div id="service01" class="p-top-service__card">
+              <a href="/service/inheritance/" class="p-top-service__card-link">
+                <div class="p-top-service__card-img">
+                  <img src="./assets/img/top/top-service_img01.jpg" alt="" width="350" height="206" loading="lazy" />
+                </div>
+                <div class="p-top-service__card-body">
+                  <div class="p-top-service__card-content">
+                    <h3 class="p-top-service__card-title">相続手続き代行</h3>
+                    <span class="p-top-service__card--num">1</span>
+                    <p class="p-top-service__card-text">
+                      戸籍の収集、財産目録の作成、預貯金の解約、名義変更まで。面倒な相続手続きを全部おまかせ。
+                    </p>
+                  </div>
+                  <div class="p-top-service__card-price">
+                    <dl class="p-top-service__card-dl">
+                      <div class="p-top-service__card-dl-item">
+                        <dt class="p-top-service__card-dt">通常料金 ライト</dt>
+                        <dd class="p-top-service__card-dd">
+                          165,000<span class="p-top-service__card-price-unit">円〜</span>
+                        </dd>
+                      </div>
+                      <div class="p-top-service__card-dl-item p-top-service__card-dl-item--highlight">
+                        <dt class="p-top-service__card-dt">相続税申告セット割</dt>
+                        <dd class="p-top-service__card-dd">
+                          99,000<span class="p-top-service__card-price-unit">円〜</span>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="p-top-service__card-link-wrap">
+                    <p class="p-top-service__card-link-text">相続手続き代行を詳しく見る</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="service02" class="p-top-service__card">
+              <a href="" class="p-top-service__card-link">
+                <div class="p-top-service__card-img">
+                  <img src="./assets/img/top/top-service_img02.jpg" alt="" width="350" height="206" loading="lazy" />
+                </div>
+                <div class="p-top-service__card-body">
+                  <div class="p-top-service__card-content">
+                    <h3 class="p-top-service__card-title">遺言書作成サポート</h3>
+                    <span class="p-top-service__card--num">2</span>
+                    <p class="p-top-service__card-text">
+                      公正証書遺言の作成を、原案作成から公証役場の手続きまで全面サポート。証人2名の手配込み。遺言執行者への就任もお受けします。
+                    </p>
+                  </div>
+                  <div class="p-top-service__card-price">
+                    <dl class="p-top-service__card-dl">
+                      <div class="p-top-service__card-dl-item">
+                        <dt class="p-top-service__card-dt">作成サポート</dt>
+                        <dd class="p-top-service__card-dd">
+                          220,000<span class="p-top-service__card-price-unit">円〜</span>
+                        </dd>
+                      </div>
+                      <div class="p-top-service__card-dl-item">
+                        <dt class="p-top-service__card-dt">遺言執行報酬</dt>
+                        <dd class="p-top-service__card-dd">
+                          825,000<span class="p-top-service__card-price-unit">円〜</span>
+                        </dd>
+                      </div>
+                    </dl>
+                    <p class="p-top-service__card-dl-note">※執行報酬は累進料率（1.5%〜0.2%）</p>
+                  </div>
+                  <div class="p-top-service__card-link-wrap">
+                    <p class="p-top-service__card-link-text">遺言書作成を詳しく見る</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+            <div id="service03" class="p-top-service__card">
+              <a href="" class="p-top-service__card-link">
+                <div class="p-top-service__card-img">
+                  <img src="./assets/img/top/top-service_img03.jpg" alt="" width="350" height="206" loading="lazy" />
+                </div>
+                <div class="p-top-service__card-body">
+                  <div class="p-top-service__card-content">
+                    <h3 class="p-top-service__card-title">おひとりさま終活サポート</h3>
+                    <span class="p-top-service__card--num">3</span>
+                    <p class="p-top-service__card-text">
+                      遺言書、死後事務委任契約、任意後見契約をまとめてサポート。生前の見守りから死後の手続きまで。
+                    </p>
+                  </div>
+                  <div class="p-top-service__card-price">
+                    <dl class="p-top-service__card-dl">
+                      <div class="p-top-service__card-dl-item">
+                        <dt class="p-top-service__card-dt">あんしんプラン</dt>
+                        <dd class="p-top-service__card-dd">
+                          330,000<span class="p-top-service__card-price-unit">円〜</span>
+                        </dd>
+                      </div>
+                    </dl>
+                  </div>
+                  <div class="p-top-service__card-link-wrap">
+                    <p class="p-top-service__card-link-text">終活サポートを詳しく見る</p>
+                  </div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-top-reason u-bg-color-main">
+        <div class="l-inner">
+          <h2 class="c-primary-title">選ばれる7つの理由</h2>
+          <p class="c-lead">相続専門の行政書士法人として、<br class="u-onliy-sp" />私たちが大切にしていること。</p>
+          <ul class="p-top-reason__list">
+            <li class="c-reason">
+              <span class="c-reason__num">01</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon01.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">謙虚に、素直に、誠実に</h3>
+                  <p class="c-reason__text">
+                    お客様は大切なご家族を亡くされた方です。<br />トゥモローズのスタッフ全員が、お客様に寄り添いながら共に相続を乗り越えていきます。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__num">02</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon02.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">相続専門</h3>
+                  <p class="c-reason__text">
+                    売上の9割以上が相続関連業務。相続手続きに特化した専門法人だからこそ、複雑な案件にも対応できます。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__num">03</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon03.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">豊富な実績</h3>
+                  <p class="c-reason__text">
+                    グループで年間500件超の相続手続き・遺言作成実績。相続税申告年間350件の税理士法人と連携。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__num">04</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon04.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">適正価格</h3>
+                  <p class="c-reason__text">
+                    社内業務の効率化と企業努力により実現した適正価格報酬です。全ての業務について事前にお見積りを提示する明朗会計を徹底しております。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__num">05</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon05.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">迅速対応</h3>
+                  <p class="c-reason__text">
+                    お客様からのご相談ご質問には原則として1営業日以内に返答しお待たせしません。お急ぎの案件にも柔軟に対応いたします。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__num">06</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon06.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">アフターサービス</h3>
+                  <p class="c-reason__text">
+                    相続完了後も、二次相続対策・資産運用・税務調査対応など、アフターサービスも充実しています。
+                  </p>
+                </div>
+              </div>
+            </li>
+            <li class="c-reason">
+              <span class="c-reason__num">07</span>
+              <div class="c-reason__content">
+                <div class="c-reason__icon">
+                  <img src="./assets/img/top/reason__icon07.png" alt="" width="" height="" loading="lazy" />
+                </div>
+                <div class="c-reason__body">
+                  <h3 class="c-reason__title">平日夜間・土日も対応</h3>
+                  <p class="c-reason__text">
+                    平日はお仕事で時間が取れないお客様のために、平日夜間や土日の対応も可能です。オンライン面談も実施。
+                  </p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="p-cta">
+        <div class="l-inner">
+          <h2 class="p-cta__title">Contact</h2>
+          <div class="p-cta__content">
+            <p class="p-cta__catch">
+              <span class="u-text-marker">平日夜間や土日</span>も対応。<br class="u-onliy-tbsp" />お急ぎの方は<span
+                class="u-text-marker"
+                >即日対応可能。</span
+              >
+            </p>
+            <p class="p-cta__text">初回のご相談は無料です。お気軽に<br class="u-onliy-sp" />お問い合わせください。</p>
+            <div class="p-cta__bottom">
+              <div class="p-cta__tel-wrap c-tel c-tel--black">
+                <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+                <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+              </div>
+              <div class="p-cta__btn-wrap">
+                <a href="/contact/" class="c-btn">お問い合わせ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-top-support">
+        <div class="l-inner">
+          <h2 class="c-primary-title">トゥモローズグループが<br />フルサポート</h2>
+          <p class="c-lead">
+            税理士法人・行政書士法人・株式会社の<br class="u-onliy-sp" />3社連携で、相続に関するあらゆるご相談に<br
+              class="u-onliy-sp"
+            />ワンストップで対応します。
+          </p>
+          <div class="p-top-support__content c-support">
+            <figure class="c-support__img">
+              <img src="./assets/img/top/support_img.png" alt="" width="408" height="408" loading="lazy" />
+            </figure>
+            <div class="c-support__text-area">
+              <div class="c-support__dl">
+                <div class="c-support__dl-row">
+                  <dt class="c-support__dt">税理士法人トゥモローズ</dt>
+                  <dd class="c-support__dd">
+                    相続税申告年間350件超の豊富な実績。相続税に特化した税理士法人として専門性の高いサービスを提供。
+                  </dd>
+                </div>
+                <div class="c-support__dl-row">
+                  <dt class="c-support__dt">行政書士法人トゥモローズ</dt>
+                  <dd class="c-support__dd">
+                    相続手続き・遺言書作成・終活サポートの窓口。専門スタッフがお客様の想いに寄り添います。
+                  </dd>
+                </div>
+                <div class="c-support__dl-row">
+                  <dt class="c-support__dt">株式会社トゥモローズ</dt>
+                  <dd class="c-support__dd">
+                    相続不動産の売却、有効活用、資産組替等をサポート。税務と連動した最適な不動産戦略をご提案します。
+                  </dd>
+                </div>
+                <div class="c-support__dl-row">
+                  <dt class="c-support__dt">提携司法書士・弁護士</dt>
+                  <dd class="c-support__dd">
+                    相続登記や紛争案件も信頼の提携ネットワークで対応。ワンストップで解決できます。
+                  </dd>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="p-top-support__bg">
+            <h3 class="p-top-support__bg-title">安心のアフターサービス</h3>
+            <p class="p-top-support__bg-text">
+              資産運用相談　/　税務調査対応　/　<br class="u-onliy-sp" />二次相続対策　/　生命保険見直し　/　<br
+                class="u-onliy-sp"
+              />所得税確定申告　/　<br class="u-onliy-sp" />信頼できる専門家のご紹介
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="p-greeting p-greeting--top">
+        <div class="l-inner">
+          <h2 class="c-primary-title">代表ごあいさつ</h2>
+          <div class="c-greeting p-greeting__media">
+            <figure class="c-greeting__img">
+              <img src="./assets/img/top/greeting_img.jpg" alt="" width="355" height="388" loading="lazy" />
+            </figure>
+            <div class="c-greeting__body">
+              <p class="c-greeting__position">行政書士法人トモワーズ</p>
+              <p class="c-greeting__name">大塚 英司</p>
+            </div>
+            <div class="c-greeting__text-warp">
+              <p class="c-greeting__text">
+                私たちは「謙虚に、素直に、誠実に」をモットーに、お客様の相続に最善を尽くしてまいります。
+              </p>
+              <p class="c-greeting__text">
+                相続は人生で何度も経験することではありません。だからこそ、お客様一人ひとりのお気持ちに寄り添い、専門家として確かなサポートをお届けします。
+              </p>
+              <p class="c-greeting__text">
+                ご相談いただいたからといって、必ずご依頼いただく必要はありません。まずはお気軽にお話をお聞かせください。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-cta">
+        <div class="l-inner">
+          <h2 class="p-cta__title">Contact</h2>
+          <div class="p-cta__content">
+            <p class="p-cta__catch">
+              <span class="u-text-marker">平日夜間や土日</span>も対応。<br class="u-onliy-tbsp" />お急ぎの方は<span
+                class="u-text-marker"
+                >即日対応可能。</span
+              >
+            </p>
+            <p class="p-cta__text">初回のご相談は無料です。お気軽に<br class="u-onliy-sp" />お問い合わせください。</p>
+            <div class="p-cta__bottom">
+              <div class="p-cta__tel-wrap c-tel c-tel--black">
+                <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+                <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+              </div>
+              <div class="p-cta__btn-wrap">
+                <a href="/contact/" class="c-btn">お問い合わせ</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="p-top-column">
+        <div class="l-inner l-inner--l">
+          <h2 class="c-primary-title">相続コラム</h2>
+          <p class="c-lead">相続・遺言・終活に関する<br class="u-onliy-sp" />最新情報をお届けします。</p>
+          <ul class="p-top-column__card-wrap">
+            <li>
+              <a href="" class="c-card">
+                <figure class="c-card__img">
+                  <img src="./assets/img/top/column_thumb.jpg" alt="" width="383" height="233" loading="lazy" />
+                </figure>
+                <div class="c-card__body">
+                  <div class="c-card__meta">
+                    <time class="c-card__date" datetime="2026-04-01">2026.04.01</time>
+                    <div class="c-card__cate-wrap">
+                      <span class="c-card__cate">相続手続き</span>
+                    </div>
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">
+                      インドの相続手続き｜承継証明書と日本の税務タイトルタイトルタイトルタイトル
+                    </h3>
+                    <p class="c-card__text">
+                      本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入りま...
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="c-card">
+                <figure class="c-card__img">
+                  <img src="./assets/img/top/column_thumb.jpg" alt="" width="383" height="233" loading="lazy" />
+                </figure>
+                <div class="c-card__body">
+                  <div class="c-card__meta">
+                    <time class="c-card__date" datetime="2026-04-01">2026.04.01</time>
+                    <div class="c-card__cate-wrap">
+                      <span class="c-card__cate">相続手続き</span>
+                    </div>
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">
+                      インドの相続手続き｜承継証明書と日本の税務タイトルタイトルタイトルタイトル
+                    </h3>
+                    <p class="c-card__text">
+                      本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入りま...
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="" class="c-card">
+                <figure class="c-card__img">
+                  <img src="./assets/img/top/column_thumb.jpg" alt="" width="383" height="233" loading="lazy" />
+                </figure>
+                <div class="c-card__body">
+                  <div class="c-card__meta">
+                    <time class="c-card__date" datetime="2026-04-01">2026.04.01</time>
+                    <div class="c-card__cate-wrap">
+                      <span class="c-card__cate">相続手続き</span>
+                    </div>
+                  </div>
+                  <div class="c-card__content">
+                    <h3 class="c-card__title">
+                      インドの相続手続き｜承継証明書と日本の税務タイトルタイトルタイトルタイトル
+                    </h3>
+                    <p class="c-card__text">
+                      本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入ります本文の抜粋が入りま...
+                    </p>
+                  </div>
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="p-top-column__btn-wrap">
+            <a href="/column/" class="c-btn c-btn--border">コラム一覧を見る</a>
+          </div>
+        </div>
+      </section>
+      <section class="p-offer">
+        <div class="l-inner">
+          <div class="p-offer__content">
+            <div class="p-offer__text-area">
+              <h2 class="p-offer__title">まずは無料相談から、<br />お気軽にお問い合わせください。</h2>
+              <p class="p-offer__text">
+                相続は、早めに専門家に相談することで<br />時間も費用も大幅に節約できます。<br />「まだ何も決まっていない」という段階でも構いません。<br />お客様のご状況を整理するところから、お手伝いします。
+              </p>
+              <div class="p-offer__btn-wrap">
+                <a href="" class="c-btn">無料相談を予約する</a>
+              </div>
+            </div>
+            <figure class="p-offer__img">
+              <img src="./assets/img/top/offer_img.jpg" alt="" width="789" height="526" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+      <section class="p-office p-office--top">
+        <div class="l-inner">
+          <h2 class="c-primary-title">事務所のご案内</h2>
+          <div class="p-office__content">
+            <div class="p-office__body">
+              <h3 class="p-office__name">東京本店</h3>
+              <p class="p-office__address">〒104-0032<br />東京都中央区八丁堀4-3-5 京橋宝町PREX 6階</p>
+              <div class="p-office__access">
+                <p class="p-office__access-title">Access</p>
+                <div class="p-office__access-text-wrap">
+                  <p class="p-office__access-text">東京メトロ日比谷線 八丁堀駅 徒歩3分</p>
+                  <p class="p-office__access-text">都営浅草線 宝町駅 徒歩4分</p>
+                  <p class="p-office__access-text">東京メトロ銀座線 京橋駅 徒歩6分</p>
+                </div>
+              </div>
+            </div>
+            <figure class="p-office__img">
+              <img src="./assets/img/top/office_img.jpg" alt="" width="488" height="325" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="l-footer__container">
+          <div class="l-footer__info">
+            <p class="l-footer__name">行政書士法人トゥモローズ</p>
+            <p class="l-footer__address">〒104-0032<br />東京都中央区八丁堀4-3-5 京橋室町PREX 6階</p>
+            <p class="l-footer__tel">電話：03-6280-5188</p>
+            <p class="l-footer__license">東京 都行政書士会所属</p>
+          </div>
+
+          <div class="l-footer__nav-wrap">
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+              <ul class="l-footer__nav-list">
+                <li class="l-footer__nav-item"><a href="">相続手続き代行</a></li>
+                <li class="l-footer__nav-item"><a href="">遺言書作成</a></li>
+                <li class="l-footer__nav-item"><a href="">おひとりさま終活</a></li>
+                <li class="l-footer__nav-item"><a href="">法人案内</a></li>
+              </ul>
+              <ul class="l-footer__nav-list">
+                <li class="l-footer__nav-item"><a href="">相続コラム</a></li>
+                <li class="l-footer__nav-item"><a href="">お問い合わせ</a></li>
+                <li class="l-footer__nav-item"><a href="">税理士法人トゥモローズ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="l-footer__copyright">
+          © <span id="current-year"></span> 行政書士法人トゥモローズ. All Rights Reserved.
+        </p>
+      </div>
+    </footer>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- <script src="./assets/js/splide/splide.min.js"></script> -->
+    <script src="./assets/js/ScrollHint/scroll-hint.min.js"></script>
+    <script defer src="./assets/js/common.js"></script>
+  </body>
 </html>
