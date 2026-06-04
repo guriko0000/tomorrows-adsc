@@ -33,6 +33,22 @@
   src: url('../fonts/NotoSans_Black.woff2') format('woff2'),
        url('../fonts/NotoSans_Black.woff')  format('woff');
 }
+@font-face {
+  font-family: 'Notoserif_subset';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/NotoSerif_semibold.woff2') format('woff2'),
+       url('../fonts/NotoSerif_semibold.woff')  format('woff');
+}
+@font-face {
+  font-family: 'Notoserif_subset';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/NotoSerif_bold.woff2') format('woff2'),
+       url('../fonts/NotoSerif_bold.woff')  format('woff');
+}
 
 /* roboto-regular - latin */
 @font-face {
