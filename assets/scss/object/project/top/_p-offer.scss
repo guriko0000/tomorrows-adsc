@@ -4,7 +4,7 @@
         p-offer
 -----------------------------------------*/
 .p-offer {
-  @include mq(md) {    
+  @include mq(md) {
     background: transparent url(../img/top/offer_img-sp.jpg) no-repeat center center/cover;
     padding: 60px 0;
   }
@@ -43,7 +43,7 @@
     @include mq(md) {
       font-size: 2.2rem;
     }
-    @media screen and (max-width: 382px){
+    @media screen and (max-width: 382px) {
       font-size: 5.6vw;
     }
   }
@@ -65,14 +65,14 @@
       display: none;
     }
     &::before {
-      content: '';
+      content: "";
       display: block;
       position: absolute;
       top: 0;
       right: -2px;
       width: 54.11%;
       min-height: 100%;
-      background: linear-gradient(90deg, rgba(246, 246, 246, 0.00) 0%, #FFF 100%);
+      background: linear-gradient(90deg, rgba(246, 246, 246, 0) 0%, #fff 100%);
     }
 
     img {
@@ -80,6 +80,53 @@
       min-height: 526px;
       object-fit: cover;
     }
+  }
+
+  &__round-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 30px;
+
+    @include mq(md) {
+      justify-content: center;
+    }
+  }
+
+  &__round {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 114px;
+    height: 114px;
+    margin-right: 20px;
+    background-color: $main-bg;
+    border-radius: 100%;
+
+    @include mq(md) {
+      width: 100px;
+      height: 100px;
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__round-number {
+    font-size: 1.5rem;
+    line-height: 1;
+
+    span {
+      font-size: 3rem;
+      font-family: roboto;
+      color: $main-color;
+      font-weight: $semibold;
+    }
+  }
+
+  &__round-cap {
+    font-size: 1.2rem;
   }
 
   &__btn-wrap {
@@ -97,5 +144,4 @@
       }
     }
   }
-
 }

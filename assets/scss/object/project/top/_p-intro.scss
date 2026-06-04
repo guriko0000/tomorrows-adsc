@@ -33,14 +33,15 @@
     }
   }
 
-    &__text-medium {
-      line-height: 2;
-      text-align: center;
-    }
+  &__text-medium {
+    line-height: 2;
+    text-align: center;
+  }
 
-    &__img {
-      margin-top: 80px;
-    }
+  &__img {
+    margin-top: 80px;
+    text-align: center;
+  }
 
   &__media {
     margin-top: 100px;
@@ -121,7 +122,7 @@
       margin-top: 30px;
     }
     &::before {
-      content: '';
+      content: "";
       flex-shrink: 0;
       width: 24px;
       height: 24px;
@@ -136,5 +137,4 @@
       }
     }
   }
-
 }

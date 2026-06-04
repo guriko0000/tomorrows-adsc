@@ -3207,6 +3207,7 @@ tbody .c-servicetable02__section th {
 }
 .p-intro__img {
   margin-top: 80px;
+  text-align: center;
 }
 .p-intro__media {
   margin-top: 100px;
@@ -4010,13 +4011,57 @@ tbody .c-servicetable02__section th {
   right: -2px;
   width: 54.11%;
   min-height: 100%;
-  background: linear-gradient(90deg, rgba(246, 246, 246, 0) 0%, #FFF 100%);
+  background: linear-gradient(90deg, rgba(246, 246, 246, 0) 0%, #fff 100%);
 }
 .p-offer__img img {
   width: 100%;
   min-height: 526px;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.p-offer__round-wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .p-offer__round-wrap {
+    justify-content: center;
+  }
+}
+.p-offer__round {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 114px;
+  height: 114px;
+  margin-right: 20px;
+  background-color: #EEFAF9;
+  border-radius: 100%;
+}
+@media screen and (max-width: 767px) {
+  .p-offer__round {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+  }
+  .p-offer__round:last-child {
+    margin-right: 0;
+  }
+}
+.p-offer__round-number {
+  font-size: 1.5rem;
+  line-height: 1;
+}
+.p-offer__round-number span {
+  font-size: 3rem;
+  font-family: roboto;
+  color: #2DAEBB;
+  font-weight: 600;
+}
+.p-offer__round-cap {
+  font-size: 1.2rem;
 }
 .p-offer__btn-wrap {
   margin-top: 40px;
