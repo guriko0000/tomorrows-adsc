@@ -5,22 +5,64 @@
 -----------------------------------------*/
 .p-voice {
 
-  &__intro {}
+  &__intro {
+    padding: 50px 70px;
+  }
 
-  &__intro-text {}
+  &__intro-text {
+    font-size: 1.8rem;
+    line-height: 2;
+    text-align: center;
+  }
 
-  &__intro-img {}
+  &__intro-img {
+    margin-top: 60px;
+  }
 
-  &__cate-wrap {}
+  &__cate-wrap {
 
-  &__cate-list {}
+  }
 
-  &__cate-item {}
+  &__cate-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  &__cate-item {
+    a {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid $main-color;
+      font-size: 1.8rem;
+      font-weight: $medium;
+      line-height: 1.4;
+      text-align: center;
+      padding: 15px 20px;
+      transition: 0.25s;
+      &:hover, &:focus-visible {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+
+    &.is-active {
+      a {
+        background-color: $main-color;
+        color: #fff;
+        &:hover, &:focus-visible {
+          background-color: #fff;
+          color: $main-color;
+        }
+      }
+    }
+  }
 
   &__item-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 30px;
+    margin-top: 50px;
   }
 
 }
