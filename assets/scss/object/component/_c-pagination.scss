@@ -4,14 +4,18 @@
 -----------------------------------------*/
 .c-pagination {
   display: flex;
+  justify-content: center;
 
   ul {
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 5px 10px;
+    gap: 5px 16px;
     position: relative;
+    @include mq(md) {
+      gap: 5px 10px;
+    }
   }
 
   li a {
@@ -25,14 +29,12 @@
     display: flex;
     align-items: center;
     justify-content: center;    
-    width: 40px;
-    height: 40px;
-    border: 1px solid $main-bg;
-    background-color: $main-bg;
-    border-radius: 4px;
+    width: 46px;
+    height: 46px;
+    border: 1px solid $main-color;
+    background-color: #fff;    
     font-family: $third-font-family;
     line-height: 1;
-    margin: 3px;
     @include mq(md) {
       width: 30px;
       height: 30px;
@@ -41,22 +43,22 @@
   }
 
   li .current {
-    background-color: $accent-color;
-    border: 1px solid $accent-color;
+    background-color: $main-color;
+    border: 1px solid $main-color;
     color: #fff;
   }
 
   li .prev, li .next {
-    border: none;
+    // border: none;
   }
 
   li .prev {
     &::before {
       content: '';
       display: inline-block;
-      width: 7px;
-      height: 14px;      
-      background-image: url(../img/icon/icon_left.svg);
+      width: 12px;
+      height: 24px;      
+      background-image: url(../img/icon/icon_arrow-left.svg);
       background-size: contain;
       background-repeat: no-repeat;  
       @include mq(md) {
@@ -70,9 +72,9 @@
     &::after {
       content: '';
       display: inline-block;
-      width: 7px;
-      height: 14px;      
-      background-image: url(../img/icon/icon_right.svg);
+      width: 12px;
+      height: 24px;      
+      background-image: url(../img/icon/icon_arrow-right-2.svg);
       background-size: contain;
       background-repeat: no-repeat;
       @include mq(md) {
