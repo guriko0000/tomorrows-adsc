@@ -1,0 +1,23 @@
+@use "../global/index" as *;
+
+/* -------------------------------------
+        l-col2
+-----------------------------------------*/
+
+.l-col2 {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px auto 130px;
+
+  @include mq(lg) {
+    display: block;
+  }
+}
+
+.l-body {
+  width: 66%;
+}
+
+.l-side {
+  width: 27%;
+}

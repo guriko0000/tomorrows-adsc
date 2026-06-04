@@ -26,6 +26,7 @@
 @use "./layout/l-main";
 @use "./layout/l-grid";
 @use "./layout/l-pagination";
+@use "./layout/l-col2";
 
 //==========================================================================
 // Object
@@ -54,6 +55,7 @@
 @use "./object/component/c-faq";
 @use "./object/component/c-voice";
 @use "./object/component/c-breadcrumb";
+@use "./object/component/c-side";
 
 // Project
 @use "./object/project/top/p-mv";
@@ -87,6 +89,7 @@
 @use "./object/project/under/p-voice";
 @use "./object/project/under/p-stage";
 @use "./object/project/under/p-agreement";
+@use "./object/project/under/p-column";
 
 // Utility
 @use "./object/utility/utility";

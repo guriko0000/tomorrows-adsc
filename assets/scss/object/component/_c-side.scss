@@ -1,0 +1,45 @@
+@use "../../global/index" as *;
+
+/* -------------------------------------
+        c-side
+-----------------------------------------*/
+
+.c-side {
+  &__title {
+    padding-bottom: 3px;
+    font-size: 1.8rem;
+    border-bottom: solid 1px $main-color;
+  }
+
+  &__cate {
+    margin-top: 25px;
+  }
+
+  &__cate-item {
+    position: relative;
+    margin-top: 10px;
+    padding-left: 1.5rem;
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 2px;
+      display: inline-block;
+      width: 12px;
+      height: 24px;
+      background-image: url(../img/icon/icon_arrow-right-2.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    a {
+      &:hover {
+        color: $main-color;
+        transition: color 0.25s;
+      }
+    }
+  }
+  & + .c-side {
+    margin-top: 60px;
+  }
+}

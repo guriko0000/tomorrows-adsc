@@ -1,0 +1,21 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-
+-----------------------------------------*/
+
+.p-column {
+  &__card-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  li {
+    width: 48%;
+
+    &:nth-child(n + 3) {
+      margin-top: 30px;
+    }
+  }
+}
