@@ -6,41 +6,63 @@
 .p-if {
   padding: 100px 0;
 
+  em {
+    font-weight: $bold;
+    font-style: normal;
+  }
+
+  &__card {
+    margin-top: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  &__card-img img {
+    width: 100%;
+  }
+
+  &__card-body {
+    padding: 30px;
+  }
+
+  &__card-title {
+    font-size: 2rem;
+    font-weight: $medium;
+    line-height: 1.5;
+  }
+
+  &__card-text {
+    margin-top: 15px;
+  }
+
   &__bottom {
     display: flex;
+    flex-direction: row-reverse;
     align-items: center;
     justify-content: center;
     gap: 35px;
     margin-top: 40px;
     @include mq(md) {
-      flex-direction: column;
-      gap: 17px;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 17px 30px;
       margin-top: 30px;
     }
 
-    &::before, &::after {
-      content: '';
+    &::before,
+    &::after {
+      content: "";
       display: inline-block;
-      width: 74px;
-      height: 80px;
-      background: url(../img/under/recommend_icon01.png) no-repeat center / contain;
-      @include mq(md) {
-        width: 97px;
-        height: 51px;
-      }
+      height: 124px;
     }
 
     &::before {
-      background-image: url(../img/under/recommend_icon01.png);
-      @include mq(md) {
-        content: none;
-      }
+      width: 101px;
+      background: url(../img/under/if_icon01.png) no-repeat center / contain;
     }
     &::after {
-      background: url(../img/under/recommend_icon02.png) no-repeat center / contain;
-      @include mq(md) {
-        background-image: url(../img/under/recommend_icon-sp.png);
-      }
+      width: 111px;
+      background: url(../img/under/if_icon02.png) no-repeat center / contain;
     }
   }
 
@@ -48,6 +70,8 @@
     font-size: 1.8rem;
     text-align: center;
     @include mq(md) {
+      order: -1;
+      width: 100%;
       font-size: 1.5rem;
     }
 
@@ -56,5 +80,4 @@
       font-weight: $medium;
     }
   }
-
 }

@@ -1,494 +1,764 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+    <!-- meta情報 -->
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <!-- ogp -->
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+    <meta property="og:site_name" content="" />
+    <meta property="og:description" content="" />
+    <!-- ファビコン -->
+    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <!-- fontawesome -->
+    <!-- <script src="https://kit.fontawesome.com/39d42e1acb.js" crossorigin="anonymous"></script> -->
+    <!-- Googleフォント -->
+    <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
+    <!-- css -->
+    <!-- <link rel="stylesheet" href="../assets/js/splide/splide.min.css"> -->
+    <link rel="stylesheet" href="../assets/js/ScrollHint/scroll-hint.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <script>
+      console.log("");
+    </script>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <meta name="format-detection" content="telephone=no">
-  <!-- meta情報 -->
-  <title></title>
-  <meta name="description" content="">
-  <meta name="keywords" content="">
-  <!-- ogp -->
-  <meta property="og:title" content="">
-  <meta property="og:type" content="">
-  <meta property="og:url" content="">
-  <meta property="og:image" content="">
-  <meta property="og:site_name" content="">
-  <meta property="og:description" content="">
-  <!-- ファビコン -->
-  <link rel="shortcut icon" type="image/x-icon" href="">
-  <!-- fontawesome -->
-  <!-- <script src="https://kit.fontawesome.com/39d42e1acb.js" crossorigin="anonymous"></script> -->
-  <!-- Googleフォント -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Condensed&display=swap" rel="stylesheet"> -->
-  <!-- css -->
-  <!-- <link rel="stylesheet" href="../assets/js/splide/splide.min.css"> -->
-  <link rel="stylesheet" href="../assets/js/ScrollHint/scroll-hint.css">
-  <link rel="stylesheet" href="../assets/css/style.css">
-  <script>console.log("")</script>
-</head>
-
-<body>
-  <header id="header" class="l-header js-header">
-    <div class="l-header__inner">
-      <!-- ロゴ -->
-      <div class="l-header__logo">
-        <a href="/">
-          <span class="l-header__logo-text">相続専門の行政書士法人</span>
-          <span class="l-header__logo-main">
-            <picture>
-              <source media="(min-width: 768px)" srcset="../assets/img/common/logo.svg" width="361" height="30">
-              <source media="(max-width: 767px)" srcset="../assets/img/common/logo-sp.svg" width="255" height="17">
-              <img class="l-header__logo-img" src="../assets/img/common/logo.svg" alt="ロゴ" width="361" height="30">
-            </picture>
-          </span>
-        </a>
-      </div>
-      <!-- ヘッダーナビ -->
-      <div class="l-header__container">
-        <nav class="p-header-nav">
-          <ul class="p-header-nav__list">
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="#">相続手続き代行</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="#">遺言書作成</a>
-            </li>
-            <li class="p-header-nav__item">
-              <a class="p-header-nav__link" href="#">おひとりさま終活</a>
-            </li>
-          </ul>
-        </nav>
-        <div class="l-header__contact">
-          <div class="l-header__tel-wrap c-tel">
-            <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-            <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-          </div>
-          <a href="/contact/" class="l-header__cta-btn c-btn c-btn--small">お問い合わせ</a>
+  <body class="service03">
+    <header id="header" class="l-header js-header">
+      <div class="l-header__inner">
+        <!-- ロゴ -->
+        <div class="l-header__logo">
+          <a href="/">
+            <span class="l-header__logo-text">相続専門の行政書士法人</span>
+            <span class="l-header__logo-main">
+              <picture>
+                <source media="(min-width: 768px)" srcset="../assets/img/common/logo.svg" width="361" height="30" />
+                <source media="(max-width: 767px)" srcset="../assets/img/common/logo-sp.svg" width="255" height="17" />
+                <img
+                  class="l-header__logo-img"
+                  src="../assets/img/common/logo.svg"
+                  alt="ロゴ"
+                  width="361"
+                  height="30"
+                />
+              </picture>
+            </span>
+          </a>
         </div>
-      </div>
-      <!-- ハンバーガーメニュー -->
-      <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
-        <span class="c-hamburger-btn__inner">
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-          <span class="c-hamburger-btn__line"></span>
-        </span>
-      </button>
-    </div>
-
-    <!-- ハンバーガーメニュー内ナビ -->
-    <nav class="p-sub-nav" aria-hidden="true">
-      <div class="l-inner p-sub-nav__inner">
-        <ul class="p-sub-nav__list js-header-nav">
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">ホーム</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続手続き代行</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">遺言書作成</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">おひとりさま終活</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">法人案内</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続コラム</a></p>
-          </li>
-          <li class="p-sub-nav__item">
-            <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="https://tomorrowstax.com/">税理士法人トゥモローズ</a></p>
-          </li>
-        </ul>
-        <div class="p-sub-nav__bottom">
-          <div class="p-sub-nav__tel-wrap c-tel">
-            <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-            <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-          </div>
-          <div class="p-sub-nav__btn">
-            <a href="/contact/" class="c-btn">無料相談を予約する</a>
-          </div>
-        </div>
-      </div>
-    </nav>
-  </header>
-  <main class="l-main l-main--top">
-    <section class="p-mv p-mv--service03">
-      <div class="p-mv__inner">
-        <div class="p-mv__content">
-          <h1 class="p-mv__title">おひとりさまの不安を、<br><span class="u-text-main-color">公正証書遺言</span>の<span class="u-text-main-color">死後事務委任</span>で<br>確かな備えに。</h1>
-          <ul class="p-mv__tags">
-            <li class="p-mv__tag">遺言書 22万円〜</li>
-            <li class="p-mv__tag">死後事務委任 22万円〜</li>
-          </ul>
-          <ul class="p-mv__tags">
-            <li class="p-mv__tag">必要な契約だけ選べる</li>
-            <li class="p-mv__tag">大きな預託金は不要</li>
-          </ul>
-          <div class="p-mv__bottom">
-            <div class="p-mv__btn-wrap">
-              <a href="/contact/" class="c-btn">初回相談無料｜今すぐ予約</a>
-            </div>
-            <div class="p-mv__tel-wrap c-tel">
+        <!-- ヘッダーナビ -->
+        <div class="l-header__container">
+          <nav class="p-header-nav">
+            <ul class="p-header-nav__list">
+              <li class="p-header-nav__item">
+                <a class="p-header-nav__link" href="#">相続手続き代行</a>
+              </li>
+              <li class="p-header-nav__item">
+                <a class="p-header-nav__link" href="#">遺言書作成</a>
+              </li>
+              <li class="p-header-nav__item">
+                <a class="p-header-nav__link" href="#">おひとりさま終活</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="l-header__contact">
+            <div class="l-header__tel-wrap c-tel">
               <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
               <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
             </div>
+            <a href="/contact/" class="l-header__cta-btn c-btn c-btn--small">お問い合わせ</a>
           </div>
-          <p class="p-mv__note"><small>※ 初回の面談は無料です。相談だけ・見積りだけでもお気軽にお問い合わせください。</small></p>
         </div>
+        <!-- ハンバーガーメニュー -->
+        <button class="c-hamburger-btn js-header-btn" aria-label="メニューボタン" aria-expanded="false">
+          <span class="c-hamburger-btn__inner">
+            <span class="c-hamburger-btn__line"></span>
+            <span class="c-hamburger-btn__line"></span>
+            <span class="c-hamburger-btn__line"></span>
+          </span>
+        </button>
       </div>
-    </section>
-    <section class="p-intro">
-      <div class="l-inner">
-        <p class="p-intro__text-medium"><span class="u-text-marker">遺言書22万円〜・死後事務委任22万円〜</span>を中心に、<br>必要に応じて身元保証・任意後見・財産管理・尊厳死宣言まで。<br>相続専門の税理士・行政書士法人グループが、おひとりさまの人生の最期まで一貫サポートします。</p>
-        <figure class="p-intro__img">
-          <picture>
-            <source media="(min-width: 768px)" srcset="../assets/img/under/service03_intro-img.png" width="1100" height="188">
-            <source media="(max-width: 767px)" srcset="../assets/img/under/service03_intro-img-sp.png" width="360" height="351">
-            <img src="../assets/img/under/service03_intro-img.png" alt="" width="1100" height="188" loading="lazy">
-          </picture>
-        </figure>
-      </div>
-    </section>
-    <section class="p-if u-bg-color-gray">
-      <div class="l-inner">
-        <h2 class="c-primary-title">おひとりさまに、<br>こんな<span class="u-text-marker">「もしも」</span>が起こります</h2>
-        <p class="c-lead">準備をせずにいると、ご自身だけでなく、周囲の方々にも大きな負担が及びます。<br>実際にあった3つのケースをご紹介します。</p>
-        <div class="p-if__bottom">
-          <p class="p-if__bottom-text"><em>これらはすべて生前の契約で解決できる問題です。</em><br>しかし、認知症を発症してしまうと契約自体ができなくなります。<br><span class="u-text-marker">準備は「元気なうち」にしかできません。</span></p>
+
+      <!-- ハンバーガーメニュー内ナビ -->
+      <nav class="p-sub-nav" aria-hidden="true">
+        <div class="l-inner p-sub-nav__inner">
+          <ul class="p-sub-nav__list js-header-nav">
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">ホーム</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続手続き代行</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">遺言書作成</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">おひとりさま終活</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">法人案内</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title"><a class="p-sub-nav__link" href="#">相続コラム</a></p>
+            </li>
+            <li class="p-sub-nav__item">
+              <p class="p-sub-nav__title">
+                <a class="p-sub-nav__link" href="https://tomorrowstax.com/">税理士法人トゥモローズ</a>
+              </p>
+            </li>
+          </ul>
+          <div class="p-sub-nav__bottom">
+            <div class="p-sub-nav__tel-wrap c-tel">
+              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+            </div>
+            <div class="p-sub-nav__btn">
+              <a href="/contact/" class="c-btn">無料相談を予約する</a>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </nav>
+    </header>
+    <main class="l-main l-main--top">
+      <section class="p-mv p-mv--service03">
+        <div class="p-mv__inner">
+          <div class="p-mv__content">
+            <h1 class="p-mv__title">
+              おひとりさまの不安を、<br /><span class="u-text-main-color">公正証書遺言</span>の<span
+                class="u-text-main-color"
+                >死後事務委任</span
+              >で<br />確かな備えに。
+            </h1>
+            <ul class="p-mv__tags">
+              <li class="p-mv__tag">遺言書 22万円〜</li>
+              <li class="p-mv__tag">死後事務委任 22万円〜</li>
+            </ul>
+            <ul class="p-mv__tags">
+              <li class="p-mv__tag">必要な契約だけ選べる</li>
+              <li class="p-mv__tag">大きな預託金は不要</li>
+            </ul>
+            <div class="p-mv__bottom">
+              <div class="p-mv__btn-wrap">
+                <a href="/contact/" class="c-btn">初回相談無料｜今すぐ予約</a>
+              </div>
+              <div class="p-mv__tel-wrap c-tel">
+                <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+                <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+              </div>
+            </div>
+            <p class="p-mv__note">
+              <small>※ 初回の面談は無料です。相談だけ・見積りだけでもお気軽にお問い合わせください。</small>
+            </p>
+          </div>
+        </div>
+      </section>
+      <section class="p-intro">
+        <div class="l-inner">
+          <p class="p-intro__text-medium">
+            <span class="u-text-marker">遺言書22万円〜・死後事務委任22万円〜</span
+            >を中心に、<br />必要に応じて身元保証・任意後見・財産管理・尊厳死宣言まで。<br />相続専門の税理士・行政書士法人グループが、おひとりさまの人生の最期まで一貫サポートします。
+          </p>
+          <figure class="p-intro__img">
+            <picture>
+              <source
+                media="(min-width: 768px)"
+                srcset="../assets/img/under/service03_intro-img.png"
+                width="1100"
+                height="188"
+              />
+              <source
+                media="(max-width: 767px)"
+                srcset="../assets/img/under/service03_intro-img-sp.png"
+                width="360"
+                height="351"
+              />
+              <img src="../assets/img/under/service03_intro-img.png" alt="" width="1100" height="188" loading="lazy" />
+            </picture>
+          </figure>
+        </div>
+      </section>
+      <section class="p-if u-bg-color-gray">
+        <div class="l-inner">
+          <h2 class="c-primary-title">
+            おひとりさまに、<br />こんな「<span class="u-text-marker">もしも</span>」が起こります
+          </h2>
+          <p class="c-lead">
+            準備をせずにいると、ご自身だけでなく、周囲の方々にも大きな負担が及びます。<br />実際にあった3つのケースをご紹介します。
+          </p>
 
-    <section class="p-features">
-      <div class="l-inner">
-        <h2 class="c-primary-title">トゥモローズが選ばれる<br>3つの特徴</h2>
-        <ul class="l-grid l-grid--col3 p-features__list">
-          <li class="c-numcard">
-            <span class="c-numcard__num">01</span>
-            <div class="c-numcard__head">
-              <span class="c-numcard__icon">
-                <img src="../assets/img/under/features_icon04.png" alt="" width="70" height="46" loading="lazy">
-              </span>
-              <h3 class="c-numcard__title">税理士法人がグループ内<br>の<span class="u-text-marker">相続税まで連携提案%OFF</span></h3>
-            </div>
-            <div class="c-numcard__body">
-              <p class="c-numcard__text">遺言書の内容を決める上で<em>相続税の試算は重要</em>。ご希望の方には、<em>年間350件超の相続税申告実績</em>を持つ税理士法人トゥモローズと別途ご契約いただくことで、税額計算・二次相続シミュレーション・節税分割案を一体でご提案可能です。</p>
-            </div>
-          </li>
-          <li class="c-numcard">
-            <span class="c-numcard__num">02</span>
-            <div class="c-numcard__head">
-              <span class="c-numcard__icon">
-                <img src="../assets/img/under/features_icon05.png" alt="" width="70" height="46" loading="lazy">
-              </span>
-              <h3 class="c-numcard__title">遺言執行も対応可能<br><span class="u-text-marker">相続発生後も同じ窓口</span></h3>
-            </div>
-            <div class="c-numcard__body">
-              <p class="c-numcard__text">遺言書を作成しても、実際に相続が発生した後の手続き（戸籍収集・財産調査・名義変更）が必要です。当法人を遺言執行者にご指定いただければ、<em>遺言の作成から将来の相続手続きまで、同じ窓口で一貫対応</em>。相続税申告も税理士法人と連携可能（別途契約）です。</p>
-            </div>
-          </li>
-          <li class="c-numcard">
-            <span class="c-numcard__num">03</span>
-            <div class="c-numcard__head">
-              <span class="c-numcard__icon">
-                <img src="../assets/img/under/features_icon06.png" alt="" width="70" height="46" loading="lazy">
-              </span>
-              <h3 class="c-numcard__title">遺言作成 年間500件超<br><span class="u-text-marker">豊富な対応実績</span></h3>
-            </div>
-            <div class="c-numcard__body">
-              <p class="c-numcard__text">年間500件超の相続手続き・遺言作成実績を持つ相続専門ファーム。<em>子のいない夫婦・おひとりさま・事業承継・複雑な相続関係</em>等、難易度の高い遺言設計にも豊富な対応経験があります。公証役場との調整もスムーズです。</p>
-            </div>
-          </li>
-        </ul>
+          <ul class="l-grid l-grid--col3 p-if__list">
+            <li class="p-if__card">
+              <div class="p-if__card-img">
+                <img src="../assets/img/under/if_img01.jpg" alt="" width="345" height="..." loading="lazy" />
+              </div>
+              <div class="p-if__card-body">
+                <h3 class="p-if__card-title">「身元保証人がいないので入院・入所できません」</h3>
+                <p class="p-if__card-text">
+                  病院や介護施設の<em>9割以上が身元保証人を要求</em>しています。頼れる親族がいない、いても疎遠で頼みにくい——そんな状況で病気・怪我・要介護状態になると、本来受けられるはずの医療・介護を受けられない事態に陥ります。
+                </p>
+              </div>
+            </li>
+            <li class="p-if__card">
+              <div class="p-if__card-img">
+                <img src="../assets/img/under/if_img02.jpg" alt="" width="345" height="..." loading="lazy" />
+              </div>
+              <div class="p-if__card-body">
+                <h3 class="p-if__card-title">「本人の意思が確認できず財産が動かせません」</h3>
+                <p class="p-if__card-text">
+                  認知症が進行すると、<em>預金の引き出しも不動産の処分も自分でできなくなります。</em>事前に任意後見契約を結んでいない場合、家庭裁判所が選任した法定後見人があなたの財産を管理することになり、ご自身の希望は反映されにくくなります。
+                </p>
+              </div>
+            </li>
+            <li class="p-if__card">
+              <div class="p-if__card-img">
+                <img src="../assets/img/under/if_img03.jpg" alt="" width="345" height="..." loading="lazy" />
+              </div>
+              <div class="p-if__card-body">
+                <h3 class="p-if__card-title">「遺言がないと、財産は最終的に国庫帰属に」</h3>
+                <p class="p-if__card-text">
+                  相続人がいない、または相続人全員が相続放棄した場合、<em>遺産は最終的に国庫に帰属します。</em>「お世話になった方に少しでも遺したい」「思い入れのある団体に寄付したい」——そんな想いも、遺言書がなければ実現できません。
+                </p>
+              </div>
+            </li>
+          </ul>
 
-      </div>
-    </section>
+          <div class="p-if__bottom">
+            <p class="p-if__bottom-text">
+              <em>これらはすべて生前の契約で解決できる問題です。</em
+              ><br />しかし、認知症を発症してしまうと契約自体ができなくなります。<br /><span class="u-text-marker"
+                >準備は「元気なうち」にしかできません。</span
+              >
+            </p>
+          </div>
+        </div>
+      </section>
 
-    <section class="p-stage">
-      <div class="l-inner">
-        <h2 class="c-primary-title">おひとりさまの<br>ライフステージと必要な契約</h2>
-        <p class="c-lead">「現在」「介護開始」「ご相続」のそれぞれの場面で、<br>異なる契約が役立ちます。</p>
-        <div class="p-stage__box-wrap">
-          <div class="p-stage__box">
-            <h3 class="p-stage__box-title"><span class="u-text-marker">元気なうちに準備</span></h3>
-            <ul class="p-stage__box-list">
-              <li class="p-stage__box-item req">
-                <p class="main">遺言書（公正証書）<span>必須</span></p>
-                <p class="sub">財産の行先を指定</p>
+      <section class="p-features">
+        <div class="l-inner">
+          <h2 class="c-primary-title">トゥモローズが選ばれる<br />3つの特徴</h2>
+          <ul class="l-grid l-grid--col3 p-features__list">
+            <li class="c-numcard">
+              <span class="c-numcard__num">01</span>
+              <div class="c-numcard__head">
+                <span class="c-numcard__icon">
+                  <img src="../assets/img/under/features_icon07.png" alt="" width="70" height="46" loading="lazy" />
+                </span>
+                <h3 class="c-numcard__title">相続専門の<br /><span class="u-text-marker">士業ファーム</span></h3>
+              </div>
+              <div class="c-numcard__body">
+                <p class="c-numcard__text">
+                  おひとりさまサポート業界には、不動産業や葬儀業を本業とする事業者も多くあります。トゥモローズは<em>年間350件超の相続税申告と500件超の相続手続き・遺言作成実績</em>を持つ相続専門ファーム。すべての契約書作成・締結を当法人の士業スタッフが直接対応します。
+                </p>
+              </div>
+            </li>
+            <li class="c-numcard">
+              <span class="c-numcard__num">02</span>
+              <div class="c-numcard__head">
+                <span class="c-numcard__icon">
+                  <img src="../assets/img/under/features_icon08.png" alt="" width="70" height="46" loading="lazy" />
+                </span>
+                <h3 class="c-numcard__title">
+                  必要な契約だけ<br /><span class="u-text-marker">大きな預託金不要</span>
+                </h3>
+              </div>
+              <div class="c-numcard__body">
+                <p class="c-numcard__text">
+                  業界の入会金水準は<em>88万〜200万円</em>。トゥモローズは必要な契約だけを個別にご契約いただける仕組みで、<em>大きな前払いや高額な預託金は不要</em>です。死後事務の執行報酬は将来の遺産から精算する仕組みのため、生前のお支払い負担を最小化できます。
+                </p>
+              </div>
+            </li>
+            <li class="c-numcard">
+              <span class="c-numcard__num">03</span>
+              <div class="c-numcard__head">
+                <span class="c-numcard__icon">
+                  <img src="../assets/img/under/features_icon09.png" alt="" width="70" height="46" loading="lazy" />
+                </span>
+                <h3 class="c-numcard__title">相続税申告まで<br /><span class="u-text-marker">グループで一貫</span></h3>
+              </div>
+              <div class="c-numcard__body">
+                <p class="c-numcard__text">
+                  おひとりさまでも、財産が一定額あれば相続税が発生します。グループ内の<em>税理士法人トゥモローズと別途ご契約</em>いただくことで、遺言書の設計段階から相続税試算、相続発生後の申告まで、同じ窓口で一貫対応が可能です。
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="p-stage">
+        <div class="l-inner l-inner--l">
+          <h2 class="c-primary-title">おひとりさまの<br />ライフステージと必要な契約</h2>
+          <p class="c-lead">
+            「現在」「介護開始」「ご相続」の<br class="u-onliy-sp" />それぞれの場面で、<br />異なる契約が役立ちます。
+          </p>
+          <div class="p-stage__box-wrap">
+            <div class="p-stage__box">
+              <p class="p-stage__box-name">現在</p>
+              <div class="p-stage__box-body">
+                <h3 class="p-stage__box-title"><span class="u-text-marker">元気なうちに準備</span></h3>
+                <ul class="p-stage__box-list">
+                  <li class="p-stage__box-item req">
+                    <p class="main">遺言書（公正証書）<span>必須</span></p>
+                    <p class="sub">財産の行先を指定</p>
+                  </li>
+                  <li class="p-stage__box-item req">
+                    <p class="main">死後事務委任契約<span>必須</span></p>
+                    <p class="sub">葬儀・納骨・各種解約</p>
+                  </li>
+                  <li class="p-stage__box-item">
+                    <p class="main">身元保証</p>
+                    <p class="sub">葬儀・納骨・各種解約</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-stage__box">
+              <p class="p-stage__box-name">介護開始</p>
+              <div class="p-stage__box-body">
+                <h3 class="p-stage__box-title"><span class="u-text-marker">元気なうちに準備</span></h3>
+                <ul class="p-stage__box-list">
+                  <li class="p-stage__box-item">
+                    <p class="main">遺言書（公正証書）<span>必須</span></p>
+                    <p class="sub">財産の行先を指定</p>
+                  </li>
+                  <li class="p-stage__box-item">
+                    <p class="">身元保証</p>
+                    <p class="">葬儀・納骨・各種解約</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="p-stage__box">
+              <p class="p-stage__box-name">ご相続</p>
+              <div class="p-stage__box-body">
+                <h3 class="p-stage__box-title"><span class="u-text-marker">元気なうちに準備</span></h3>
+                <ul class="p-stage__box-list">
+                  <li class="p-stage__box-item">
+                    <p class="main">遺言書（公正証書）<span>必須</span></p>
+                    <p class="sub">財産の行先を指定</p>
+                  </li>
+                  <li class="p-stage__box-item">
+                    <p class="">身元保証</p>
+                    <p class="">葬儀・納骨・各種解約</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-cta p-cta--service">
+        <div class="l-inner">
+          <h2 class="p-cta__title">Contact</h2>
+          <div class="p-cta__content u-shadow">
+            <p class="p-cta__catch">
+              まずは無料相談で、<br /><span class="u-text-marker">ご状況を整理しましょう</span>
+            </p>
+            <p class="p-cta__text">
+              「何から始めればいいか分からない」<br class="u-onliy-sp" />という段階で大丈夫です。<br />専門スタッフが<br
+                class="u-onliy-sp"
+              />丁寧にお話を伺います。
+            </p>
+            <div class="p-cta__bottom">
+              <div class="p-cta__tel-wrap c-tel c-tel--black">
+                <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+                <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+              </div>
+              <div class="p-cta__btn-wrap">
+                <a href="/contact/" class="c-btn">初回相談無料｜今すぐ予約する</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-agreement">
+        <div class="l-inner l-inner--l">
+          <h2 class="c-primary-title">トゥモローズで対応する<br />6つの契約</h2>
+          <p class="c-lead">
+            <b>遺言書と死後事務委任は、おひとりさまにとって特に重要な2契約</b
+            >です。<br />他の4契約は、ご状況に応じて必要なものをお選びいただけます。
+          </p>
+
+          <div class="p-agreement__wrap">
+            <div class="p-agreement__title-wrap">
+              <h3 class="p-agreement__title req">必ず準備したい2契約</h3>
+            </div>
+            <ul class="p-agreement__list">
+              <li class="p-agreement__item">
+                <h4 class="p-agreement__item-title req">公正証書遺言作成サポート<span>必須</span></h4>
+                <p class="p-agreement__item-text">
+                  財産の行先を法的に確実なかたちで残す契約。<br />
+                  おひとりさまは法定相続人がいない場合、財産が最終的に国庫帰属となるため、遺言書の作成が特に重要です。
+                </p>
+                <div class="p-agreement__box-wrap">
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">作成サポート</h5>
+                      <p class="p-agreement__box-price"><span>220,000</span>円〜</p>
+                    </div>
+                    <p class="p-agreement__box-note">別途公証人手数料（3〜8万円程度）／証人2名手配込み</p>
+                  </div>
+                </div>
               </li>
-              <li class="p-stage__box-item">
-                <p class="">身元保証</p>
-                <p class="">葬儀・納骨・各種解約</p>
+              <li class="p-agreement__item">
+                <h4 class="p-agreement__item-title req">死後事務委任契約（公正証書化）<span>必須</span></h4>
+                <p class="p-agreement__item-text">
+                  葬儀・納骨・役所手続き・賃貸解約・各種サービス停止など、亡くなった後に必要な事務手続きを生前に委任しておく契約。遺言書ではカバーできない領域を補います。
+                </p>
+                <div class="p-agreement__box-wrap">
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">契約書作成</h5>
+                      <p class="p-agreement__box-price"><span>220,000</span>円〜</p>
+                    </div>
+                  </div>
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">執行報酬<br class="u-onliy-sp" />（相続発生時）</h5>
+                      <p class="p-agreement__box-price"><span>550,000</span>円〜</p>
+                    </div>
+                    <p class="p-agreement__box-note">別途公証人手数料（3〜8万円程度）／証人2名手配込み</p>
+                  </div>
+                </div>
               </li>
             </ul>
           </div>
-        </div>
-      
-      </div>
-    </section>
 
-    <section class="p-cta p-cta--service">
-      <div class="l-inner">
-        <h2 class="p-cta__title">Contact</h2>
-        <div class="p-cta__content u-shadow">
-          <p class="p-cta__catch">まずは無料相談で、<br><span class="u-text-marker">ご状況を整理しましょう</span></p>
-          <p class="p-cta__text">「何から始めればいいか分からない」<br class="u-onliy-sp">という段階で大丈夫です。<br>専門スタッフが<br class="u-onliy-sp">丁寧にお話を伺います。</p>
-          <div class="p-cta__bottom">
-            <div class="p-cta__tel-wrap c-tel c-tel--black">
-              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
+          <div class="p-agreement__wrap">
+            <div class="p-agreement__title-wrap">
+              <h3 class="p-agreement__title">状況に応じて選べる4契約</h3>
             </div>
-            <div class="p-cta__btn-wrap">
-              <a href="/contact/" class="c-btn">初回相談無料｜今すぐ予約する</a>
+            <ul class="p-agreement__list">
+              <li class="p-agreement__item">
+                <h4 class="p-agreement__item-title">身元保証契約（病院・施設）<span>オプション</span></h4>
+                <p class="p-agreement__item-text">
+                  病院への入院・介護施設への入所時に求められる身元保証人として、法人がお引き受けします。費用滞納時の連帯保証、退去時の身柄引取り、緊急連絡先窓口の対応を含みます（24時間駆けつけや日常生活の付き添い等は対象外／必要な場合は外部事業者をご紹介可能です）。
+                </p>
+                <div class="p-agreement__box-wrap">
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">契約書作成＋就任</h5>
+                      <p class="p-agreement__box-price"><span>330,000</span>円〜</p>
+                    </div>
+                    <p class="p-agreement__box-note">
+                      法人として終身で身元保証人をお引き受け／実際の費用代払い等は別途実費清算
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li class="p-agreement__item">
+                <h4 class="p-agreement__item-title">任意後見契約（公正証書化必須）<span>オプション</span></h4>
+                <p class="p-agreement__item-text">
+                  将来認知症等で判断能力が低下した時に備えて、後見人になる人をあらかじめ選んでおく契約。法律上、必ず公正証書で作成する必要があります。発効後は家庭裁判所の監督下で運用されます。
+                </p>
+                <div class="p-agreement__box-wrap">
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">契約書作成</h5>
+                      <p class="p-agreement__box-price"><span>110,000</span>円〜</p>
+                    </div>
+                    <p class="p-agreement__box-note">発効後の後見人報酬は別途月額（家裁基準）／公証人手数料別途</p>
+                  </div>
+                </div>
+              </li>
+              <li class="p-agreement__item">
+                <h4 class="p-agreement__item-title">財産管理委任契約<span>オプション</span></h4>
+                <p class="p-agreement__item-text">
+                  体力低下や入院などで自由に動けなくなった時、判断能力はあっても外出が困難な状況に備える契約。預金の出納や役所手続きなどを代理で行います（任意後見の前段階の備え）。
+                </p>
+                <div class="p-agreement__box-wrap">
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">契約書作成</h5>
+                      <p class="p-agreement__box-price"><span>110,000</span>円〜</p>
+                    </div>
+                    <p class="p-agreement__box-note">実際の管理開始時は別途月額報酬（内容に応じてお見積り）</p>
+                  </div>
+                </div>
+              </li>
+              <li class="p-agreement__item">
+                <h4 class="p-agreement__item-title">尊厳死宣言書（公正証書）<span>オプション</span></h4>
+                <p class="p-agreement__item-text">
+                  病気が「不治かつ末期」になったとき、延命措置を望まない意思を公的に表示する宣言書。担当医師に提示することで、ご自身の意思に沿った医療判断を支援します。
+                </p>
+                <div class="p-agreement__box-wrap">
+                  <div class="p-agreement__box">
+                    <div class="p-agreement__box-flex">
+                      <h5 class="p-agreement__box-name">作成サポート</h5>
+                      <p class="p-agreement__box-price"><span>55,000</span>円〜</p>
+                    </div>
+                    <p class="p-agreement__box-note">公正証書化／公証人手数料別途</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="p-agreement__meyasu">
+            <p class="p-agreement__meyasu-title">
+              6契約フル契約時のご契約時<br class="u-onliy-sp" />お支払い目安（税込）
+            </p>
+            <p class="p-agreement__meyasu-price"><span>1,045,000</span>円〜</p>
+            <div class="p-agreement__meyasu-note">
+              <p>死後事務執行報酬550,000円〜は相続発生時に遺産から精算するため、ご契約時の負担には含まれません</p>
+              <p>任意後見・財産管理の月額報酬は実際の管理・後見開始時から発生します</p>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="p-willsupport">
-      <div class="l-inner">
-        <h2 class="c-primary-title">公正証書遺言作成サポート</h2>
-        <p class="c-lead">原案作成から公証役場との調整・証人手配まで、<br class="u-onliy-sp">明朗な料金で一括対応します。</p>
-        <div class="p-willsupport__plan-wrap">
-          <div class="c-plan u-shadow-10">
-            <div class="c-plan__head">
-              <h3 class="c-plan__title">公正証書遺言作成サポート</h3>
-              <p class="c-plan__lead">書類作成中心プラン</p>
-              <p class="c-plan__sub-lead">遺言書原案の作成から<br class="u-onliy-sp">公証役場との調整・証人同行まで、<br>一括でサポートします。</p>
-              <div class="c-plan__head-price"><span class="unit">¥</span>220,000<span class="price-from">〜</span></div>
+      <section class="p-greeting">
+        <div class="l-inner">
+          <h2 class="c-primary-title">代表ごあいさつ</h2>
+          <div class="c-greeting p-greeting__media">
+            <figure class="c-greeting__img">
+              <img src="../assets/img/under/greeting_img02.jpg" alt="" width="355" height="388" loading="lazy" />
+            </figure>
+            <div class="c-greeting__body">
+              <p class="c-greeting__position">税理士法人トゥモローズ 代表<br />行政書士法人トゥモローズ 代表</p>
+              <p class="c-greeting__name">角田 壮平</p>
             </div>
-            <div class="c-plan__body">
-              <div class="c-plan__note-wrap">
-                <p class="c-plan__note"><small>※ 遺言書の内容・複雑さにより変動します</small></p>
-                <p class="c-plan__note"><small>※ 表示価格はすべて税込です。</small></p>
+            <div class="c-greeting__text-warp">
+              <h3 class="c-greeting__title">「おひとりさま」だからこそ、確かな備えを。</h3>
+              <p class="c-greeting__text">
+                ご家族と離れてお一人で過ごされている方、お子さまがいらっしゃらないご夫婦——「おひとりさま」と呼ばれる方々が、急速に増えています。
+              </p>
+              <p class="c-greeting__text">
+                しかし、いざという時に頼れる方が近くにいないという状況は、入院・施設入所・認知症発症・お亡くなりになった後の手続きと、人生のあらゆる場面で不安を生みます。
+              </p>
+              <p class="c-greeting__text">
+                トゥモローズグループは、<em>相続専門の税理士・行政書士・不動産の専門家が集結</em>した相続専門ファームです。年間350件超の相続税申告、500件以上の相続手続き・遺言作成実績の中で、おひとりさまの終活設計にも数多く携わってきました。
+              </p>
+              <p class="c-greeting__text">
+                私たちが大切にしているのは、<em>「不要な契約を勧めない」「適正価格で確実に」</em>という姿勢です。お客様のご状況とご希望に応じて、必要な契約だけを必要なだけ。大きな前払いや高額な預託金は求めません。
+              </p>
+              <p class="c-greeting__text">
+                おひとりさまでも、確かな備えがあれば、ご自身の意思に沿った人生の最期を迎えることができます。私たちが、その伴走者となります。
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="p-cta p-cta--service">
+        <div class="l-inner">
+          <h2 class="p-cta__title">Contact</h2>
+          <div class="p-cta__content u-shadow">
+            <p class="p-cta__catch">
+              ご自身の遺言、<br />プロに<span class="u-text-marker"
+                >任せて<br class="u-onliy-sp" />確実に残しませんか？</span
+              >
+            </p>
+            <p class="p-cta__text">
+              「公証役場に行ったことがない」<br
+                class="u-onliy-sp"
+              />「何を書けばいいか分からない」<br />——そんな段階で構いません。<br
+                class="u-onliy-sp"
+              />専門スタッフが丁寧にサポートします。
+            </p>
+            <div class="p-cta__bottom">
+              <div class="p-cta__tel-wrap c-tel c-tel--black">
+                <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
+                <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
               </div>
-              <ul class="c-plan__list">
-                <li>遺言内容の丁寧なヒアリング</li>
-                <li>相続関係・財産の整理</li>
-                <li>遺言書原案の作成（法律文言を代行）</li>
-                <li>公証人との事前協議・日程調整</li>
-                <li>公証役場への同行（証人2名手配込み）</li>
-                <li>税理士法人との連携窓口（相続税試算は別契約）</li>
-              </ul>
+              <div class="p-cta__btn-wrap">
+                <a href="/contact/" class="c-btn">初回相談無料｜今すぐ予約する</a>
+              </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <dl class="p-willsupport__dl">
-          <div class="p-willsupport__row">
-            <dt class="p-willsupport__dt">公証人手数料（法定費用）について</dt>
-            <dd class="p-willsupport__dd">別途、公証人手数料が法定費用としてかかります。遺産総額や相続人の数により異なりますが、目安として3〜8万円程度です。詳しくは無料相談時にご説明します。</dd>
-          </div>
-          <div class="p-willsupport__row">
-            <dt class="p-willsupport__dt">相続税試算をご希望の場合</dt>
-            <dd class="p-willsupport__dd">相続税の試算・節税分割案のシミュレーションは税理士法人トゥモローズとの別途契約が必要です。上記22万円の作成サポート料金には含まれません。遺産総額・相続人の数等に応じた税理士報酬を別途お見積りします。</dd>
-          </div>
-          <div class="p-willsupport__row">
-            <dt class="p-willsupport__dt">遺言執行についても当法人で対応可能</dt>
-            <dd class="p-willsupport__dd">遺言書の中で当法人を遺言執行者にご指定いただくことができます。執行報酬は相続発生時に遺産の中からお支払いいただく形となるため、遺言書作成時の追加費用はありません。詳細は無料相談時にご案内します。</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-
-
-    <section class="p-cta p-cta--service">
-      <div class="l-inner">
-        <h2 class="p-cta__title">Contact</h2>
-        <div class="p-cta__content u-shadow">
-          <p class="p-cta__catch">ご自身の遺言、<br>プロに<span class="u-text-marker">任せて<br class="u-onliy-sp">確実に残しませんか？</span></p>
-          <p class="p-cta__text">「公証役場に行ったことがない」<br class="u-onliy-sp">「何を書けばいいか分からない」<br>——そんな段階で構いません。<br class="u-onliy-sp">専門スタッフが丁寧にサポートします。</p>
-          <div class="p-cta__bottom">
-            <div class="p-cta__tel-wrap c-tel c-tel--black">
-              <a href="tel:03-6280-5188" class="c-tel__item">03-6280-5188</a>
-              <p class="c-tel__note">平日 9:00〜21:00　土日祝 応相談</p>
-            </div>
-            <div class="p-cta__btn-wrap">
-              <a href="/contact/" class="c-btn">初回相談無料｜今すぐ予約する</a>
-            </div>
-          </div>
+      <section class="p-flow p-flow--service02">
+        <div class="l-inner">
+          <h2 class="c-primary-title">作成サポートの流れ</h2>
+          <ol class="p-flow__list">
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">01</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">お問い合わせ・初回面談予約</h3>
+                <p class="p-flow__text">
+                  お電話またはWebフォームからご連絡ください。ご状況を簡単にお伺いし、面談日時を調整します。<br />オンライン面談（Zoom
+                  / Google Meet）にも対応しています。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">02</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">初回面談（無料）</h3>
+                <p class="p-flow__text">
+                  ご家族構成・財産状況・遺言の目的を丁寧にお伺いします。<br />相続税の試算をご希望の方は、税理士法人トゥモローズとの別途契約についてもこの場でご案内します。お見積りは無料です。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">03</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">ご契約・ヒアリングの深堀り</h3>
+                <p class="p-flow__text">
+                  ご契約後、詳細なヒアリングを実施。<br />どなたに何を残したいか、遺留分への配慮、付言事項（想いを伝える文章）の検討まで、丁寧にサポートします。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">04</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">遺言書の原案作成</h3>
+                <p class="p-flow__text">
+                  お打ち合わせの内容に基づいて、法律的に正確な遺言書案を作成します。<br />想いが伝わるようにメッセージを付け加えることもお勧めしています。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">05</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">公証役場との事前協議</h3>
+                <p class="p-flow__text">
+                  原案をもとに、公証人（元裁判官や元検察官等）と事前協議を行い、最終原稿が完成します。<br />資料の提出・日程調整・公証人手数料の算出など、すべて代行いたします。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">06</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">公証役場で遺言書作成（当日）</h3>
+                <p class="p-flow__text">
+                  遺言者が署名と捺印をして公正証書遺言が完成します。<br />相続人やその親族等は証人になれないため、当法人の専門スタッフ2名が証人として同行します。所要時間は通常30分〜1時間です。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">07</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">遺言書正本・謄本のお渡し</h3>
+                <p class="p-flow__text">
+                  公証役場で原本が保管され、遺言者にはご自宅保管用の正本・謄本が交付されます。<br />今後の見直し・修正のご相談も、いつでも承ります。
+                </p>
+              </div>
+            </li>
+            <li class="p-flow__item">
+              <div class="p-flow__number">
+                <span class="p-flow__number-text">Step</span>
+                <span class="p-flow__number-num">08</span>
+              </div>
+              <div class="p-flow__body">
+                <h3 class="p-flow__title">相続発生後の遺言執行（オプション）</h3>
+                <p class="p-flow__text">
+                  遺言執行者に当法人をご指定いただいている場合、相続発生後は速やかに遺言の内容を実現します。執行報酬は相続発生時に遺産の中からお支払いいただきます。
+                </p>
+              </div>
+            </li>
+          </ol>
         </div>
-      </div>
-    </section>
-
-    <section class="p-flow p-flow--service02">
-      <div class="l-inner">
-        <h2 class="c-primary-title">作成サポートの流れ</h2>
-        <ol class="p-flow__list">
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">01</span>
+      </section>
+      <section class="p-faq u-bg-color-main">
+        <div class="l-inner">
+          <h2 class="c-primary-title">よくあるご質問</h2>
+          <dl class="c-faq p-faq__list">
+            <div class="c-faq__row">
+              <dt class="c-faq__head">遺言書作成の費用はいくらですか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  公正証書遺言の作成サポートは220,000円〜（税込）です。ヒアリング・遺言書原案の作成・公証役場との調整・証人2名の同行まで含まれています。別途、公証人手数料（法定費用）がかかりますが、目安として3〜8万円程度です。遺言執行者への就任もご相談可能で、その場合の執行報酬は相続発生時に遺産の中からお支払いいただく形となるため、作成時の追加費用はありません。詳細は無料相談時にご案内します。
+                </p>
+              </dd>
             </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">お問い合わせ・初回面談予約</h3>
-              <p class="p-flow__text">お電話またはWebフォームからご連絡ください。ご状況を簡単にお伺いし、面談日時を調整します。<br>オンライン面談（Zoom / Google Meet）にも対応しています。</p>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">遺言書はいつ作成すればいいですか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  法律上は15歳から作成可能ですが、「相続対策を始めよう」と思ったタイミングがベストです。特にお子様が独立された後、退職後、不動産を取得した時などが一つの節目です。認知症を発症すると遺言能力が問題になるため、お元気なうちの作成を強くお勧めします。
+                </p>
+              </dd>
             </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">02</span>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">入院中・施設入所中でも作成できますか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  はい。公証人に病院や施設へ出張してもらうことが可能です（出張手数料が別途かかります）。ご本人の意思確認ができる状態であれば作成できます。当法人が公証人との出張調整も代行します。
+                </p>
+              </dd>
             </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">初回面談（無料）</h3>
-              <p class="p-flow__text">ご家族構成・財産状況・遺言の目的を丁寧にお伺いします。<br>相続税の試算をご希望の方は、税理士法人トゥモローズとの別途契約についてもこの場でご案内します。お見積りは無料です。</p>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">遺言執行者も依頼できますか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  はい。遺言書の中で当法人を遺言執行者にご指定いただくことが可能です。遺言執行報酬は相続発生時に遺産の中からお支払いいただきますので、<em>遺言書作成時の追加費用はありません</em>。執行報酬の詳細は無料相談時にご案内します。
+                </p>
+              </dd>
             </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">03</span>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">作成した遺言書は、あとで変更できますか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  はい。遺言書は何度でも書き直し可能です。新しい遺言書を作成すれば、古い内容は無効になります（抵触する部分のみ）。ご家族構成や財産状況の変化に応じて、定期的な見直しをお勧めしています。
+                </p>
+              </dd>
             </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">ご契約・ヒアリングの深堀り</h3>
-              <p class="p-flow__text">ご契約後、詳細なヒアリングを実施。<br>どなたに何を残したいか、遺留分への配慮、付言事項（想いを伝える文章）の検討まで、丁寧にサポートします。</p>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">相続税のシミュレーションもしてもらえますか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  はい。ただし行政書士法人の遺言書作成サポート（22万円〜）には相続税の試算は含まれません。税理士法人トゥモローズとの別途ご契約をいただくことで、遺言書の内容に基づく相続税の試算・二次相続まで考慮した節税分割案をご提案します。グループ内の税理士法人ですので、外部の税理士を探していただく必要はなく、連携もスムーズです。税理士報酬は遺産総額・相続人の数等に応じて別途お見積りします。
+                </p>
+              </dd>
             </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">04</span>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">遠方に住んでいるのですが、依頼できますか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  東京・神奈川・埼玉・千葉の首都圏全域に対応しています。対面対応が不要なオンライン対応で宜しければ全国対応可能ですので、遠方の方もお気軽にお問い合わせください。公証役場同行の日だけは現地対応となります。
+                </p>
+              </dd>
             </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">遺言書の原案作成</h3>
-              <p class="p-flow__text">お打ち合わせの内容に基づいて、法律的に正確な遺言書案を作成します。<br>想いが伝わるようにメッセージを付け加えることもお勧めしています。</p>
+            <div class="c-faq__row">
+              <dt class="c-faq__head">料金はどのように支払いますか？</dt>
+              <dd class="c-faq__data">
+                <p>
+                  作成サポート報酬はご契約時に半額、公証役場での作成完了時に残金をお支払いいただきます。銀行振込での対応です。遺言執行者の就任をご依頼いただいた場合の執行報酬は、相続発生時に遺産の中からお支払いいただく形となります。
+                </p>
+              </dd>
             </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">05</span>
-            </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">公証役場との事前協議</h3>
-              <p class="p-flow__text">原案をもとに、公証人（元裁判官や元検察官等）と事前協議を行い、最終原稿が完成します。<br>資料の提出・日程調整・公証人手数料の算出など、すべて代行いたします。</p>
-            </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">06</span>
-            </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">公証役場で遺言書作成（当日）</h3>
-              <p class="p-flow__text">遺言者が署名と捺印をして公正証書遺言が完成します。<br>相続人やその親族等は証人になれないため、当法人の専門スタッフ2名が証人として同行します。所要時間は通常30分〜1時間です。</p>
-            </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">07</span>
-            </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">遺言書正本・謄本のお渡し</h3>
-              <p class="p-flow__text">公証役場で原本が保管され、遺言者にはご自宅保管用の正本・謄本が交付されます。<br>今後の見直し・修正のご相談も、いつでも承ります。</p>
-            </div>
-          </li>
-          <li class="p-flow__item">
-            <div class="p-flow__number">
-              <span class="p-flow__number-text">Step</span>
-              <span class="p-flow__number-num">08</span>
-            </div>
-            <div class="p-flow__body">
-              <h3 class="p-flow__title">相続発生後の遺言執行（オプション）</h3>
-              <p class="p-flow__text">遺言執行者に当法人をご指定いただいている場合、相続発生後は速やかに遺言の内容を実現します。執行報酬は相続発生時に遺産の中からお支払いいただきます。</p>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-    <section class="p-faq u-bg-color-main">
-      <div class="l-inner">
-        <h2 class="c-primary-title">よくあるご質問</h2>
-        <dl class="c-faq p-faq__list">
-          <div class="c-faq__row">
-            <dt class="c-faq__head">遺言書作成の費用はいくらですか？</dt>
-            <dd class="c-faq__data">
-              <p>公正証書遺言の作成サポートは220,000円〜（税込）です。ヒアリング・遺言書原案の作成・公証役場との調整・証人2名の同行まで含まれています。別途、公証人手数料（法定費用）がかかりますが、目安として3〜8万円程度です。遺言執行者への就任もご相談可能で、その場合の執行報酬は相続発生時に遺産の中からお支払いいただく形となるため、作成時の追加費用はありません。詳細は無料相談時にご案内します。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">遺言書はいつ作成すればいいですか？</dt>
-            <dd class="c-faq__data">
-              <p>法律上は15歳から作成可能ですが、「相続対策を始めよう」と思ったタイミングがベストです。特にお子様が独立された後、退職後、不動産を取得した時などが一つの節目です。認知症を発症すると遺言能力が問題になるため、お元気なうちの作成を強くお勧めします。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">入院中・施設入所中でも作成できますか？</dt>
-            <dd class="c-faq__data">
-              <p>はい。公証人に病院や施設へ出張してもらうことが可能です（出張手数料が別途かかります）。ご本人の意思確認ができる状態であれば作成できます。当法人が公証人との出張調整も代行します。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">遺言執行者も依頼できますか？</dt>
-            <dd class="c-faq__data">
-              <p>はい。遺言書の中で当法人を遺言執行者にご指定いただくことが可能です。遺言執行報酬は相続発生時に遺産の中からお支払いいただきますので、<em>遺言書作成時の追加費用はありません</em>。執行報酬の詳細は無料相談時にご案内します。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">作成した遺言書は、あとで変更できますか？</dt>
-            <dd class="c-faq__data">
-              <p>はい。遺言書は何度でも書き直し可能です。新しい遺言書を作成すれば、古い内容は無効になります（抵触する部分のみ）。ご家族構成や財産状況の変化に応じて、定期的な見直しをお勧めしています。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">相続税のシミュレーションもしてもらえますか？</dt>
-            <dd class="c-faq__data">
-              <p>はい。ただし行政書士法人の遺言書作成サポート（22万円〜）には相続税の試算は含まれません。税理士法人トゥモローズとの別途ご契約をいただくことで、遺言書の内容に基づく相続税の試算・二次相続まで考慮した節税分割案をご提案します。グループ内の税理士法人ですので、外部の税理士を探していただく必要はなく、連携もスムーズです。税理士報酬は遺産総額・相続人の数等に応じて別途お見積りします。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">遠方に住んでいるのですが、依頼できますか？</dt>
-            <dd class="c-faq__data">
-              <p>東京・神奈川・埼玉・千葉の首都圏全域に対応しています。対面対応が不要なオンライン対応で宜しければ全国対応可能ですので、遠方の方もお気軽にお問い合わせください。公証役場同行の日だけは現地対応となります。</p>
-            </dd>
-          </div>
-          <div class="c-faq__row">
-            <dt class="c-faq__head">料金はどのように支払いますか？</dt>
-            <dd class="c-faq__data">
-              <p>作成サポート報酬はご契約時に半額、公証役場での作成完了時に残金をお支払いいただきます。銀行振込での対応です。遺言執行者の就任をご依頼いただいた場合の執行報酬は、相続発生時に遺産の中からお支払いいただく形となります。</p>
-            </dd>
-          </div>
-        </dl>
-
-      </div>
-    </section>
-    <section class="p-greeting">
-      <div class="l-inner">
-        <h2 class="c-primary-title">代表ごあいさつ</h2>
-        <div class="c-greeting p-greeting__media">
-          <figure class="c-greeting__img">
-            <img src="../assets/img/under/greeting_img02.jpg" alt="" width="355" height="388" loading="lazy">
-          </figure>
-          <div class="c-greeting__body">
-            <p class="c-greeting__position">税理士法人トゥモローズ 代表<br>行政書士法人トゥモローズ 代表</p>
-            <p class="c-greeting__name">角田 壮平</p>
-          </div>
-          <div class="c-greeting__text-warp">
-            <h3 class="c-greeting__title">遺言書は、ご自身の想いを、<br>未来のご家族へ届ける手紙です。</h3>
-            <p class="c-greeting__text">遺言書は単なる財産分配の指示書ではありません。<em>「なぜこの分け方にしたのか」という想いを付言事項として伝える</em>ことで、残されたご家族の納得感が大きく変わります。</p>
-            <p class="c-greeting__text">トゥモローズグループは、<em>年間350件超の相続税申告と500件以上の相続手続き・遺言作成実績</em>を持つ相続専門ファームです。税理士・行政書士・不動産の専門家がグループ内で連携し、<em>遺言書の設計から将来の執行・相続税申告まで、窓口ひとつでご対応</em>します。</p>
-            <p class="c-greeting__text"><em>「適正価格で、税務まで見据えた確かな遺言サポート」</em>——これがトゥモローズの提供価値です。</p>
-            <p class="c-greeting__text">ご家族への確かな想いを、法的に確実な形で残すお手伝いをさせてください。</p>
-          </div>
+          </dl>
         </div>
-      </div>
-    </section>
-    <section class="p-office">
-      <div class="l-inner">
-        <h2 class="c-primary-title">事務所のご案内</h2>
-        <div class="p-office__content">
-          <div class="p-office__body">
-            <h3 class="p-office__name">東京本店</h2>
-              <p class="p-office__address">〒104-0032<br>東京都中央区八丁堀4-3-5 京橋宝町PREX 6階</p>
+      </section>
+      <section class="p-office">
+        <div class="l-inner">
+          <h2 class="c-primary-title">事務所のご案内</h2>
+          <div class="p-office__content">
+            <div class="p-office__body">
+              <h3 class="p-office__name">東京本店</h3>
+              <p class="p-office__address">〒104-0032<br />東京都中央区八丁堀4-3-5 京橋宝町PREX 6階</p>
               <div class="p-office__access">
                 <p class="p-office__access-title">Access</p>
                 <div class="p-office__access-text-wrap">
@@ -497,72 +767,71 @@
                   <p class="p-office__access-text">東京メトロ銀座線 京橋駅 徒歩6分</p>
                 </div>
               </div>
-          </div>
-          <figure class="p-office__img">
-            <img src="../assets/img/top/office_img.jpg" alt="" width="488" height="325" loading="lazy">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-
-    <section class="p-offer">
-      <div class="l-inner">
-        <div class="p-offer__content">
-
-          <div class="p-offer__text-area">
-            <h2 class="p-offer__title">まずは無料相談から、<br>お気軽にお問い合わせください。</h2>
-            <p class="p-offer__text">相続は、早めに専門家に相談することで<br>時間も費用も大幅に節約できます。<br>「まだ何も決まっていない」という段階でも構いません。<br>お客様のご状況を整理するところから、お手伝いします。</p>
-            <div class="p-offer__btn-wrap">
-              <a href="" class="c-btn">無料相談を予約する</a>
             </div>
+            <figure class="p-office__img">
+              <img src="../assets/img/top/office_img.jpg" alt="" width="488" height="325" loading="lazy" />
+            </figure>
           </div>
-          <figure class="p-offer__img">
-            <img src="../assets/img/under/service02offer_img.jpg" alt="" width="789" height="526" loading="lazy">
-          </figure>
         </div>
+      </section>
+
+      <section class="p-offer">
+        <div class="l-inner">
+          <div class="p-offer__content">
+            <div class="p-offer__text-area">
+              <h2 class="p-offer__title">まずは無料相談から、<br />お気軽にお問い合わせください。</h2>
+              <p class="p-offer__text">
+                相続は、早めに専門家に相談することで<br />時間も費用も大幅に節約できます。<br />「まだ何も決まっていない」という段階でも構いません。<br />お客様のご状況を整理するところから、お手伝いします。
+              </p>
+              <div class="p-offer__btn-wrap">
+                <a href="" class="c-btn">無料相談を予約する</a>
+              </div>
+            </div>
+            <figure class="p-offer__img">
+              <img src="../assets/img/under/service02offer_img.jpg" alt="" width="789" height="526" loading="lazy" />
+            </figure>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- footer -->
+    <footer class="l-footer">
+      <div class="l-inner">
+        <div class="l-footer__container">
+          <div class="l-footer__info">
+            <p class="l-footer__name">行政書士法人トゥモローズ</p>
+            <p class="l-footer__address">〒104-0032<br />東京都中央区八丁堀4-3-5 京橋室町PREX 6階</p>
+            <p class="l-footer__tel">電話：03-6280-5188</p>
+            <p class="l-footer__license">東京 都行政書士会所属</p>
+          </div>
+
+          <div class="l-footer__nav-wrap">
+            <nav class="l-footer__nav" aria-label="フッターナビゲーション">
+              <ul class="l-footer__nav-list">
+                <li class="l-footer__nav-item"><a href="">相続手続き代行</a></li>
+                <li class="l-footer__nav-item"><a href="">遺言書作成</a></li>
+                <li class="l-footer__nav-item"><a href="">おひとりさま終活</a></li>
+                <li class="l-footer__nav-item"><a href="">法人案内</a></li>
+              </ul>
+              <ul class="l-footer__nav-list">
+                <li class="l-footer__nav-item"><a href="">相続コラム</a></li>
+                <li class="l-footer__nav-item"><a href="">お問い合わせ</a></li>
+                <li class="l-footer__nav-item"><a href="">税理士法人トゥモローズ</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <p class="l-footer__copyright">
+          © <span id="current-year"></span> 行政書士法人トゥモローズ. All Rights Reserved.
+        </p>
       </div>
-    </section>
-
-
-  </main>
-  <!-- footer -->
-  <footer class="l-footer">
-    <div class="l-inner">
-      <div class="l-footer__container">
-        <div class="l-footer__info">
-          <p class="l-footer__name">行政書士法人トゥモローズ</p>
-          <p class="l-footer__address">〒104-0032<br>東京都中央区八丁堀4-3-5 京橋室町PREX 6階</p>
-          <p class="l-footer__tel">電話：03-6280-5188</p>
-          <p class="l-footer__license">東京 都行政書士会所属</p>
-        </div>
-
-        <div class="l-footer__nav-wrap">
-          <nav class="l-footer__nav" aria-label="フッターナビゲーション">
-            <ul class="l-footer__nav-list">
-              <li class="l-footer__nav-item"><a href="">相続手続き代行</a></li>
-              <li class="l-footer__nav-item"><a href="">遺言書作成</a></li>
-              <li class="l-footer__nav-item"><a href="">おひとりさま終活</a></li>
-              <li class="l-footer__nav-item"><a href="">法人案内</a></li>
-            </ul>
-            <ul class="l-footer__nav-list">
-              <li class="l-footer__nav-item"><a href="">相続コラム</a></li>
-              <li class="l-footer__nav-item"><a href="">お問い合わせ</a></li>
-              <li class="l-footer__nav-item"><a href="">税理士法人トゥモローズ</a></li>
-            </ul>
-          </nav>
-        </div>
-      </div>
-      <p class="l-footer__copyright">© <span id="current-year"></span> 行政書士法人トゥモローズ. All Rights Reserved.</p>
-    </div>
-  </footer>
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- <script src="../assets/js/splide/splide.min.js"></script> -->
-  <script src="../assets/js/ScrollHint/scroll-hint.min.js"></script>
-  <script defer src="../assets/js/common.js"></script>
-</body>
-
+    </footer>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <!-- <script src="../assets/js/splide/splide.min.js"></script> -->
+    <script src="../assets/js/ScrollHint/scroll-hint.min.js"></script>
+    <script defer src="../assets/js/common.js"></script>
+  </body>
 </html>

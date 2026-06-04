@@ -1,0 +1,285 @@
+@use "../../../global/index" as *;
+
+/* -------------------------------------
+        p-agreement
+-----------------------------------------*/
+
+.p-agreement {
+  padding: 100px 0 0;
+
+  &__wrap {
+    margin-top: 50px;
+    padding: 35px 50px 50px;
+    background-color: #f8f8f8;
+    &:first-child {
+      margin-top: 60px;
+    }
+    @include mq(lg) {
+      padding: 30px 20px;
+    }
+  }
+
+  &__title-wrap {
+    position: relative;
+    text-align: center;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #ccc;
+      z-index: 0;
+    }
+
+    @include mq(lg) {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    display: inline-block;
+    padding: 0 10px;
+    font-size: 2.4rem;
+    font-weight: $medium;
+    background-color: #f8f8f8;
+    z-index: 10;
+
+    @include mq(lg) {
+      font-size: 1.8rem;
+    }
+
+    &.req {
+      color: #056e79;
+    }
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 25px;
+    @include mq(lg) {
+      display: block;
+    }
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 48%;
+    padding: 40px 30px;
+    background-color: #fff;
+
+    &:nth-child(n + 3) {
+      margin-top: 30px;
+    }
+
+    @include mq(lg) {
+      width: 100%;
+      padding: 35px 20px;
+      + .p-agreement__item {
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__item-title {
+    position: relative;
+    padding-left: 20px;
+    font-size: 2rem;
+    font-weight: $medium;
+    &::before {
+      content: "";
+      position: absolute;
+      top: 12px;
+      left: 0px;
+      width: 12px;
+      height: 12px;
+      background-color: #ccc;
+      border-radius: 100%;
+    }
+
+    &.req {
+      &::before {
+        background-color: $main-color;
+      }
+    }
+
+    @include mq(lg) {
+      font-size: 1.6rem;
+
+      &::before {
+        top: 9px;
+      }
+    }
+
+    span {
+      display: inline-block;
+      margin-left: 5px;
+      padding: 0 5px;
+      font-size: 1.4rem;
+      color: #fff;
+      vertical-align: text-bottom;
+      background-color: $main-color;
+
+      @include mq(lg) {
+        position: absolute;
+        top: -35px;
+        right: -20px;
+      }
+    }
+
+    &.req span {
+      background-color: $accent-color;
+    }
+  }
+
+  &__item-text {
+    margin: 15px auto 30px;
+
+    @include mq(lg) {
+      margin: 10px auto 20px;
+      font-size: 1.5rem;
+    }
+  }
+  &__box-wrap {
+    margin-top: auto;
+    padding: 20px 25px;
+    background-color: $main-bg;
+
+    @include mq(lg) {
+      padding: 15px;
+    }
+  }
+
+  &__box {
+    + .p-agreement__box {
+      margin-top: 20px;
+    }
+  }
+
+  &__box-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__box-name {
+    font-weight: $medium;
+
+    @include mq(lg) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &__box-price {
+    font-size: 1.4rem;
+    span {
+      display: inline-block;
+      margin-right: 5px;
+      font-size: 2.4rem;
+      font-weight: $medium;
+      color: $main-color;
+
+      @include mq(lg) {
+        font-size: 2.2rem;
+      }
+    }
+  }
+
+  &__box-note {
+    position: relative;
+    padding-left: 1.5rem;
+    font-size: 1.4rem;
+    &::before {
+      content: "※";
+      position: absolute;
+      left: 0;
+    }
+
+    @include mq(lg) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__meyasu {
+    position: relative;
+    padding: 140px 0 70px;
+    text-align: center;
+    border-bottom: solid 1px #ccc;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 60px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-style: solid;
+      border-width: 45px 60px 0 60px;
+      border-color: $main-color transparent transparent transparent;
+    }
+
+    @include mq(md) {
+      padding: 70px 0 40px;
+      &::before {
+        top: 30px;
+        border-width: 25px 40px 0 40px;
+      }
+    }
+  }
+
+  &__meyasu-title {
+    font-size: 2rem;
+    @include mq(lg) {
+      font-size: 1.8rem;
+    }
+  }
+
+  &__meyasu-price {
+    margin-top: 20px;
+    font-weight: $medium;
+
+    span {
+      margin-right: 5px;
+      font-family: roboto;
+      font-size: 4rem;
+      color: #056e79;
+    }
+
+    @include mq(lg) {
+      margin-top: 10px;
+      font-size: 1.5rem;
+
+      span {
+        font-size: 3.4rem;
+      }
+    }
+  }
+
+  &__meyasu-note {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.2rem;
+    text-align: left;
+
+    p {
+      position: relative;
+      padding-left: 1.5rem;
+      &::before {
+        content: "※";
+        position: absolute;
+        left: 0;
+      }
+    }
+
+    @include mq(lg) {
+      margin-top: 10px;
+    }
+  }
+}
