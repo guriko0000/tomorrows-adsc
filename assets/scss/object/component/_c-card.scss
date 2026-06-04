@@ -95,11 +95,18 @@
         --p: 100%;
       }
     }
+
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 
   &__text {
     font-size: 1.5rem;
     // line-height: 1.5;
     margin-top: 10px;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
   }
 }

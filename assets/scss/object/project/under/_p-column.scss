@@ -17,5 +17,13 @@
     &:nth-child(n + 3) {
       margin-top: 30px;
     }
+
+    @include mq(md) {
+      width: 100%;
+
+      &:nth-child(n + 2) {
+        margin-top: 30px;
+      }
+    }
   }
 }

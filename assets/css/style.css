@@ -1133,9 +1133,20 @@ body {
 .l-body {
   width: 66%;
 }
+@media screen and (max-width: 992px) {
+  .l-body {
+    width: 100%;
+  }
+}
 
 .l-side {
   width: 27%;
+}
+@media screen and (max-width: 992px) {
+  .l-side {
+    width: 100%;
+    margin-top: 50px;
+  }
 }
 
 /* -------------------------------------
@@ -1487,9 +1498,19 @@ body {
     --p: 100%;
   }
 }
+@media screen and (max-width: 767px) {
+  .c-card__title {
+    font-size: 1.5rem;
+  }
+}
 .c-card__text {
   font-size: 1.5rem;
   margin-top: 10px;
+}
+@media screen and (max-width: 767px) {
+  .c-card__text {
+    font-size: 1.4rem;
+  }
 }
 
 /* -------------------------------------
@@ -2917,31 +2938,58 @@ tbody .c-servicetable02__section th {
 .c-side__title {
   padding-bottom: 3px;
   font-size: 1.8rem;
+  font-weight: 500;
   border-bottom: solid 1px #2DAEBB;
 }
-.c-side__cate {
+.c-side__cate, .c-side__ranking {
   margin-top: 25px;
+}
+.c-side__cate-item, .c-side__ranking-item {
+  margin-top: 10px;
+}
+.c-side__cate-item a:hover, .c-side__ranking-item a:hover {
+  color: #2DAEBB;
+  transition: color 0.25s;
+}
+@media screen and (max-width: 767px) {
+  .c-side__cate-item a, .c-side__ranking-item a {
+    font-size: 1.5rem;
+  }
 }
 .c-side__cate-item {
   position: relative;
-  margin-top: 10px;
   padding-left: 1.5rem;
 }
 .c-side__cate-item::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 2px;
   display: inline-block;
+  top: 2px;
   width: 12px;
   height: 24px;
   background-image: url(../img/icon/icon_arrow-right-2.svg);
   background-size: contain;
   background-repeat: no-repeat;
 }
-.c-side__cate-item a:hover {
-  color: #2DAEBB;
-  transition: color 0.25s;
+.c-side__ranking-item a {
+  display: flex;
+}
+.c-side__ranking-item .num {
+  position: relative;
+  top: 4px;
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin-right: 10px;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #d2a96c;
+  text-align: center;
+  border-radius: 100%;
+}
+.c-side__ranking-item p {
+  width: calc(100% - 35px);
 }
 .c-side + .c-side {
   margin-top: 60px;
@@ -6024,6 +6072,14 @@ tbody .c-servicetable02__section th {
 }
 .p-column li:nth-child(n+3) {
   margin-top: 30px;
+}
+@media screen and (max-width: 767px) {
+  .p-column li {
+    width: 100%;
+  }
+  .p-column li:nth-child(n+2) {
+    margin-top: 30px;
+  }
 }
 
 /* -------------------------------------
