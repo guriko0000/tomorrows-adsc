@@ -4,23 +4,114 @@
         p-voice
 -----------------------------------------*/
 .p-voice {
+  padding-bottom: 130px;
+  @include mq(md) {
+    padding-bottom: 100px;
+  }
 
-  &__intro {}
+  &__intro {
+    padding: 50px 0 70px;
+    @include mq(md) {
+      padding: 20px 0 40px;
+    }
+  }
 
-  &__intro-text {}
+  &__intro-text {
+    font-size: 1.8rem;
+    line-height: 2;
+    text-align: center;
+    @include mq(md) {
+      font-size: 1.5rem;
+      text-align: left;
+    }
+  }
 
-  &__intro-img {}
+  &__intro-img {
+    margin-top: 60px;
+    @include mq(md) {
+      margin-top: 40px;
+    }
+  }
 
-  &__cate-wrap {}
+  &__cate-wrap {
 
-  &__cate-list {}
+  }
 
-  &__cate-item {}
+  &__cate-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    @include mq(lg) {      
+      gap: 10px;
+    }
+    @include mq(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &__cate-item {
+    a {
+      display: inline-block;
+      width: 100%;
+      border: 1px solid $main-color;
+      font-size: 1.8rem;
+      font-weight: $medium;
+      line-height: 1.4;
+      text-align: center;
+      padding: 15px 10px;
+      transition: 0.25s;
+      @include mq(lg) {
+        font-size: 1.6rem;
+      }
+      &:hover, &:focus-visible {
+        background-color: $main-color;
+        color: #fff;
+      }
+    }
+
+    &.is-active {
+      a {
+        background-color: $main-color;
+        color: #fff;
+        &:hover, &:focus-visible {
+          background-color: #fff;
+          color: $main-color;
+        }
+      }
+    }
+  }
 
   &__item-wrap {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 40px 30px;
+    margin-top: 50px;
+    @media screen and (max-width: 850px){
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @include mq(md) {
+      gap: 30px;
+      margin-top: 40px;
+    }
+  }
+
+  &__policy {
+    margin-top: 100px;
+    @include mq(md) {
+      margin-top: 50px;
+    }
+  }
+
+  &__policy-title {
+    font-size: 1.4rem;
+    line-height: 1.5;
+    font-weight: $medium;
+    text-align: center;
+  }
+
+  &__policy-text {
+    font-size: 1.4rem;
+    margin-top: 10px;
   }
 
 }

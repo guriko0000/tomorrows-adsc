@@ -4,16 +4,24 @@
         c-voice
 -----------------------------------------*/
 .c-voice {
-  padding: 40px;
+  display: block;
   box-shadow: 0px 0px 10px rgba(0,0,0,0.15);
+  padding: 40px;
+  @include mq(md) {
+    padding: 30px 20px;
+  }
 
   &__head {
     border-bottom: 1px solid #ccc;
     padding-bottom: 40px;
+    @include mq(md) {
+      padding-bottom: 20px;
+    }
   }
 
   &__meta-wrap {
     display: flex;
+    align-items: flex-start;
   }
 
   &__meta {
@@ -24,6 +32,9 @@
   &__person {
     font-size: 1.8rem;
     font-weight: $medium;
+    @include mq(md) {
+      font-size: 1.4rem;
+    }
   }
 
   &__area {
@@ -31,11 +42,21 @@
     font-size: 1.4rem;
     font-weight: $medium;
     margin-top: 10px;
+    @include mq(md) {
+      font-size: 1.2rem;
+    }
   }
     
   &__cate {
     flex-shrink: 0;
-    width: 103px;
+    display: inline-block;
+    background-color: $main-color;
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: $medium;
+    line-height: 1.5;
+    text-align: center;
+    padding: 8px 15px;
   }
 
   &__rating {
@@ -45,28 +66,45 @@
   }
 
   &__star {
+    display: inline-block;
+    max-width: 184px;
     margin-left: 20px;
+    @include mq(md) {
+      max-width: 149px;
+    }
   }
 
   &__body {
     padding-top: 40px;
+    @include mq(md) {
+      padding-top: 20px;
+    }
   }
 
   &__title {
-    border-left: 1px solid $main-color;
+    border-left: 3px solid $main-color;
     font-size: 2rem;
     font-weight: $medium;
     line-height: 1.5;
     padding-left: 12px;
+    @include mq(md) {
+      font-size: 1.8rem;
+    }
   }
 
   &__content {
     margin-top: 40px;
+    @include mq(md) {
+      margin-top: 30px;
+    }
   }
 
   &__block {
     &:not(:first-child) {
       margin-top: 30px;
+      @include mq(md) {
+        margin-top: 20px;
+      }
     }
   }
 
@@ -91,12 +129,18 @@
 
   &__text {
     margin-top: 10px;
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 
   &__bg {
     background-color: $main-bg;
     padding: 20px 25px;
     margin-top: 25px;
+    @include mq(md) {
+      margin-top: 20px;
+    }
   }
 
   &__bg-title {
@@ -116,6 +160,9 @@
     font-weight: $medium;
     text-align: right;
     margin-top: 15px;
+    @include mq(md) {
+      margin-top: 10px;
+    }
   }
 
 }
