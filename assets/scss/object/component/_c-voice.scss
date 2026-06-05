@@ -25,10 +25,10 @@
   }
 
   &__meta {
-    flex: 1;
+    flex-shrink: 0;
     line-height: 1.5;
+    margin-right: 20px;
   }
-
   &__person {
     font-size: 1.8rem;
     font-weight: $medium;
@@ -45,6 +45,14 @@
     @include mq(md) {
       font-size: 1.2rem;
     }
+  }
+
+  &__cate-wrap {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-left: auto;
   }
     
   &__cate {
