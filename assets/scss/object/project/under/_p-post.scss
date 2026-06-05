@@ -10,6 +10,10 @@
     font-size: 2.8rem;
     font-weight: $semibold;
     line-height: 1.5;
+
+    @include mq(md) {
+      font-size: 2rem;
+    }
   }
 
   &__meta {
@@ -17,6 +21,9 @@
     justify-content: space-between;
     align-items: center;
     margin-top: 20px;
+    @include mq(md) {
+      display: block;
+    }
   }
 
   &__date {
@@ -32,11 +39,17 @@
     font-size: 1.4rem;
     color: #fff;
     background-color: $main-color;
+    @include mq(md) {
+      font-size: 1.2rem;
+    }
   }
 
   &__author {
     display: flex;
     align-items: center;
+    @include mq(md) {
+      margin-top: 20px;
+    }
   }
 
   &__author-img {
@@ -63,8 +76,17 @@
 .p-post {
   margin-top: 60px;
 
+  @include mq(md) {
+    margin-top: 40px;
+    font-size: 1.5rem;
+  }
+
   * + p {
     margin-top: 20px;
+
+    @include mq(md) {
+      margin-top: 10px;
+    }
   }
 
   em {
@@ -80,6 +102,11 @@
     line-height: 1.5;
     background-color: #f7f7f7;
     border-left: solid 3px #2daebb;
+
+    @include mq(md) {
+      margin: 60px auto 20px;
+      font-size: 2rem;
+    }
   }
 
   h3 {
@@ -88,6 +115,10 @@
     font-size: 2rem;
     font-weight: $medium;
     border-bottom: solid 1px $main-color;
+    @include mq(md) {
+      margin: 40px auto 20px;
+      font-size: 1.8rem;
+    }
   }
 
   ul,
@@ -154,25 +185,47 @@
     margin-top: 70px;
     padding: 30px;
     border: solid 1px #ccc;
+
+    @include mq(md) {
+      margin-top: 40px;
+    }
   }
 
   &__author-inner {
     display: flex;
     justify-content: space-between;
+    @include mq(md) {
+      display: block;
+    }
   }
 
   &__author-img {
     display: inline-block;
     width: 22%;
+
+    @include mq(md) {
+      width: 100%;
+      max-wiht: 146px;
+      text-align: center;
+    }
   }
 
   &__author-body {
     width: 73%;
+
+    @include mq(md) {
+      width: 100%;
+      margin-top: 30px;
+    }
   }
 
   &__author-name {
     font-size: 1.8rem;
     font-weight: $medium;
+
+    @include mq(md) {
+      font-size: 1.6rem;
+    }
   }
 
   &__author-title {
@@ -183,5 +236,9 @@
 
   &__author-text {
     margin-top: 20px;
+
+    @include mq(md) {
+      font-size: 1.5rem;
+    }
   }
 }
