@@ -133,8 +133,7 @@ a {
  */
 abbr[title] {
   text-decoration: underline; /* 2 */
-  -webkit-text-decoration: underline dotted;
-          text-decoration: underline dotted; /* 2 */
+  text-decoration: underline dotted; /* 2 */
 }
 
 /**
@@ -206,8 +205,7 @@ optgroup,
 select,
 body {
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   vertical-align: middle;
   color: inherit;
   font: inherit;
@@ -224,14 +222,12 @@ body {
  */
 [type=checkbox] {
   -webkit-appearance: checkbox;
-  -moz-appearance: checkbox;
-       appearance: checkbox;
+  appearance: checkbox;
 }
 
 [type=radio] {
   -webkit-appearance: radio;
-  -moz-appearance: radio;
-       appearance: radio;
+  appearance: radio;
 }
 
 /**
@@ -263,8 +259,7 @@ button,
 [type=submit] {
   cursor: pointer;
   -webkit-appearance: none;
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
 }
 
 button[disabled],
@@ -527,8 +522,7 @@ template {
 html {
   font-size: 62.5%;
   -webkit-text-size-adjust: 100%;
-  -moz-text-size-adjust: 100%;
-       text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
 body {
@@ -1124,6 +1118,9 @@ body {
   justify-content: space-between;
   margin: 50px auto 130px;
 }
+.l-col2 + footer {
+  margin-top: 130px;
+}
 @media screen and (max-width: 992px) {
   .l-col2 {
     display: block;
@@ -1447,8 +1444,7 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   transition: 0.3s;
 }
 .c-card__body {
@@ -1663,8 +1659,7 @@ body {
   width: 24px;
   height: 24px;
   background: #fff;
-  -webkit-mask: url(../img/icon/icon_mail.svg) no-repeat center/cover;
-          mask: url(../img/icon/icon_mail.svg) no-repeat center/cover;
+  mask: url(../img/icon/icon_mail.svg) no-repeat center/cover;
   background-size: contain;
   background-repeat: no-repeat;
   margin-right: 4px;
@@ -1679,8 +1674,7 @@ body {
   transition: all 0.25s;
 }
 .c-icon-btn--post .c-icon-btn__text::before {
-  -webkit-mask: url(../img/icon/icon_post.svg) no-repeat center/cover;
-          mask: url(../img/icon/icon_post.svg) no-repeat center/cover;
+  mask: url(../img/icon/icon_post.svg) no-repeat center/cover;
 }
 .c-icon-btn--larg {
   max-width: 300px;
@@ -1875,8 +1869,7 @@ body {
 .c-greeting {
   display: grid;
   grid-template-columns: 355px 1fr;
-  -moz-column-gap: 70px;
-       column-gap: 70px;
+  column-gap: 70px;
   row-gap: 0;
   margin-top: 50px;
   align-items: start;
@@ -1884,15 +1877,13 @@ body {
 @media screen and (max-width: 992px) {
   .c-greeting {
     grid-template-columns: 300px 1fr;
-    -moz-column-gap: 40px;
-         column-gap: 40px;
+    column-gap: 40px;
   }
 }
 @media screen and (max-width: 767px) {
   .c-greeting {
     grid-template-columns: 140px 1fr;
-    -moz-column-gap: 20px;
-         column-gap: 20px;
+    column-gap: 20px;
     row-gap: 30px;
     margin-top: 30px;
     align-items: center;
@@ -3385,8 +3376,7 @@ tbody .c-servicetable02__section th {
 .p-top-service__card-wrap {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  -moz-column-gap: 25px;
-       column-gap: 25px;
+  column-gap: 25px;
   row-gap: 0;
   margin-top: 60px;
 }
@@ -3399,8 +3389,7 @@ tbody .c-servicetable02__section th {
 @media screen and (max-width: 767px) {
   .p-top-service__card-wrap {
     grid-template-columns: repeat(1, 1fr);
-    -moz-column-gap: 0;
-         column-gap: 0;
+    column-gap: 0;
     row-gap: 30px;
     margin-top: 40px;
   }
@@ -4016,8 +4005,7 @@ tbody .c-servicetable02__section th {
 .p-offer__img img {
   width: 100%;
   min-height: 526px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 .p-offer__round-wrap {
   display: flex;
@@ -4752,8 +4740,7 @@ tbody .c-servicetable02__section th {
   width: 100%;
   min-height: 638px;
   height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 @media screen and (max-width: 767px) {
   .p-worries__img img {
@@ -6128,6 +6115,183 @@ tbody .c-servicetable02__section th {
 }
 
 /* -------------------------------------
+        p-post
+-----------------------------------------*/
+.p-posthead h1 {
+  font-family: "Notoserif_subset", serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+.p-posthead__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+.p-posthead__date {
+  font-size: 1.4rem;
+  color: #555;
+  line-height: 1.5;
+}
+.p-posthead__tag {
+  display: inline-block;
+  margin-top: 5px;
+  padding: 1px 10px 2px;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: #2DAEBB;
+}
+.p-posthead__author {
+  display: flex;
+  align-items: center;
+}
+.p-posthead__author-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+.p-posthead__author-img img {
+  border-radius: 100%;
+}
+.p-posthead__author-title {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+.p-posthead__author-name {
+  margin-top: 5px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.p-post {
+  margin-top: 60px;
+}
+.p-post * + p {
+  margin-top: 20px;
+}
+.p-post em {
+  font-style: normal;
+  background: linear-gradient(#FCF8BE 0%, #FCF8BE 100%);
+}
+.p-post h2 {
+  margin: 80px auto 30px;
+  padding: 15px 20px;
+  font-size: 2.4rem;
+  font-weight: 500;
+  line-height: 1.5;
+  background-color: #f7f7f7;
+  border-left: solid 3px #2daebb;
+}
+.p-post h3 {
+  margin: 60px auto 30px;
+  padding-bottom: 10px;
+  font-size: 2rem;
+  font-weight: 500;
+  border-bottom: solid 1px #2DAEBB;
+}
+.p-post ul,
+.p-post ol {
+  margin-top: 30px;
+  padding-left: 2rem;
+}
+.p-post ul li,
+.p-post ol li {
+  line-height: 1.8;
+}
+.p-post ul li + li,
+.p-post ol li + li {
+  margin-top: 10px;
+}
+.p-post ol li {
+  list-style-type: decimal;
+}
+.p-post ul li {
+  list-style-type: disc;
+}
+.p-post table {
+  width: 100%;
+  margin-top: 40px;
+}
+.p-post table th {
+  padding: 10px 20px;
+  font-weight: 500;
+  background-color: #2DAEBB;
+  color: #fff;
+}
+.p-post table th:not(:first-child) {
+  border-left: solid 1px #fff;
+}
+.p-post table th:first-child {
+  border-left: solid 1px #2DAEBB;
+}
+.p-post table td {
+  padding: 10px 20px;
+  border: solid 1px #cccccc;
+}
+
+.p-postfoot {
+  margin-top: 50px;
+}
+.p-postfoot__share {
+  text-align: center;
+  font-size: 1.4rem;
+}
+.p-postfoot__share-title {
+  margin-bottom: 20px;
+}
+.p-postfoot__author {
+  margin-top: 70px;
+  padding: 30px;
+  border: solid 1px #ccc;
+}
+.p-postfoot__author-inner {
+  display: flex;
+  justify-content: space-between;
+}
+.p-postfoot__author-img {
+  display: inline-block;
+  width: 22%;
+}
+.p-postfoot__author-body {
+  width: 73%;
+}
+.p-postfoot__author-name {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+.p-postfoot__author-title {
+  margin-top: 10px;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.p-postfoot__author-text {
+  margin-top: 20px;
+}
+
+/* -------------------------------------
+        p-relatepost
+-----------------------------------------*/
+.p-relatepost {
+  margin-top: -70px;
+  padding: 60px 0;
+  background-color: #EEFAF9;
+}
+.p-relatepost__title {
+  font-size: 2.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+.p-relatepost__list {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 40px;
+}
+.p-relatepost__list li {
+  width: 31.5%;
+}
+
+/* -------------------------------------
         utility
 -----------------------------------------*/
 @media screen and (max-width: 767px) {
@@ -6245,4 +6409,6 @@ tbody .c-servicetable02__section th {
 
 /* 下から */
 /* 上から */
-/* 右から *//*# sourceMappingURL=style.css.map */
+/* 右から */
+
+/*# sourceMappingURL=style.css.map */

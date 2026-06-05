@@ -9,6 +9,10 @@
   justify-content: space-between;
   margin: 50px auto 130px;
 
+  & + footer {
+    margin-top: 130px;
+  }
+
   @include mq(lg) {
     display: block;
   }
